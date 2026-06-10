@@ -71,6 +71,8 @@ Use semantic versioning tags:
 - `v0.1.0`: first expanded Vita design-system coverage.
 - `v0.2.0`: expanded Iris and Redwood Light coverage.
 - `v0.2.1`: clarified Iris and Redwood Light visual-system rules.
+- `v0.2.2`: added public repository documentation and bilingual usage guidance.
+- `v0.2.3`: replaced README diagrams with PNG visual guides for GitHub readers.
 
 Future release guidance:
 
