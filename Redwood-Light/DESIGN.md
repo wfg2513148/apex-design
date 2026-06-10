@@ -193,8 +193,9 @@ rounded:
   full: "9999px"
 components:
   button-observed:
-    backgroundColor: "{colors.on-surface}"
+    backgroundColor: "#FFFFFF"
     textColor: "{colors.on-surface}"
+    borderColor: "rgba(22,21,19,.35)"
     rounded: "{rounded.md}"
     padding: "6px 16px"
   input-observed:
@@ -219,11 +220,17 @@ coverage:
   capturedAt: "2026-06-10T15:35:56+08:00"
 componentPatterns:
   shell:
-    bodyBackground: "#EAEAEA"
+    bodyBackground: "#F7F6F4"
     contentBackground: "#FFFFFF"
-    headerBackground: "#5f7d4f"
-    sideNavigationBackground: "#5f7d4f"
-    sideNavigationText: "#FFFFFF"
+    headerBackground: "#FFFFFF"
+    headerText: "#161513"
+    sideNavigationBackground: "#F7F6F4"
+    sideNavigationText: "#312D2A"
+    sideNavigationSelectedBackground: "#E7E5E2"
+    sideNavigationSelectedText: "#161513"
+    sideNavigationSelectedAccent: "#5f7d4f"
+    titleIconBackground: "#6F7D7B"
+    decorativeStrip: "thin Redwood illustration band below page title; include muted teal, sage, gold, and clay accents"
     focusColor: "#5f7d4f"
   button:
     backgroundColor: "#FFFFFF"
@@ -274,6 +281,14 @@ componentPatterns:
     textColor: "#161513"
     rounded: "16px"
     fontSize: "12px"
+  component-index:
+    backgroundColor: "#FFFFFF"
+    borderColor: "#E7E5E2"
+    iconBackground: "#6F7D7B"
+    linkColor: "#00688C"
+    typeBadgeBackground: "#7B7671"
+    dividerColor: "#ECEAE7"
+    rounded: "6px"
   status:
     success: "#388729"
     warning: "#FBCE4A"
@@ -290,12 +305,15 @@ This DESIGN.md is scoped to the **Redwood Light** theme style of Oracle APEX Uni
 
 The source evidence is the public Universal Theme application at the Design, Components, and Icons navigation groups. The initial extraction supplied the Redwood Light token front matter and 48-page component baseline; this revision expands the document to the full 71 unique page paths / 73 required menu entries reflected by the current Universal Theme menu. Live verification on 2026-06-10 confirmed theme style id `2599349576570175875`, body class `apex-theme-redwood-light`, and root primary token `#5f7d4f` after switching the right-side **Theme Style** menu on `oracleapex.cn`. Canonical component URLs remain on `oracleapex.com`; `oracleapex.cn` is cited as the fallback evidence host used for live theme switching and timeout recovery.
 
+Redwood Light is visually distinct from Vita. Do not model it as a Vita layout with green primary color swapped in. Its observed shell uses a white top bar, warm light-gray left navigation, dark text, muted gray selected navigation rows, rounded white content regions, Oracle Sans, and a thin Redwood decorative illustration band below the page title. The primary green token is for focus, selected accents, icon surfaces, and primary actions; it is not the dominant header or side-navigation fill.
+
 ## Theme Style
 
 - Theme style: Redwood Light
 - Theme style id: `2599349576570175875`
 - Theme class: `apex-theme-redwood-light`
 - Live root primary token: `#5f7d4f`
+- Visual signature: white header, warm-gray side navigation, gray selected navigation rows, muted sage/teal icon blocks, and Redwood decorative stripe under the title region
 - Capture source: https://oracleapex.cn/ords/r/test/ut/design-overview
 - Canonical source family: https://oracleapex.com/ords/r/apex_pm/ut/...
 - Unique Design, Components, and Icons pages covered: 71 / 71
@@ -344,11 +362,18 @@ Use these as the executable Redwood Light defaults in Open Design prototypes.
 ### Color
 
 - Extracted palette primary: `#4F7D7B`
-- Live root primary / focus / selected navigation: `#5f7d4f`
+- Live root primary / focus / selected accent: `#5f7d4f`
 - Secondary attention: `#D63B25`
-- Canvas or broad surface: `#EAEAEA`
+- Canvas or broad surface: `#F7F6F4` to `#EAEAEA`, depending on page template density
+- Header surface: `#FFFFFF`
+- Side navigation surface: `#F7F6F4`
+- Selected navigation row: `#E7E5E2`
 - Component surface: `#FFFFFF`
 - Text / on-surface: `#161513`
+- Navigation text: `#312D2A`
+- Component index link text: blue-teal `#00688C`
+- Muted icon tile: `#6F7D7B`
+- Small category badge: dark warm gray `#7B7671`
 - Border: `rgba(22,21,19,.1)` for regions and `#E6E6E6` for report cells
 - Success: `#388729`
 - Warning: `#FBCE4A`
@@ -368,12 +393,13 @@ Redwood Light uses Oracle Sans in the captured pages. Use `Oracle Sans` and the 
 - Region shadow: `0 4px 8px -4px rgba(0,0,0,.16)`
 - Button shadow: `0 4px 8px -4px rgba(0,0,0,.16)`
 - Card hover shadow: `0 4px .5rem 0 rgba(0,0,0,.1)`
+- Redwood title accent: a very thin decorative illustration strip below the title area, not a gradient hero or large image block
 
 ## Component Design Patterns
 
 ### Application Shell And Navigation
 
-Redwood Light screens should look like Oracle APEX workspaces using Redwood visual language: compact navigation, title/breadcrumb region, data-first content, Oracle Sans typography, light-gray app canvas, and rounded controls. Use the live Redwood Light root primary `#5f7d4f` for selected navigation, focus rings, and primary actions while retaining the extracted palette token `#4F7D7B` for brand accent work. Use `#EAEAEA` as the broader canvas and white for regions, cards, inputs, and reports. Keep `#161513` as the core text color.
+Redwood Light screens should look like Oracle APEX workspaces using Redwood visual language: compact navigation, title/breadcrumb region, data-first content, Oracle Sans typography, warm light-gray app canvas, and rounded controls. The app header stays white with dark text and utility actions. The left navigation uses warm off-white / light-gray surfaces with dark text; selected rows are muted gray with a narrow accent or icon emphasis. Do not fill the header or side navigation with solid primary green, because that makes Redwood Light collapse into a Vita-like high-chroma shell. Use the live Redwood Light root primary `#5f7d4f` for selected accents, focus rings, primary actions, and small icon surfaces while retaining the extracted palette token `#4F7D7B` for brand accent work. Use white for regions, cards, inputs, and reports. Keep `#161513` as the core text color.
 
 ### Buttons
 
@@ -395,9 +421,13 @@ Reports are dense. Use white grid backgrounds, 12px font, 32px grid cell height,
 
 Cards use white surfaces, 1px borders, 6px radius, 1rem padding, and subtle shadows. Card icons and initials use the Redwood Light primary color with white foreground. Metric Cards should place one emphasized value near a short label and supporting metadata; keep the surface compact and data-first.
 
+### Component Index And Gallery Lists
+
+The Components landing page should read as a dense two-column catalog, not as isolated marketing cards. Use a single white list surface with 6px radius, subtle border, and hairline row/column dividers. Each item has a small muted sage/gray square icon tile, a compact blue-teal component link, short gray description text, and a small dark warm-gray type badge such as `Region`, `List`, `Report`, `Button`, or `Partial`. Preserve this catalog treatment for component browsers, picker pages, and Open Design prototype galleries.
+
 ### Lists, Menus, Tabs, Wizards
 
-List and navigation components should remain utilitarian. Links List supports badges, right arrows, icon display, and action styling. Tabs Container supports remembered active tab, icon placement, fill labels, simple/pill style, and small/large sizes. Wizard supports vertical orientation, clickable steps, and label display modes.
+List and navigation components should remain utilitarian and neutral-shelled. Use blue-teal only for link text and active affordances; use gray row backgrounds for selected tree navigation. Links List supports badges, right arrows, icon display, and action styling. Tabs Container supports remembered active tab, icon placement, fill labels, simple/pill style, and small/large sizes. Wizard supports vertical orientation, clickable steps, and label display modes.
 
 ### Feedback And Status
 
@@ -519,7 +549,10 @@ List and navigation components should remain utilitarian. Links List supports ba
 - Use actual component names from the catalog when describing or generating UI.
 - For data-heavy prototypes, use Interactive Grid, Interactive Report, Classic Report, Cards, Metric Card, and Region patterns before inventing generic dashboard cards.
 - Keep density compact. Do not use oversized hero marketing sections except when the APEX Hero component is specifically requested.
-- Preserve Redwood Light surfaces, primary actions, tight borders, compact controls, and report-oriented layout.
+- Preserve Redwood Light warm-gray shell surfaces, white content regions, dark text, compact controls, and report-oriented layout.
+- Keep the top bar white and the left navigation warm gray. Do not use solid green/teal header or side-navigation panels unless the user explicitly asks for a derived brand theme.
+- Include the thin Redwood decorative strip below title regions on page-template or landing-page prototypes when it helps distinguish the theme style.
+- Render component indexes as dense catalog lists with muted icon tiles, blue-teal component names, gray descriptions, and compact type badges.
 - Use the secondary color sparingly for attention/warning/destructive accents, not as a dominant page theme.
 
 ## Source Coverage

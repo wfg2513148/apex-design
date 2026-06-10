@@ -168,11 +168,13 @@ rounded:
   full: "9999px"
 components:
   button-observed:
-    backgroundColor: "{colors.on-surface}"
+    backgroundColor: "#FFFFFF"
     textColor: "{colors.on-surface}"
+    borderColor: "rgba(0,0,0,.075)"
     rounded: "{rounded.lg}"
     padding: "7px 11px"
   input-observed:
+    backgroundColor: "#FFFFFF"
     textColor: "{colors.on-surface}"
     rounded: "0px"
     padding: "4px 2px"
@@ -193,11 +195,18 @@ coverage:
   capturedAt: "2026-06-10T15:35:56+08:00"
 componentPatterns:
   shell:
-    bodyBackground: "#FFFFFF"
+    bodyBackground: "#FBF9F8"
     contentBackground: "#FFFFFF"
-    headerBackground: "#00688c"
-    sideNavigationBackground: "#00688c"
+    headerBackground: "#302D2A"
+    headerText: "#FFFFFF"
+    sideNavigationBackground: "#302D2A"
     sideNavigationText: "#FFFFFF"
+    sideNavigationSelectedBackground: "hsla(0,0%,100%,.08)"
+    sideNavigationSelectedText: "#FFFFFF"
+    sideNavigationBadgeBackground: "#00688c"
+    titleBackground: "#F1EFED"
+    titleText: "#161513"
+    titleShadow: "0 1px 0 0 rgba(0,0,0,.1)"
     focusColor: "#00688c"
   button:
     backgroundColor: "#FFFFFF"
@@ -248,6 +257,14 @@ componentPatterns:
     textColor: "#161513"
     rounded: "16px"
     fontSize: "12px"
+  component-index:
+    backgroundColor: "#FFFFFF"
+    borderColor: "rgba(0,0,0,.1)"
+    iconBackground: "#00688c"
+    linkColor: "#0E7295"
+    typeBadgeBackground: "rgba(0,0,0,.3)"
+    dividerColor: "rgba(0,0,0,.05)"
+    rounded: "4px"
   status:
     success: "#388729"
     warning: "#FBCE4A"
@@ -264,12 +281,15 @@ This DESIGN.md is scoped to the **Iris** theme style of Oracle APEX Universal Th
 
 The source evidence is the public Universal Theme application at the Design, Components, and Icons navigation groups. The initial extraction supplied the Iris token front matter and 48-page component baseline; this revision expands the document to the full 71 unique page paths / 73 required menu entries reflected by the current Universal Theme menu. Live verification on 2026-06-10 confirmed theme style id `2243014446517417`, body class `apex-theme-iris`, and root primary token `#00688c` after switching the right-side **Theme Style** menu on `oracleapex.cn`. Canonical component URLs remain on `oracleapex.com`; `oracleapex.cn` is cited as the fallback evidence host used for live theme switching and timeout recovery.
 
+Iris is visually distinct from both Vita and Redwood Light. Do not model it as a Vita layout with a different blue, and do not borrow Redwood Light's white header / warm-gray side navigation. Its observed 26.1 CSS uses a deep neutral shell (`#302d2a`) for the top header and side navigation, a warm off-white body canvas (`#fbf9f8`), a pale title band (`#f1efed`), white regions, and blue-teal links/actions. The primary `#00688c` is an action, focus, link, and badge color; it is not the dominant shell fill.
+
 ## Theme Style
 
 - Theme style: Iris
 - Theme style id: `2243014446517417`
 - Theme class: `apex-theme-iris`
 - Live root primary token: `#00688c`
+- Visual signature: deep neutral header and side navigation, warm off-white canvas, pale title band, white content regions, and blue-teal action/link accents
 - Capture source: https://oracleapex.cn/ords/r/test/ut/design-overview
 - Canonical source family: https://oracleapex.com/ords/r/apex_pm/ut/...
 - Unique Design, Components, and Icons pages covered: 71 / 71
@@ -318,11 +338,18 @@ Use these as the executable Iris defaults in Open Design prototypes.
 ### Color
 
 - Extracted palette primary: `#5FB9B5`
-- Live root primary / focus / selected navigation: `#00688c`
+- Live root primary / focus / action accent: `#00688c`
 - Secondary attention: `#B3311F`
-- Canvas or broad surface: `#FFFFFF`
+- Header and side navigation shell: `#302D2A`
+- Canvas or broad surface: `#FBF9F8`
+- Title band surface: `#F1EFED`
 - Component surface: `#FFFFFF`
 - Text / on-surface: `#161513`
+- Header and side navigation text: `#FFFFFF`
+- Selected navigation row: `hsla(0,0%,100%,.08)`
+- Link text: `#0E7295`
+- Primary alternate: `#227E9E`
+- Primary shade: `#E4F1F7`
 - Border: `rgba(0,0,0,.1)` for regions and `#E6E6E6` for report cells
 - Success: `#388729`
 - Warning: `#FBCE4A`
@@ -342,12 +369,13 @@ Iris uses Apple/system UI typography in the captured pages. Use `-apple-system` 
 - Region shadow: `0 2px 4px -2px rgba(0,0,0,.1)`
 - Button shadow: `0 2px 4px -3px rgba(0,0,0,.1)`
 - Card hover shadow: `0 4px .5rem 0 rgba(0,0,0,.1)`
+- Title band shadow: `0 1px 0 0 rgba(0,0,0,.1)`
 
 ## Component Design Patterns
 
 ### Application Shell And Navigation
 
-Iris screens should look like Oracle APEX workspaces: compact header, left navigation, title/breadcrumb region, and dense content regions. Use the live Iris root primary `#00688c` for selected navigation, focus rings, and primary actions while retaining the extracted Iris palette token `#5FB9B5` as the softer brand accent. Keep page and region surfaces white. Use the dark `#161513` on-surface value for text and reserve Iris teal for navigation/action emphasis.
+Iris screens should look like Oracle APEX workspaces with a deep neutral shell: compact dark top header, dark left navigation, pale title/breadcrumb band, warm off-white body canvas, and dense white content regions. Use the live Iris root primary `#00688c` for focus rings, primary actions, badges, and link emphasis while retaining the extracted Iris palette token `#5FB9B5` as the softer brand accent. Do not fill the shell with solid teal/blue; that collapses Iris into a Vita-like high-chroma navigation treatment. Do not use Redwood Light's white header and warm-gray side navigation. Keep regions, cards, inputs, and reports white with tight borders and small shadows.
 
 ### Buttons
 
@@ -369,9 +397,13 @@ Reports are dense. Use white grid backgrounds, 12px font, 32px grid cell height,
 
 Cards use white surfaces, 1px borders, 3px radius, 1rem padding, and subtle shadows. Card icons and initials use the Iris primary color with white foreground. Metric Cards should place one emphasized value near a short label and supporting metadata; keep the surface compact and data-first.
 
+### Component Index And Gallery Lists
+
+The Components landing page should read as a dense catalog on a white component surface, not as decorative marketing cards. Use compact rows or two-column list groupings with hairline dividers, small primary-colored icon tiles, blue-teal component links, short muted descriptions, and compact dark translucent type badges such as `Region`, `List`, `Report`, `Button`, or `Partial`. This catalog treatment should feel sharper and cooler than Redwood Light: less warm gray, no Redwood illustration strip, and more reliance on the dark shell plus teal link/action contrast.
+
 ### Lists, Menus, Tabs, Wizards
 
-List and navigation components should remain utilitarian. Links List supports badges, right arrows, icon display, and action styling. Tabs Container supports remembered active tab, icon placement, fill labels, simple/pill style, and small/large sizes. Wizard supports vertical orientation, clickable steps, and label display modes.
+List and navigation components should remain utilitarian. In side navigation, use the dark neutral shell with white text and a subtle translucent selected row; use teal for badges, focus, and link/action emphasis rather than as a full selected-row fill. Links List supports badges, right arrows, icon display, and action styling. Tabs Container supports remembered active tab, icon placement, fill labels, simple/pill style, and small/large sizes. Wizard supports vertical orientation, clickable steps, and label display modes.
 
 ### Feedback And Status
 
@@ -493,7 +525,11 @@ List and navigation components should remain utilitarian. Links List supports ba
 - Use actual component names from the catalog when describing or generating UI.
 - For data-heavy prototypes, use Interactive Grid, Interactive Report, Classic Report, Cards, Metric Card, and Region patterns before inventing generic dashboard cards.
 - Keep density compact. Do not use oversized hero marketing sections except when the APEX Hero component is specifically requested.
-- Preserve Iris surfaces, primary actions, tight borders, compact controls, and report-oriented layout.
+- Preserve Iris' dark neutral shell, warm off-white body canvas, pale title band, white content regions, compact controls, and report-oriented layout.
+- Keep the top header and left navigation deep neutral `#302D2A`. Do not render them as solid teal/blue panels unless the user explicitly asks for a derived brand theme.
+- Use `#00688c` and `#0E7295` for primary actions, focus, badges, and links; do not use them as the dominant page background.
+- Do not add Redwood Light's decorative title stripe or white/warm-gray shell to Iris prototypes.
+- Render component indexes as dense white catalog surfaces with teal icon/link accents and compact dark translucent type badges.
 - Use the secondary color sparingly for attention/warning/destructive accents, not as a dominant page theme.
 
 ## Source Coverage
