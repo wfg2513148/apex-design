@@ -1,5 +1,7 @@
 # Oracle APEX Universal Theme Design Systems
 
+[中文说明](README.zh-CN.md)
+
 Source-backed `DESIGN.md` files for Oracle APEX Universal Theme styles, prepared for Open Design and other design-agent workflows.
 
 This repository is not an Oracle project. It preserves observed Oracle APEX Universal Theme design evidence so teams can generate or review Oracle APEX-style web prototypes without mixing theme styles together.
@@ -19,6 +21,7 @@ The top-level [DESIGN.md](DESIGN.md) is the repository index. Each theme directo
 ```text
 .
 |-- README.md
+|-- README.zh-CN.md
 |-- DESIGN.md
 |-- Iris/
 |   `-- DESIGN.md
