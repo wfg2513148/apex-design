@@ -17,8 +17,11 @@
 | Iris | `深色顶栏 + 深色侧边导航 + 浅色标题带 + 白色内容区` | 使用 `#302D2A` 作为应用壳颜色，`#00688c` 只用于链接、焦点、badge 和主要动作。 |
 | Redwood Light | `白色顶栏 + 暖灰侧边导航 + Redwood 标题装饰条 + 白色内容区` | 使用暖灰中性色和 sage/teal 强调色，不要生成成绿色版 Vita。 |
 | Vita | `蓝色顶栏 + 蓝色侧边导航 + 白色标题/内容区 + 紧凑 Region` | 使用 `#056AC8` 作为高强调导航和动作色。 |
+| Vita - Dark | `蓝色顶栏 + 炭黑侧边导航 + 深色内容区` | 保持 Vita 的紧凑密度，但把应用表面切换为深色组件和深色 Region。 |
+| Vita - Red | `红色顶栏 + 浅色侧边导航 + 白色内容区` | 使用 `#DA1B1B` 作为主强调色，不要把全部 Region 都做成警告状态。 |
+| Vita - Slate | `灰蓝顶栏 + 深色侧边导航 + 浅灰标题带` | 保留 Vita 组件密度，同时使用 slate 导航壳和低饱和中性色。 |
 
-上面的视觉概览来自仓库中记录的 token 和设计规则，不是 Oracle APEX 的真实页面截图。Iris、Redwood Light、Vita 在仓库中保持为三个独立设计体系，导入和生成原型时也应分别使用。
+上面的视觉概览来自仓库中记录的 token 和设计规则，不是 Oracle APEX 的真实页面截图。每个主题样式在仓库中保持为独立设计体系，导入和生成原型时也应分别使用。
 
 ## 仓库内容
 
@@ -27,6 +30,9 @@
 | Iris | [Iris/DESIGN.md](Iris/DESIGN.md) | 71 个 Design / Components / Icons 唯一路径；73 个菜单条目 | 深色中性导航壳、暖白页面背景、浅色标题带、蓝绿色动作强调 |
 | Redwood Light | [Redwood-Light/DESIGN.md](Redwood-Light/DESIGN.md) | 71 个 Design / Components / Icons 唯一路径；73 个菜单条目 | 白色顶栏、暖灰导航、Redwood 标题装饰条、sage/teal 强调色 |
 | Vita | [Vita/DESIGN.md](Vita/DESIGN.md) | 71 个 Design / Components / Icons 唯一路径；73 个菜单条目 | 白色内容面、蓝色导航/动作强调、紧凑 APEX 应用壳 |
+| Vita - Dark | [Vita-Dark/DESIGN.md](Vita-Dark/DESIGN.md) | 71 个 Design / Components / Icons 唯一路径；73 个菜单条目 | 炭黑应用壳、深色 Region、Vita 蓝色动作强调 |
+| Vita - Red | [Vita-Red/DESIGN.md](Vita-Red/DESIGN.md) | 71 个 Design / Components / Icons 唯一路径；73 个菜单条目 | 白色内容面、红色顶栏/动作强调、紧凑 Vita 结构 |
+| Vita - Slate | [Vita-Slate/DESIGN.md](Vita-Slate/DESIGN.md) | 71 个 Design / Components / Icons 唯一路径；73 个菜单条目 | slate 导航壳、浅灰标题带、灰蓝主强调色 |
 
 顶层 [DESIGN.md](DESIGN.md) 是主题索引。每个主题目录都是独立设计体系，目录中只有一个规范文件 `DESIGN.md`，包含机器可读 YAML front matter 和面向人/AI 的设计说明。
 
@@ -42,6 +48,12 @@
 |-- Redwood-Light/
 |   `-- DESIGN.md
 |-- Vita/
+|   `-- DESIGN.md
+|-- Vita-Dark/
+|   `-- DESIGN.md
+|-- Vita-Red/
+|   `-- DESIGN.md
+|-- Vita-Slate/
 |   `-- DESIGN.md
 |-- docs/
 |   |-- assets/
@@ -65,9 +77,12 @@ cd apex-design
 Iris/DESIGN.md
 Redwood-Light/DESIGN.md
 Vita/DESIGN.md
+Vita-Dark/DESIGN.md
+Vita-Red/DESIGN.md
+Vita-Slate/DESIGN.md
 ```
 
-每次生成原型时建议只使用一个主题样式，避免 Iris、Redwood Light、Vita 的视觉语言混在一起。
+每次生成原型时建议只使用一个主题样式，避免不同主题样式的视觉语言混在一起。
 
 ## 导入 Open Design
 
@@ -83,6 +98,9 @@ Vita/DESIGN.md
 <repo>/Iris
 <repo>/Redwood-Light
 <repo>/Vita
+<repo>/Vita-Dark
+<repo>/Vita-Red
+<repo>/Vita-Slate
 ```
 
 推荐导入模式：
@@ -98,6 +116,9 @@ Vita/DESIGN.md
 | `Iris` | Oracle APEX Iris Theme |
 | `Redwood-Light` | Oracle APEX Redwood Light Theme |
 | `Vita` | Oracle APEX Vita Theme |
+| `Vita-Dark` | Oracle APEX Vita Dark Theme |
+| `Vita-Red` | Oracle APEX Vita Red Theme |
+| `Vita-Slate` | Oracle APEX Vita Slate Theme |
 
 更多步骤见 [docs/open-design-import.md](docs/open-design-import.md)。
 
@@ -137,7 +158,7 @@ https://oracleapex.cn/ords/r/test/ut/...
 
 当前仓库包含：
 
-- 3 个主题样式：Iris、Redwood Light、Vita
+- 6 个主题样式：Iris、Redwood Light、Vita、Vita - Dark、Vita - Red、Vita - Slate
 - 每个主题 71 个唯一 Design / Components / Icons 页面路径
 - 每个主题 73 个必需菜单条目，包含别名条目
 - 每个主题都有机器可读 YAML front matter

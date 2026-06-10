@@ -29,6 +29,9 @@ This guide describes how to maintain the extracted Oracle APEX Universal Theme d
 | Iris | `2243014446517417` | `apex-theme-iris` | `#00688c` |
 | Redwood Light | `2599349576570175875` | `apex-theme-redwood-light` | `#5f7d4f` |
 | Vita | `2722798454316704879` | `apex-theme-vita` | `#056ac8` |
+| Vita - Dark | `3546271551760430036` | `apex-theme-vita-dark` | `#056ac8` |
+| Vita - Red | `1941380852169028559` | `apex-theme-vita-red` | `#da1b1b` |
+| Vita - Slate | `3294906487728305352` | `apex-theme-vita-slate` | `#505f6d` |
 
 ## Coverage Expectations
 
@@ -48,7 +51,7 @@ Run from the repository root.
 Check YAML front matter:
 
 ```sh
-ruby -e "require 'yaml'; %w[Iris/DESIGN.md Redwood-Light/DESIGN.md Vita/DESIGN.md].each { |f| YAML.safe_load(File.read(f).split(/^---$/)[1], aliases: true); puts \"#{f}: yaml ok\" }"
+ruby -e "require 'yaml'; %w[Iris/DESIGN.md Redwood-Light/DESIGN.md Vita/DESIGN.md Vita-Dark/DESIGN.md Vita-Red/DESIGN.md Vita-Slate/DESIGN.md].each { |f| YAML.safe_load(File.read(f).split(/^---$/)[1], aliases: true); puts \"#{f}: yaml ok\" }"
 ```
 
 Check for whitespace errors:
@@ -74,6 +77,7 @@ Use semantic versioning tags:
 - `v0.2.2`: added public repository documentation and bilingual usage guidance.
 - `v0.2.3`: replaced README diagrams with PNG visual guides for GitHub readers.
 - `v0.2.4`: added live component extraction matrices for Iris, Redwood Light, and Vita.
+- `v0.3.0`: added Vita - Dark, Vita - Red, and Vita - Slate design systems with live component extraction matrices.
 
 Future release guidance:
 

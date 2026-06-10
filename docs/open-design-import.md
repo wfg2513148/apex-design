@@ -10,6 +10,9 @@ Import one theme directory at a time:
 Iris/
 Redwood-Light/
 Vita/
+Vita-Dark/
+Vita-Red/
+Vita-Slate/
 ```
 
 Do not import the repository root if you want separate design-system choices. Each theme directory contains its own canonical `DESIGN.md`.
@@ -32,6 +35,9 @@ Use absolute paths on your machine. For example, if the repository is cloned at 
 <repo>/Iris
 <repo>/Redwood-Light
 <repo>/Vita
+<repo>/Vita-Dark
+<repo>/Vita-Red
+<repo>/Vita-Slate
 ```
 
 ## Import Modes
@@ -51,6 +57,9 @@ Use these names in Open Design:
 | `Iris` | Oracle APEX Iris Theme |
 | `Redwood-Light` | Oracle APEX Redwood Light Theme |
 | `Vita` | Oracle APEX Vita Theme |
+| `Vita-Dark` | Oracle APEX Vita Dark Theme |
+| `Vita-Red` | Oracle APEX Vita Red Theme |
+| `Vita-Slate` | Oracle APEX Vita Slate Theme |
 
 ## Updating An Existing Import
 
@@ -62,6 +71,9 @@ Example ids used by a typical local import:
 user:iris
 user:redwood-light
 user:oracle-apex-vita-theme-design-system
+user:oracle-apex-vita-dark-theme-design-system
+user:oracle-apex-vita-red-theme-design-system
+user:oracle-apex-vita-slate-theme-design-system
 ```
 
 After update, verify:
@@ -83,7 +95,7 @@ Rules:
 
 - Use one theme at a time.
 - Ask for APEX components by name when possible.
-- Do not mix Iris, Redwood Light, and Vita visual signatures unless the task is a comparison.
+- Do not mix visual signatures from different theme styles unless the task is a comparison.
 - For data-heavy screens, prefer Interactive Grid, Interactive Report, Classic Report, Cards, Metric Card, and Region patterns.
 
 ## Troubleshooting

@@ -17,8 +17,11 @@ Click the overview image to open the theme index.
 | Iris | `dark header + dark side nav + pale title band + white regions` | Use `#302D2A` for the app shell and keep `#00688c` for links, focus, badges, and primary actions. |
 | Redwood Light | `white header + warm-gray side nav + Redwood title strip + white regions` | Use warm neutral surfaces and sage/teal accents; do not turn it into a green Vita shell. |
 | Vita | `blue header + blue side nav + white title/content + compact regions` | Use `#056AC8` as the high-emphasis navigation and action color. |
+| Vita - Dark | `blue header + charcoal side nav + dark content regions` | Keep Vita density, but switch app surfaces to charcoal and dark component chrome. |
+| Vita - Red | `red header + light side nav + white content regions` | Use `#DA1B1B` as the primary accent without turning every region into an alert. |
+| Vita - Slate | `slate header + dark side nav + pale slate title band` | Combine Vita component density with slate navigation and muted neutral surfaces. |
 
-The project keeps Iris, Redwood Light, and Vita as separate design systems. The overview above is derived from the documented tokens; it is not a screenshot of Oracle APEX.
+The project keeps each theme style as a separate design system. The overview above is derived from the documented tokens; it is not a screenshot of Oracle APEX.
 
 ## What Is Included
 
@@ -27,6 +30,9 @@ The project keeps Iris, Redwood Light, and Vita as separate design systems. The 
 | Iris | [Iris/DESIGN.md](Iris/DESIGN.md) | 71 unique Design, Components, and Icons pages; 73 menu entries | Deep neutral shell, warm off-white canvas, pale title band, blue-teal action accents |
 | Redwood Light | [Redwood-Light/DESIGN.md](Redwood-Light/DESIGN.md) | 71 unique Design, Components, and Icons pages; 73 menu entries | White header, warm-gray navigation, Redwood decorative title strip, sage/teal accents |
 | Vita | [Vita/DESIGN.md](Vita/DESIGN.md) | 71 unique Design, Components, and Icons pages; 73 menu entries | White surfaces, blue navigation/action emphasis, compact APEX application shell |
+| Vita - Dark | [Vita-Dark/DESIGN.md](Vita-Dark/DESIGN.md) | 71 unique Design, Components, and Icons pages; 73 menu entries | Charcoal application shell, dark regions, Vita blue action emphasis |
+| Vita - Red | [Vita-Red/DESIGN.md](Vita-Red/DESIGN.md) | 71 unique Design, Components, and Icons pages; 73 menu entries | White content surfaces, red header/action emphasis, compact Vita structure |
+| Vita - Slate | [Vita-Slate/DESIGN.md](Vita-Slate/DESIGN.md) | 71 unique Design, Components, and Icons pages; 73 menu entries | Slate navigation chrome, pale title band, muted gray primary emphasis |
 
 The top-level [DESIGN.md](DESIGN.md) is the repository index. Each theme directory is an independent design system and contains a single canonical `DESIGN.md` file with YAML front matter plus human-readable guidance.
 
@@ -42,6 +48,12 @@ The top-level [DESIGN.md](DESIGN.md) is the repository index. Each theme directo
 |-- Redwood-Light/
 |   `-- DESIGN.md
 |-- Vita/
+|   `-- DESIGN.md
+|-- Vita-Dark/
+|   `-- DESIGN.md
+|-- Vita-Red/
+|   `-- DESIGN.md
+|-- Vita-Slate/
 |   `-- DESIGN.md
 |-- docs/
 |   |-- assets/
@@ -67,7 +79,7 @@ Choose one theme directory and use its `DESIGN.md` as the design-system source.
 
 Click the workflow image to open the step-by-step Open Design import guide.
 
-Import each theme directory as its own design system. Do not import the repository root if you want independent Iris, Redwood Light, and Vita choices.
+Import each theme directory as its own design system. Do not import the repository root if you want independent theme-style choices.
 
 Example project paths after cloning:
 
@@ -75,13 +87,16 @@ Example project paths after cloning:
 <repo>/Iris
 <repo>/Redwood-Light
 <repo>/Vita
+<repo>/Vita-Dark
+<repo>/Vita-Red
+<repo>/Vita-Slate
 ```
 
 Recommended Open Design import mode:
 
 - Use `hybrid` when you want Open Design to make the system convenient for prototype generation.
 - Use `verbatim` when source preservation matters more than normalized generated artifacts.
-- Keep the three theme styles separate unless you are intentionally building a comparison or derived multi-theme package.
+- Keep theme styles separate unless you are intentionally building a comparison or derived multi-theme package.
 
 See [docs/open-design-import.md](docs/open-design-import.md) for step-by-step import guidance.
 
@@ -120,7 +135,7 @@ The fallback host is used only when the primary source times out or when live th
 
 Current corpus:
 
-- 3 theme styles
+- 6 theme styles
 - 71 unique Design, Components, and Icons pages per theme
 - 73 required menu entries per theme, including aliases
 - Machine-readable YAML front matter in every theme file
