@@ -15,10 +15,6 @@ The current corpus contains extracted design systems for three official Universa
 Each theme directory contains:
 
 - `DESIGN.md`: the human-readable design-system document with YAML front matter for machine-readable tokens.
-- `extraction-summary.json`: extraction coverage, theme metadata, and canonical/source URL mapping.
-- `extraction-progress.json`: page-level extraction progress evidence.
-
-The top-level `DESIGN.md` is the index and source-scope summary.
 
 ## Source Priority
 
@@ -37,18 +33,3 @@ Do not redesign, normalize, or "improve" Oracle's observed design values unless 
 - Keep canonical URLs pointed at `oracleapex.com`; use fallback URLs only as source evidence.
 - When adding or refreshing a theme, update the top-level `DESIGN.md` index and include coverage counts.
 - Avoid broad formatting churn in extracted Markdown or JSON.
-
-## Verification
-
-For documentation-only edits, verify with:
-
-```bash
-rtk find . -maxdepth 2 -type f | sort
-rtk wc -l DESIGN.md */DESIGN.md */extraction-*.json
-```
-
-For extraction refreshes, also verify:
-
-- attempted, extracted, and failed counts in `extraction-summary.json`
-- source host split between `oracleapex.com` and fallback hosts
-- corresponding Source Coverage section in each changed `DESIGN.md`
