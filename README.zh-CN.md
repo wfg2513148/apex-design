@@ -8,9 +8,13 @@
 
 ## 图片概览
 
-<img src="docs/assets/theme-overview.svg" alt="Iris、Redwood Light、Vita 三套设计体系概览" draggable="false">
+| 主题 | 应用壳示意 | 主要视觉规则 |
+| --- | --- | --- |
+| Iris | `深色顶栏 + 深色侧边导航 + 浅色标题带 + 白色内容区` | 使用 `#302D2A` 作为应用壳颜色，`#00688c` 只用于链接、焦点、badge 和主要动作。 |
+| Redwood Light | `白色顶栏 + 暖灰侧边导航 + Redwood 标题装饰条 + 白色内容区` | 使用暖灰中性色和 sage/teal 强调色，不要生成成绿色版 Vita。 |
+| Vita | `蓝色顶栏 + 蓝色侧边导航 + 白色标题/内容区 + 紧凑 Region` | 使用 `#056AC8` 作为高强调导航和动作色。 |
 
-上图是根据仓库中记录的 token 和设计规则绘制的概念示意图，不是 Oracle APEX 的真实页面截图。Iris、Redwood Light、Vita 在仓库中保持为三个独立设计体系，导入和生成原型时也应分别使用。
+上面的视觉概览来自仓库中记录的 token 和设计规则，不是 Oracle APEX 的真实页面截图。Iris、Redwood Light、Vita 在仓库中保持为三个独立设计体系，导入和生成原型时也应分别使用。
 
 ## 仓库内容
 
@@ -36,7 +40,6 @@
 |-- Vita/
 |   `-- DESIGN.md
 |-- docs/
-|   |-- assets/
 |   |-- maintenance.md
 |   `-- open-design-import.md
 `-- CONTRIBUTING.md
@@ -63,7 +66,9 @@ Vita/DESIGN.md
 
 ## 导入 Open Design
 
-<img src="docs/assets/open-design-flow.svg" alt="Open Design 导入流程" draggable="false">
+```text
+克隆仓库 -> 选择一个主题目录 -> 作为本地设计体系导入 -> 生成 APEX 原型
+```
 
 在 Open Design 中应逐个导入主题目录，而不是导入仓库根目录。
 

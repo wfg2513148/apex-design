@@ -8,9 +8,13 @@ This repository is not an Oracle project. It preserves observed Oracle APEX Univ
 
 ## Visual Overview
 
-<img src="docs/assets/theme-overview.svg" alt="Theme overview: Iris, Redwood Light, and Vita design systems" draggable="false">
+| Theme | Shell sketch | Primary visual rule |
+| --- | --- | --- |
+| Iris | `dark header + dark side nav + pale title band + white regions` | Use `#302D2A` for the app shell and keep `#00688c` for links, focus, badges, and primary actions. |
+| Redwood Light | `white header + warm-gray side nav + Redwood title strip + white regions` | Use warm neutral surfaces and sage/teal accents; do not turn it into a green Vita shell. |
+| Vita | `blue header + blue side nav + white title/content + compact regions` | Use `#056AC8` as the high-emphasis navigation and action color. |
 
-The project keeps Iris, Redwood Light, and Vita as separate design systems. The image above is a conceptual preview derived from the documented tokens; it is not a screenshot of Oracle APEX.
+The project keeps Iris, Redwood Light, and Vita as separate design systems. The overview above is derived from the documented tokens; it is not a screenshot of Oracle APEX.
 
 ## What Is Included
 
@@ -36,7 +40,6 @@ The top-level [DESIGN.md](DESIGN.md) is the repository index. Each theme directo
 |-- Vita/
 |   `-- DESIGN.md
 |-- docs/
-|   |-- assets/
 |   |-- maintenance.md
 |   `-- open-design-import.md
 `-- CONTRIBUTING.md
@@ -55,7 +58,9 @@ Choose one theme directory and use its `DESIGN.md` as the design-system source.
 
 ## Use With Open Design
 
-<img src="docs/assets/open-design-flow.svg" alt="Open Design import flow" draggable="false">
+```text
+Clone repo -> Pick one theme folder -> Import as local design system -> Generate APEX prototype
+```
 
 Import each theme directory as its own design system. Do not import the repository root if you want independent Iris, Redwood Light, and Vita choices.
 
