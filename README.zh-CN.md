@@ -8,7 +8,7 @@
 
 ## 图片概览
 
-![Iris、Redwood Light、Vita 三套设计体系概览](docs/assets/theme-overview.svg)
+<img src="docs/assets/theme-overview.svg" alt="Iris、Redwood Light、Vita 三套设计体系概览" draggable="false">
 
 上图是根据仓库中记录的 token 和设计规则绘制的概念示意图，不是 Oracle APEX 的真实页面截图。Iris、Redwood Light、Vita 在仓库中保持为三个独立设计体系，导入和生成原型时也应分别使用。
 
@@ -63,7 +63,7 @@ Vita/DESIGN.md
 
 ## 导入 Open Design
 
-![Open Design 导入流程](docs/assets/open-design-flow.svg)
+<img src="docs/assets/open-design-flow.svg" alt="Open Design 导入流程" draggable="false">
 
 在 Open Design 中应逐个导入主题目录，而不是导入仓库根目录。
 

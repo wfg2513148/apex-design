@@ -8,7 +8,7 @@ This repository is not an Oracle project. It preserves observed Oracle APEX Univ
 
 ## Visual Overview
 
-![Theme overview: Iris, Redwood Light, and Vita design systems](docs/assets/theme-overview.svg)
+<img src="docs/assets/theme-overview.svg" alt="Theme overview: Iris, Redwood Light, and Vita design systems" draggable="false">
 
 The project keeps Iris, Redwood Light, and Vita as separate design systems. The image above is a conceptual preview derived from the documented tokens; it is not a screenshot of Oracle APEX.
 
@@ -55,7 +55,7 @@ Choose one theme directory and use its `DESIGN.md` as the design-system source.
 
 ## Use With Open Design
 
-![Open Design import flow](docs/assets/open-design-flow.svg)
+<img src="docs/assets/open-design-flow.svg" alt="Open Design import flow" draggable="false">
 
 Import each theme directory as its own design system. Do not import the repository root if you want independent Iris, Redwood Light, and Vita choices.
 
