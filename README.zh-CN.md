@@ -6,6 +6,12 @@
 
 本项目不是 Oracle 官方项目。它的目标是把公开 Universal Theme 应用中观察到的设计证据整理成可导入、可审阅、可复用的设计体系，而不是重新设计 Oracle APEX。
 
+## 图片概览
+
+![Iris、Redwood Light、Vita 三套设计体系概览](docs/assets/theme-overview.svg)
+
+上图是根据仓库中记录的 token 和设计规则绘制的概念示意图，不是 Oracle APEX 的真实页面截图。Iris、Redwood Light、Vita 在仓库中保持为三个独立设计体系，导入和生成原型时也应分别使用。
+
 ## 仓库内容
 
 | 主题样式 | 设计体系文件 | 验证覆盖范围 | 视觉特征 |
@@ -30,6 +36,7 @@
 |-- Vita/
 |   `-- DESIGN.md
 |-- docs/
+|   |-- assets/
 |   |-- maintenance.md
 |   `-- open-design-import.md
 `-- CONTRIBUTING.md
@@ -55,6 +62,8 @@ Vita/DESIGN.md
 每次生成原型时建议只使用一个主题样式，避免 Iris、Redwood Light、Vita 的视觉语言混在一起。
 
 ## 导入 Open Design
+
+![Open Design 导入流程](docs/assets/open-design-flow.svg)
 
 在 Open Design 中应逐个导入主题目录，而不是导入仓库根目录。
 

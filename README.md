@@ -6,6 +6,12 @@ Source-backed `DESIGN.md` files for Oracle APEX Universal Theme styles, prepared
 
 This repository is not an Oracle project. It preserves observed Oracle APEX Universal Theme design evidence so teams can generate or review Oracle APEX-style web prototypes without mixing theme styles together.
 
+## Visual Overview
+
+![Theme overview: Iris, Redwood Light, and Vita design systems](docs/assets/theme-overview.svg)
+
+The project keeps Iris, Redwood Light, and Vita as separate design systems. The image above is a conceptual preview derived from the documented tokens; it is not a screenshot of Oracle APEX.
+
 ## What Is Included
 
 | Theme style | Design system file | Verified coverage | Visual signature |
@@ -30,6 +36,7 @@ The top-level [DESIGN.md](DESIGN.md) is the repository index. Each theme directo
 |-- Vita/
 |   `-- DESIGN.md
 |-- docs/
+|   |-- assets/
 |   |-- maintenance.md
 |   `-- open-design-import.md
 `-- CONTRIBUTING.md
@@ -47,6 +54,8 @@ cd apex-design
 Choose one theme directory and use its `DESIGN.md` as the design-system source.
 
 ## Use With Open Design
+
+![Open Design import flow](docs/assets/open-design-flow.svg)
 
 Import each theme directory as its own design system. Do not import the repository root if you want independent Iris, Redwood Light, and Vita choices.
 
