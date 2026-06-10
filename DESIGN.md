@@ -6,8 +6,8 @@ This repository contains extracted design-system documentation for Oracle APEX U
 
 | Theme style | File | Source coverage | Component coverage |
 | --- | --- | --- | --- |
-| Iris | `Iris/DESIGN.md` | 48 attempted, 48 extracted, 0 failed | Summary-level component evidence |
-| Redwood Light | `Redwood-Light/DESIGN.md` | 48 attempted, 48 extracted, 0 failed | Summary-level component evidence |
+| Iris | `Iris/DESIGN.md` | 71 unique Design/Components/Icons pages HTTP/theme verified | 73 required menu entries covered, including component aliases and Icons |
+| Redwood Light | `Redwood-Light/DESIGN.md` | 71 unique Design/Components/Icons pages HTTP/theme verified | 73 required menu entries covered, including component aliases and Icons |
 | Vita | `Vita/DESIGN.md` | 71 unique Design/Components/Icons pages verified in Vita | 73 required menu entries covered, including component aliases and Icons |
 
 ## Notes
