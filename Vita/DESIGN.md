@@ -163,13 +163,17 @@ components:
     rounded: "0px"
     padding: "7px"
 coverage:
-  source: "https://oracleapex.cn/ords/r/test/ut/components"
+  source: "https://oracleapex.cn/ords/r/test/ut/design-overview"
   canonicalHost: "https://oracleapex.com/ords/r/apex_pm/ut"
   themeStyle: "Vita"
   themeStyleId: "2722798454316704879"
   standardComponents: 46
-  verifiedVitaPages: 46
-  capturedAt: "2026-06-10T03:56:34.574Z"
+  designPages: 11
+  componentAndIconPages: 60
+  uniqueVitaPages: 71
+  requiredMenuEntries: 73
+  verifiedVitaPages: 71
+  capturedAt: "2026-06-10T10:33:53Z"
 componentPatterns:
   shell:
     bodyBackground: "#FFFFFF"
@@ -241,16 +245,50 @@ componentPatterns:
 
 This DESIGN.md is scoped to the **Vita** theme style of Oracle APEX Universal Theme. It is intended for Open Design import so product managers and design agents can generate APEX-style application prototypes with source-backed Vita component patterns. Do not merge Iris, Redwood Light, Vita Dark, Vita Red, or Vita Slate into this file.
 
-The source evidence was collected from the public Universal Theme application after switching the right-side **Theme Style** menu to **Vita**. Verification signals: 46 of 46 component pages reported `Vita (Current)`, page bodies carried `apex-theme-vita`, and the root primary token resolved to `#056ac8`. Canonical component URLs remain on `oracleapex.com`; `oracleapex.cn` is cited as the fallback evidence host used for the live scrape.
+The source evidence was collected from the public Universal Theme application after switching the right-side **Theme Style** menu to **Vita**. Verification signals: 71 unique Design, Components, and Icons pages carried `apex-theme-vita`, the root primary token resolved to `#056ac8`, and spot checks reported `Vita (Current)`. Canonical component URLs remain on `oracleapex.com`; `oracleapex.cn` is cited as the fallback evidence host used for the live scrape.
 
 ## Theme Style
 
 - Theme style: Vita
 - Theme style id: `2722798454316704879`
-- Capture source: https://oracleapex.cn/ords/r/test/ut/components
+- Capture source: https://oracleapex.cn/ords/r/test/ut/design-overview
 - Canonical source family: https://oracleapex.com/ords/r/apex_pm/ut/...
-- Standard component pages verified: 46 / 46
-- Capture timestamp: 2026-06-10T03:56:34.574Z
+- Unique Design, Components, and Icons pages verified: 71 / 71
+- Required menu entries covered: 73 / 73, including repeated aliases such as Navigation / Navigation Bar and Modal Dialogs / Page Dialog
+- Capture timestamp: 2026-06-10T10:33:53Z
+
+## Vita Coverage Model
+
+Open Design should treat this file as the Vita-only extraction for the Universal Theme **Design**, **Components**, and **Icons** navigation groups. The canonical URL for every listed page is `https://oracleapex.com/ords/r/apex_pm/ut/<path>`; the fallback evidence host used for live verification was `https://oracleapex.cn/ords/r/test/ut/<path>`.
+
+### Design Menu
+
+- **Design Overview** (`design-overview`): establishes the Universal Theme design overview and source navigation shell.
+- **Colors** (`colors`): defines Vita color use around `#056AC8` primary, `#FFC628` secondary attention, white surfaces, dense borders, and status colors.
+- **Navigation** (`navigation`): covers application shell navigation, side navigation, navigation bar behavior, selected state, and breadcrumb/title placement.
+- **Grid Layout** (`grid-layout`): uses the Universal Theme 12-column grid layout, responsive classes, visibility classes, and compact region alignment.
+- **Page Templates** (`pages`): covers Standard, Left Side Column, Right Side Column, Both Side Column, Marquee Detail, Dialog, and other page-template layouts.
+- **Theme Styles** (`theme-styles`): keeps Vita separate from Iris, Redwood Light, Vita Dark, Vita Red, and Vita Slate.
+- **Mobile Patterns / Navigation** (`navigation2`), **Headers and Footers** (`headers-and-footers`), **Data Entry** (`data-entry2`), **Touch Gestures** (`touch-gestures`), and **jQuery Mobile Components** (`jquery-mobile-components`): apply the same Vita density and token defaults to mobile navigation, mobile data entry, gestures, headers, footers, and jQuery Mobile component patterns.
+
+### Expanded Components And Icons
+
+These menu entries are required in addition to the original 46 standard component pages. Names intentionally preserve Oracle APEX menu labels and common aliases so generators can match either the page title or the navigation item.
+
+- **Badge List** (`badges-list`): same page family as Badges List; supports circular, stacked, grid, flexible box, span-horizontal, float-items, and theme-color variants.
+- **Comments Component** (`comments-component`) and **Comments Report** (`comments-report`): use avatar, comment text, metadata, and status-update layouts for activity feeds.
+- **Content Row Component** (`content-row-component`) and **Content Row Report** (`content-row-report`): use selection controls, icon or avatar slots, primary text, secondary text, and row actions.
+- **Classic Report / Data Tables and Reports** (`standard-reports`), **Interactive Report** (`interactive-report`), **Interactive Grid** (`interactive-grid`), **Faceted Search** (`reports-faceted-search`), **Smart Filters** (`reports-smart-filters`), **Search Region** (`reports-search-region`), **Reflow Report** (`reflow-report`), and **Column Toggle Report** (`column-toggle-report`): keep report UIs dense, table-first, and filter/search controls close to the report they affect.
+- **Dynamic Content Region** (`dynamic-content-region`): corresponds to PL/SQL Dynamic Content and should render generated HTML/text inside standard Vita region chrome.
+- **Forms** (`form-item-types`) and **Form Labels** (`forms`): preserve page-item density, required/help states, label alignment, item pre/post text, and stretch item options.
+- **Map** (`map`): render map regions as data regions with compact controls and Vita region framing; do not make map pages look like standalone consumer maps.
+- **Media List Component** (`media-list-component`) and **Media List Report** (`media-list`): use icon/avatar media, heading, description, metadata, and badge/status slots.
+- **Modal Dialogs** (`page-dialog`), **Page Dialog** (`page-dialog`), **Page Drawer** (`page-drawer`), **Inline Dialog** (`inline-dialog`), **Inline Drawer** (`inline-drawer`), and **Inline Popup** (`inline-popup`): preserve APEX dialog/drawer boundaries, compact headers, visible close affordances, and action button placement.
+- **Tabs / Region Display Selector** (`region-display-selector`) and **Tabs Container** (`tabs`): use RDS for switching page regions and Tabs Container for tabbed region layout with simple or pill styling.
+- **Timeline Component** (`timeline-component`) and **Timeline Report** (`timeline-reports`): use time-ordered activity rows with icon/avatar, title, metadata, and compact report-backed variants.
+- **Value Attribute Pairs Report** (`value-attr-pairs-report`): use key-value report layouts with fixed or variable label widths, left or right aligned details, pagination behavior, and hidden-empty-value options.
+- **Wizards / Wazards** (`wizard-region`): use Wizard Progress List, vertical orientation, clickable steps, and current-step label modes. `Wazards` is treated as a misspelling alias for Wizards in generation prompts.
+- **Icons** (`icons`): use Font APEX classes such as `fa-*`, `a-Icon`, and `t-Icon`; use small/large icon sizing from the Universal Theme icon page and do not replace APEX icon semantics with emoji or unrelated SVG libraries.
 
 ## Vita Token Contract
 
@@ -440,4 +478,82 @@ List and navigation components should remain utilitarian. Links List supports ba
 
 ## Source Coverage
 
-All 46 standard component pages listed by the Universal Theme Components page were visited after switching to Vita. The scrape recorded representative visible elements, Template Option labels, class tokens, and computed styles for each component page. The local working evidence file for this refresh was `.tmp/vita-component-evidence.json`; it is an extraction artifact and not part of the design-system API.
+All 71 unique Design, Components, and Icons page paths were visited after switching to Vita. Each visited page carried `apex-theme-vita` and resolved the primary token to `#056ac8`. The local Playwright evidence also verified that the final Icons page and sampled Design/Component pages remained in the same Vita theme context.
+
+### Verified Page Paths
+
+| Group | Required menu entry | Canonical path |
+| --- | --- | --- |
+| Design | Design Overview | `design-overview` |
+| Design | Colors | `colors` |
+| Design | Navigation | `navigation` |
+| Design | Grid Layout | `grid-layout` |
+| Design | Page Templates | `pages` |
+| Design | Theme Styles | `theme-styles` |
+| Design | Mobile Patterns / Navigation | `navigation2` |
+| Design | Headers and Footers | `headers-and-footers` |
+| Design | Data Entry | `data-entry2` |
+| Design | Touch Gestures | `touch-gestures` |
+| Design | jQuery Mobile Components | `jquery-mobile-components` |
+| Components | Components | `components` |
+| Components | Alert | `alert-region` |
+| Components | Avatar | `avatar-component` |
+| Components | Badge | `badge-component` |
+| Components | Badge List | `badges-list` |
+| Components | Breadcrumb | `breadcrumb` |
+| Components | Buttons | `buttons` |
+| Components | Button Group | `button-container-region` |
+| Components | Button Container | `button-container` |
+| Components | Calendar | `calendars` |
+| Components | Card Regions | `card-regions` |
+| Components | Card Templates | `card-templates` |
+| Components | Carousel | `carousel-region` |
+| Components | Charts | `charts` |
+| Components | Collapsible | `collapsible-region` |
+| Components | Comments Component | `comments-component` |
+| Components | Comments Report | `comments-report` |
+| Components | Content Block | `content-block` |
+| Components | Content Row Component | `content-row-component` |
+| Components | Content Row Report | `content-row-report` |
+| Components | Contextual Info | `contextual-info` |
+| Components | Classic Report / Data Tables and Reports | `standard-reports` |
+| Components | Interactive Report | `interactive-report` |
+| Components | Interactive Grid | `interactive-grid` |
+| Components | Faceted Search | `reports-faceted-search` |
+| Components | Smart Filters | `reports-smart-filters` |
+| Components | Search Region | `reports-search-region` |
+| Components | Reflow Report | `reflow-report` |
+| Components | Column Toggle Report | `column-toggle-report` |
+| Components | Dynamic Content Region | `dynamic-content-region` |
+| Components | Flexbox Container | `flexbox-container-component` |
+| Components | Forms | `form-item-types` |
+| Components | Form Labels | `forms` |
+| Components | Help Text | `help-text` |
+| Components | Hero | `hero-region` |
+| Components | Image | `region-image` |
+| Components | Links List | `links-list` |
+| Components | List View | `list-view` |
+| Components | Map | `map` |
+| Components | Media List Component | `media-list-component` |
+| Components | Media List Report | `media-list` |
+| Components | Menu Bar | `menu-bar-list` |
+| Components | Menu Popup | `menu-popup` |
+| Components | Metric Card | `metric-card` |
+| Components | Modal Dialogs | `page-dialog` |
+| Components | Page Dialog | `page-dialog` |
+| Components | Page Drawer | `page-drawer` |
+| Components | Inline Dialog | `inline-dialog` |
+| Components | Inline Drawer | `inline-drawer` |
+| Components | Inline Popup | `inline-popup` |
+| Components | Navigation Bar | `navigation` |
+| Components | Standard | `standard-region` |
+| Components | Static Content | `static-content` |
+| Components | Region Display Selector | `region-display-selector` |
+| Components | Tabs Container | `tabs` |
+| Components | Timeline Component | `timeline-component` |
+| Components | Timeline Report | `timeline-reports` |
+| Components | Title Bar | `title-bar-region` |
+| Components | Tree | `tree` |
+| Components | Value Attribute Pairs Report | `value-attr-pairs-report` |
+| Components | Wizards / Wazards | `wizard-region` |
+| Icons | Icons | `icons` |
