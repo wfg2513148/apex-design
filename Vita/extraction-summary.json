@@ -1,0 +1,253 @@
+{
+  "theme": {
+    "name": "Vita",
+    "slug": "Vita",
+    "id": "2722798454316704879"
+  },
+  "attempted": 48,
+  "extracted": 48,
+  "failed": 0,
+  "failures": [],
+  "pages": [
+    {
+      "label": "Design",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/design-overview",
+      "sourceUrl": "https://oracleapex.com/ords/r/apex_pm/ut/design-overview"
+    },
+    {
+      "label": "Components",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/components",
+      "sourceUrl": "https://oracleapex.com/ords/r/apex_pm/ut/components"
+    },
+    {
+      "label": "Alert",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/alert-region",
+      "sourceUrl": "https://oracleapex.cn/ords/r/test/ut/alert-region"
+    },
+    {
+      "label": "Avatar",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/avatar-component",
+      "sourceUrl": "https://oracleapex.com/ords/r/apex_pm/ut/avatar-component"
+    },
+    {
+      "label": "Badges List",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/badges-list",
+      "sourceUrl": "https://oracleapex.com/ords/r/apex_pm/ut/badges-list"
+    },
+    {
+      "label": "Badge",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/badge-component",
+      "sourceUrl": "https://oracleapex.com/ords/r/apex_pm/ut/badge-component"
+    },
+    {
+      "label": "Breadcrumb",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/breadcrumb",
+      "sourceUrl": "https://oracleapex.com/ords/r/apex_pm/ut/breadcrumb"
+    },
+    {
+      "label": "Button",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/buttons",
+      "sourceUrl": "https://oracleapex.cn/ords/r/test/ut/buttons"
+    },
+    {
+      "label": "Button Container",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/button-container",
+      "sourceUrl": "https://oracleapex.cn/ords/r/test/ut/button-container"
+    },
+    {
+      "label": "Button Group",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/button-container-region",
+      "sourceUrl": "https://oracleapex.com/ords/r/apex_pm/ut/button-container-region"
+    },
+    {
+      "label": "Calendar",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/calendars",
+      "sourceUrl": "https://oracleapex.com/ords/r/apex_pm/ut/calendars"
+    },
+    {
+      "label": "Card Regions",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/card-regions",
+      "sourceUrl": "https://oracleapex.com/ords/r/apex_pm/ut/card-regions"
+    },
+    {
+      "label": "Card Templates",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/card-templates",
+      "sourceUrl": "https://oracleapex.cn/ords/r/test/ut/card-templates"
+    },
+    {
+      "label": "Carousel",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/carousel-region",
+      "sourceUrl": "https://oracleapex.cn/ords/r/test/ut/carousel-region"
+    },
+    {
+      "label": "Charts",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/charts",
+      "sourceUrl": "https://oracleapex.com/ords/r/apex_pm/ut/charts"
+    },
+    {
+      "label": "Classic Report",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/standard-reports",
+      "sourceUrl": "https://oracleapex.com/ords/r/apex_pm/ut/standard-reports"
+    },
+    {
+      "label": "Collapsible",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/collapsible-region",
+      "sourceUrl": "https://oracleapex.cn/ords/r/test/ut/collapsible-region"
+    },
+    {
+      "label": "Column Toggle Report",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/column-toggle-report",
+      "sourceUrl": "https://oracleapex.com/ords/r/apex_pm/ut/column-toggle-report"
+    },
+    {
+      "label": "Comments",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/comments-component",
+      "sourceUrl": "https://oracleapex.com/ords/r/apex_pm/ut/comments-component"
+    },
+    {
+      "label": "Content Block",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/content-block",
+      "sourceUrl": "https://oracleapex.cn/ords/r/test/ut/content-block"
+    },
+    {
+      "label": "Content Row",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/content-row-component",
+      "sourceUrl": "https://oracleapex.com/ords/r/apex_pm/ut/content-row-component"
+    },
+    {
+      "label": "Contextual Info",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/contextual-info",
+      "sourceUrl": "https://oracleapex.com/ords/r/apex_pm/ut/contextual-info"
+    },
+    {
+      "label": "Flexbox Container",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/flexbox-container-component",
+      "sourceUrl": "https://oracleapex.com/ords/r/apex_pm/ut/flexbox-container-component"
+    },
+    {
+      "label": "Form Field",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/forms",
+      "sourceUrl": "https://oracleapex.cn/ords/r/test/ut/forms"
+    },
+    {
+      "label": "Help Text",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/help-text",
+      "sourceUrl": "https://oracleapex.com/ords/r/apex_pm/ut/help-text"
+    },
+    {
+      "label": "Hero",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/hero-region",
+      "sourceUrl": "https://oracleapex.cn/ords/r/test/ut/hero-region"
+    },
+    {
+      "label": "Image",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/region-image",
+      "sourceUrl": "https://oracleapex.cn/ords/r/test/ut/region-image"
+    },
+    {
+      "label": "Inline Dialog",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/inline-dialog",
+      "sourceUrl": "https://oracleapex.com/ords/r/apex_pm/ut/inline-dialog"
+    },
+    {
+      "label": "Interactive Grid",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/interactive-grid",
+      "sourceUrl": "https://oracleapex.cn/ords/r/test/ut/interactive-grid"
+    },
+    {
+      "label": "Interactive Report",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/interactive-report",
+      "sourceUrl": "https://oracleapex.cn/ords/r/test/ut/interactive-report"
+    },
+    {
+      "label": "Links List",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/links-list",
+      "sourceUrl": "https://oracleapex.com/ords/r/apex_pm/ut/links-list"
+    },
+    {
+      "label": "List View",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/list-view",
+      "sourceUrl": "https://oracleapex.com/ords/r/apex_pm/ut/list-view"
+    },
+    {
+      "label": "Media List",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/media-list-component",
+      "sourceUrl": "https://oracleapex.com/ords/r/apex_pm/ut/media-list-component"
+    },
+    {
+      "label": "Menu Bar",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/menu-bar-list",
+      "sourceUrl": "https://oracleapex.com/ords/r/apex_pm/ut/menu-bar-list"
+    },
+    {
+      "label": "Menu Popup",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/menu-popup",
+      "sourceUrl": "https://oracleapex.com/ords/r/apex_pm/ut/menu-popup"
+    },
+    {
+      "label": "Metric Card",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/metric-card",
+      "sourceUrl": "https://oracleapex.com/ords/r/apex_pm/ut/metric-card"
+    },
+    {
+      "label": "Navigation Bar",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/navigation",
+      "sourceUrl": "https://oracleapex.com/ords/r/apex_pm/ut/navigation"
+    },
+    {
+      "label": "PL/SQL Dynamic Content",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/dynamic-content-region",
+      "sourceUrl": "https://oracleapex.com/ords/r/apex_pm/ut/dynamic-content-region"
+    },
+    {
+      "label": "Reflow Report",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/reflow-report",
+      "sourceUrl": "https://oracleapex.cn/ords/r/test/ut/reflow-report"
+    },
+    {
+      "label": "Region Display Selector",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/region-display-selector",
+      "sourceUrl": "https://oracleapex.com/ords/r/apex_pm/ut/region-display-selector"
+    },
+    {
+      "label": "Standard",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/standard-region",
+      "sourceUrl": "https://oracleapex.cn/ords/r/test/ut/standard-region"
+    },
+    {
+      "label": "Static Content",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/static-content",
+      "sourceUrl": "https://oracleapex.com/ords/r/apex_pm/ut/static-content"
+    },
+    {
+      "label": "Tabs Container",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/tabs",
+      "sourceUrl": "https://oracleapex.cn/ords/r/test/ut/tabs"
+    },
+    {
+      "label": "Timeline",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/timeline-component",
+      "sourceUrl": "https://oracleapex.com/ords/r/apex_pm/ut/timeline-component"
+    },
+    {
+      "label": "Title Bar",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/title-bar-region",
+      "sourceUrl": "https://oracleapex.cn/ords/r/test/ut/title-bar-region"
+    },
+    {
+      "label": "Tree",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/tree",
+      "sourceUrl": "https://oracleapex.com/ords/r/apex_pm/ut/tree"
+    },
+    {
+      "label": "Value Attribute Pairs",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/value-attr-pairs-report",
+      "sourceUrl": "https://oracleapex.cn/ords/r/test/ut/value-attr-pairs-report"
+    },
+    {
+      "label": "Wizard",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/wizard-region",
+      "sourceUrl": "https://oracleapex.com/ords/r/apex_pm/ut/wizard-region"
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "theme": {
+    "name": "Iris",
+    "slug": "Iris",
+    "id": "2243014446517417"
+  },
+  "attemptedSoFar": 70,
+  "total": 70,
+  "successfulSoFar": 42,
+  "failedSoFar": 28,
+  "failures": [
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/alert-region",
+      "group": "Components",
+      "label": "Alert",
+      "error": "page.goto: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://oracleapex.com/ords/r/kw/ut/alert-region\", waiting until \"commit\"\u001b[22m\n"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/badges-list",
+      "group": "Components",
+      "label": "Badge List",
+      "error": "page.goto: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://oracleapex.com/ords/r/kw/ut/badges-list\", waiting until \"commit\"\u001b[22m\n"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/buttons",
+      "group": "Components",
+      "label": "Buttons",
+      "error": "page.goto: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://oracleapex.com/ords/r/kw/ut/buttons\", waiting until \"commit\"\u001b[22m\n"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/button-container",
+      "group": "Components",
+      "label": "Button Container",
+      "error": "page.goto: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://oracleapex.com/ords/r/kw/ut/button-container\", waiting until \"commit\"\u001b[22m\n"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/card-templates",
+      "group": "Components",
+      "label": "Card Templates",
+      "error": "page.goto: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://oracleapex.com/ords/r/kw/ut/card-templates\", waiting until \"commit\"\u001b[22m\n"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/carousel-region",
+      "group": "Components",
+      "label": "Carousel",
+      "error": "page.goto: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://oracleapex.com/ords/r/kw/ut/carousel-region\", waiting until \"commit\"\u001b[22m\n"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/collapsible-region",
+      "group": "Components",
+      "label": "Collapsible",
+      "error": "page.goto: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://oracleapex.com/ords/r/kw/ut/collapsible-region\", waiting until \"commit\"\u001b[22m\n"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/content-block",
+      "group": "Components",
+      "label": "Content Block",
+      "error": "page.goto: net::ERR_ABORTED at https://oracleapex.com/ords/r/kw/ut/content-block\nCall log:\n\u001b[2m  - navigating to \"https://oracleapex.com/ords/r/kw/ut/content-block\", waiting until \"commit\"\u001b[22m\n"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/content-row-report",
+      "group": "Components",
+      "label": "Content Row Report",
+      "error": "browser.newContext: Target page, context or browser has been closed\nBrowser logs:\n\n<launching> /Users/kwang/Library/Caches/ms-playwright/chromium_headless_shell-1223/chrome-headless-shell-mac-arm64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --disable-blink-features=AutomationControlled --user-data-dir=/var/folders/jw/dmkv0r7x2r381s4blfg1nk480000gn/T/playwright_chromiumdev_profile-bMW0dD --remote-debugging-pipe --no-startup-window\n<launched> pid=14959\n[pid=14959] <gracefully close start>"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/standard-reports",
+      "group": "Components",
+      "label": "Data Tables and Reports",
+      "error": "browser.newContext: Target page, context or browser has been closed"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/interactive-report",
+      "group": "Components",
+      "label": "Interactive Report",
+      "error": "browser.newContext: Target page, context or browser has been closed"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/interactive-grid",
+      "group": "Components",
+      "label": "Interactive Grid",
+      "error": "browser.newContext: Target page, context or browser has been closed"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/reports-faceted-search",
+      "group": "Components",
+      "label": "Faceted Search",
+      "error": "browser.newContext: Target page, context or browser has been closed"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/reports-smart-filters",
+      "group": "Components",
+      "label": "Smart Filters",
+      "error": "browser.newContext: Target page, context or browser has been closed"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/reports-search-region",
+      "group": "Components",
+      "label": "Search Region",
+      "error": "browser.newContext: Target page, context or browser has been closed"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/reflow-report",
+      "group": "Components",
+      "label": "Reflow Report",
+      "error": "browser.newContext: Target page, context or browser has been closed"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/form-item-types",
+      "group": "Components",
+      "label": "Forms",
+      "error": "browser.newContext: Target page, context or browser has been closed"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/forms",
+      "group": "Components",
+      "label": "Form Labels",
+      "error": "browser.newContext: Target page, context or browser has been closed"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/hero-region",
+      "group": "Components",
+      "label": "Hero",
+      "error": "browser.newContext: Target page, context or browser has been closed"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/region-image",
+      "group": "Components",
+      "label": "Image",
+      "error": "browser.newContext: Target page, context or browser has been closed"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/links-list",
+      "group": "Components",
+      "label": "Links List",
+      "error": "browser.newContext: Target page, context or browser has been closed"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/media-list",
+      "group": "Components",
+      "label": "Media List Report",
+      "error": "browser.newContext: Target page, context or browser has been closed"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/standard-region",
+      "group": "Components",
+      "label": "Standard",
+      "error": "browser.newContext: Target page, context or browser has been closed"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/tabs",
+      "group": "Components",
+      "label": "Tabs Container",
+      "error": "browser.newContext: Target page, context or browser has been closed"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/timeline-reports",
+      "group": "Components",
+      "label": "Timeline Report",
+      "error": "browser.newContext: Target page, context or browser has been closed"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/title-bar-region",
+      "group": "Components",
+      "label": "Title Bar",
+      "error": "browser.newContext: Target page, context or browser has been closed"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/value-attr-pairs-report",
+      "group": "Components",
+      "label": "Value Attribute Pairs Report",
+      "error": "browser.newContext: Target page, context or browser has been closed"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/wizard-region",
+      "group": "Components",
+      "label": "Wizards",
+      "error": "browser.newContext: Target page, context or browser has been closed"
+    }
+  ]
+}

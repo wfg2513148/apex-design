@@ -1,0 +1,139 @@
+{
+  "theme": {
+    "name": "Vita",
+    "slug": "Vita",
+    "id": "2722798454316704879"
+  },
+  "attemptedSoFar": 70,
+  "total": 70,
+  "successfulSoFar": 49,
+  "failedSoFar": 21,
+  "failures": [
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/alert-region",
+      "group": "Components",
+      "label": "Alert",
+      "error": "page.goto: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://oracleapex.com/ords/r/kw/ut/alert-region\", waiting until \"commit\"\u001b[22m\n"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/badges-list",
+      "group": "Components",
+      "label": "Badge List",
+      "error": "page.goto: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://oracleapex.com/ords/r/kw/ut/badges-list\", waiting until \"commit\"\u001b[22m\n"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/buttons",
+      "group": "Components",
+      "label": "Buttons",
+      "error": "page.goto: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://oracleapex.com/ords/r/kw/ut/buttons\", waiting until \"commit\"\u001b[22m\n"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/button-container",
+      "group": "Components",
+      "label": "Button Container",
+      "error": "page.goto: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://oracleapex.com/ords/r/kw/ut/button-container\", waiting until \"commit\"\u001b[22m\n"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/card-templates",
+      "group": "Components",
+      "label": "Card Templates",
+      "error": "page.goto: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://oracleapex.com/ords/r/kw/ut/card-templates\", waiting until \"commit\"\u001b[22m\n"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/carousel-region",
+      "group": "Components",
+      "label": "Carousel",
+      "error": "page.goto: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://oracleapex.com/ords/r/kw/ut/carousel-region\", waiting until \"commit\"\u001b[22m\n"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/collapsible-region",
+      "group": "Components",
+      "label": "Collapsible",
+      "error": "page.goto: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://oracleapex.com/ords/r/kw/ut/collapsible-region\", waiting until \"commit\"\u001b[22m\n"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/content-block",
+      "group": "Components",
+      "label": "Content Block",
+      "error": "page.goto: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://oracleapex.com/ords/r/kw/ut/content-block\", waiting until \"commit\"\u001b[22m\n"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/content-row-report",
+      "group": "Components",
+      "label": "Content Row Report",
+      "error": "page.goto: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://oracleapex.com/ords/r/kw/ut/content-row-report\", waiting until \"commit\"\u001b[22m\n"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/standard-reports",
+      "group": "Components",
+      "label": "Data Tables and Reports",
+      "error": "page.goto: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://oracleapex.com/ords/r/kw/ut/standard-reports\", waiting until \"commit\"\u001b[22m\n"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/interactive-report",
+      "group": "Components",
+      "label": "Interactive Report",
+      "error": "page.goto: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://oracleapex.com/ords/r/kw/ut/interactive-report\", waiting until \"commit\"\u001b[22m\n"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/interactive-grid",
+      "group": "Components",
+      "label": "Interactive Grid",
+      "error": "page.goto: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://oracleapex.com/ords/r/kw/ut/interactive-grid\", waiting until \"commit\"\u001b[22m\n"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/reports-faceted-search",
+      "group": "Components",
+      "label": "Faceted Search",
+      "error": "page.goto: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://oracleapex.com/ords/r/kw/ut/reports-faceted-search\", waiting until \"commit\"\u001b[22m\n"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/reports-smart-filters",
+      "group": "Components",
+      "label": "Smart Filters",
+      "error": "page.goto: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://oracleapex.com/ords/r/kw/ut/reports-smart-filters\", waiting until \"commit\"\u001b[22m\n"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/reports-search-region",
+      "group": "Components",
+      "label": "Search Region",
+      "error": "page.goto: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://oracleapex.com/ords/r/kw/ut/reports-search-region\", waiting until \"commit\"\u001b[22m\n"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/reflow-report",
+      "group": "Components",
+      "label": "Reflow Report",
+      "error": "page.goto: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://oracleapex.com/ords/r/kw/ut/reflow-report\", waiting until \"commit\"\u001b[22m\n"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/form-item-types",
+      "group": "Components",
+      "label": "Forms",
+      "error": "page.goto: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://oracleapex.com/ords/r/kw/ut/form-item-types\", waiting until \"commit\"\u001b[22m\n"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/forms",
+      "group": "Components",
+      "label": "Form Labels",
+      "error": "page.goto: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://oracleapex.com/ords/r/kw/ut/forms\", waiting until \"commit\"\u001b[22m\n"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/hero-region",
+      "group": "Components",
+      "label": "Hero",
+      "error": "page.goto: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://oracleapex.com/ords/r/kw/ut/hero-region\", waiting until \"commit\"\u001b[22m\n"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/region-image",
+      "group": "Components",
+      "label": "Image",
+      "error": "page.goto: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://oracleapex.com/ords/r/kw/ut/region-image\", waiting until \"commit\"\u001b[22m\n"
+    },
+    {
+      "url": "https://oracleapex.com/ords/r/kw/ut/media-list",
+      "group": "Components",
+      "label": "Media List Report",
+      "error": "page.goto: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://oracleapex.com/ords/r/kw/ut/media-list\", waiting until \"commit\"\u001b[22m\n"
+    }
+  ]
+}
