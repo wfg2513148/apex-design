@@ -8,23 +8,9 @@
 
 ## 图片概览
 
-```mermaid
-flowchart LR
-  source["Oracle APEX Universal Theme 证据"]
-  iris["Iris/DESIGN.md"]
-  redwood["Redwood-Light/DESIGN.md"]
-  vita["Vita/DESIGN.md"]
-  openDesign["Open Design"]
-  prototype["APEX 风格原型"]
+[![Oracle APEX Universal Theme 设计体系概览](docs/assets/theme-overview.png)](DESIGN.md)
 
-  source --> iris
-  source --> redwood
-  source --> vita
-  iris --> openDesign
-  redwood --> openDesign
-  vita --> openDesign
-  openDesign --> prototype
-```
+点击概览图可打开主题索引。
 
 | 主题 | 应用壳示意 | 主要视觉规则 |
 | --- | --- | --- |
@@ -58,6 +44,7 @@ flowchart LR
 |-- Vita/
 |   `-- DESIGN.md
 |-- docs/
+|   |-- assets/
 |   |-- maintenance.md
 |   `-- open-design-import.md
 `-- CONTRIBUTING.md
@@ -84,15 +71,9 @@ Vita/DESIGN.md
 
 ## 导入 Open Design
 
-```mermaid
-flowchart LR
-  clone["克隆仓库"]
-  pick["选择一个主题目录"]
-  importStep["作为本地设计体系导入"]
-  generate["生成 APEX 原型"]
+[![将 APEX 设计体系导入 Open Design 的流程](docs/assets/open-design-flow.png)](docs/open-design-import.md)
 
-  clone --> pick --> importStep --> generate
-```
+点击流程图可打开 Open Design 导入步骤说明。
 
 在 Open Design 中应逐个导入主题目录，而不是导入仓库根目录。
 
