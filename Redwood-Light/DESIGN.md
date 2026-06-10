@@ -193,14 +193,14 @@ rounded:
   full: "9999px"
 components:
   button-observed:
-    backgroundColor: "#FFFFFF"
-    textColor: "{colors.on-surface}"
-    borderColor: "rgba(22,21,19,.35)"
+    backgroundColor: "rgba(22,21,19,.08)"
+    textColor: "#161513"
+    borderColor: "rgba(22,21,19,.5)"
     rounded: "{rounded.md}"
     padding: "6px 16px"
   input-observed:
     backgroundColor: "#FFFFFF"
-    textColor: "{colors.on-surface}"
+    textColor: "#161513"
     rounded: "{rounded.md}"
     padding: "27px 7px 7px"
 coverage:
@@ -216,6 +216,10 @@ coverage:
   uniqueRedwoodLightPages: 71
   requiredMenuEntries: 73
   httpVerifiedRedwoodLightPages: 71
+  liveComponentPagesScraped: 59
+  liveComponentPagesRedwoodLightVerified: 59
+  liveComponentTemplateOptionPages: 31
+  liveComponentEvidenceAt: "2026-06-10T18:26:57Z"
   httpVerification: "71/71 oracleapex.cn paths returned HTTP 200 with apex-theme-redwood-light body class"
   capturedAt: "2026-06-10T15:35:56+08:00"
 componentPatterns:
@@ -233,19 +237,19 @@ componentPatterns:
     decorativeStrip: "thin Redwood illustration band below page title; include muted teal, sage, gold, and clay accents"
     focusColor: "#5f7d4f"
   button:
-    backgroundColor: "#FFFFFF"
-    hoverBackgroundColor: "#FFFFFF"
+    backgroundColor: "rgba(22,21,19,.08)"
+    hoverBackgroundColor: "rgba(22,21,19,.12)"
     textColor: "#161513"
     borderColor: "rgba(22,21,19,.5)"
     rounded: "4px"
     padding: "6px 16px"
-    fontSize: "12px"
-    lineHeight: "16px"
-    shadow: "0 4px 8px -4px rgba(0,0,0,.16)"
+    fontSize: "14px"
+    lineHeight: "24px"
+    shadow: "none"
   button-primary:
-    backgroundColor: "#5f7d4f"
+    backgroundColor: "#312D2A"
     textColor: "#FFFFFF"
-    borderColor: "#5f7d4f"
+    borderColor: "#312D2A"
   input:
     backgroundColor: "#FFFFFF"
     focusBackgroundColor: "#FFFFFF"
@@ -258,8 +262,8 @@ componentPatterns:
     backgroundColor: "#FFFFFF"
     textColor: "#161513"
     borderColor: "rgba(22,21,19,.1)"
-    rounded: "4px"
-    shadow: "0 4px 8px -4px rgba(0,0,0,.16)"
+    rounded: "6px"
+    shadow: "none"
     headerFontSize: "16px"
     headerFontWeight: 600
   card:
@@ -273,14 +277,14 @@ componentPatterns:
     backgroundColor: "#FFFFFF"
     borderColor: "rgba(22,21,19,.1)"
     headerBackground: "#FFFFFF"
-    cellBorderColor: "#E6E6E6"
-    fontSize: "12px"
-    cellHeight: "32px"
+    cellBorderColor: "#EAEAEA"
+    fontSize: "14px"
+    cellHeight: "41px"
   badge:
     backgroundColor: "rgba(0,0,0,.1)"
     textColor: "#161513"
-    rounded: "16px"
-    fontSize: "12px"
+    rounded: "12px"
+    fontSize: "14px"
   component-index:
     backgroundColor: "#FFFFFF"
     borderColor: "#E7E5E2"
@@ -491,6 +495,89 @@ List and navigation components should remain utilitarian and neutral-shelled. Us
 - **Charts** (Region): Visualize data in a variety of different ways based on Oracle JavaScript Extension Toolkit (JET) Data Visualizations. Template Options: No page-level Template Options captured; use component default.
 - **PL/SQL Dynamic Content** (Region): Render HTML or text using the PL/SQL Web Toolkit. Template Options: No page-level Template Options captured; use component default.
 
+## Live Redwood Light Component Extraction Pass
+
+A follow-up Playwright extraction pass visited the 59 unique Components pages listed below on the `oracleapex.cn` fallback host after switching the session to **Redwood Light**. Every visited component page carried `apex-theme-redwood-light` and resolved the root primary token to `#5f7d4f`; no component page failed to load. Canonical links remain `https://oracleapex.com/ords/r/apex_pm/ut/<path>`.
+
+This pass inspected the Universal Theme component-page anatomy the sample application exposes: the page title and breadcrumb, an Overview block, one or more Demo blocks with live components, and the Template Options configuration region when the page exposes one. Template Options were not exhaustively toggled, but 31 pages exposed option families and visible preview targets that Open Design should use when generating Redwood Light variants.
+
+### Measured Redwood Light Defaults From Live Components
+
+- **Page anatomy**: component pages use compact title/breadcrumb chrome followed by Overview, Instructions, Demo, and Template Options sections. Preserve the Universal Theme sample-app structure and Redwood Light's white header / warm neutral navigation shell.
+- **Template Options panels**: option regions remain compact accordions, often about `379px` wide, with 48px region headers, 16px / 600 region titles, 14px option text, and dense option rows.
+- **Buttons**: neutral `t-Button` controls are 36px high with `rgba(22,21,19,.08)` background, `#161513` text, 4px radius, 14px / 600 type, 24px line height, and 6px/16px padding. Hot buttons use Redwood's dark neutral `#312D2A` with white text; do not make primary action buttons Vita blue or generic green.
+- **Forms**: text fields use white background, `#161513` text, `rgba(22,21,19,.5)` border, 4px radius, 16px type, and a 56px floating-label height with 27px/7px padding. Redwood Light should feel roomier than Vita while remaining data-entry oriented.
+- **Regions**: component frames use white surfaces, `rgba(22,21,19,.1)` borders, generally 6px radius on content/status surfaces, and subdued no-shadow frames in the live component pages. Keep the warm neutral shell and avoid blue Vita region styling.
+- **Reports and grids**: Interactive Grid and Interactive Report use white surfaces, warm neutral 1px borders, 14px data text, 20px line height, about 41px data rows, 10px/8px cell padding, and `#EAEAEA` separators.
+- **Status components**: Alert regions use white surfaces, `rgba(22,21,19,.1)` borders, 6px radius, 16px type, and no heavy shadow. Warning badges use `#AC630C` with white text, 12px pill radius, 14px type, and 4px/12px padding.
+- **Identity and activity**: large avatars render as 96px blocks with 8px radius and muted Redwood neutrals such as `#C8D0DD`. Activity components combine avatar, text, metadata, badge/status, and compact row actions.
+- **Cards and metrics**: Cards, CardView, Metric Card, Media List, Content Row, and Timeline share white surfaces, warm neutral borders, rounded corners, icon/avatar slots, badge slots, and data-first text hierarchy. Metric Card examples are roughly 200px by 146px with 16px padding.
+- **Navigation components**: Breadcrumb, Links List, Menu Bar, Navigation Bar, Tree, Tabs, Title Bar, and Wizard are application navigation widgets. Keep warm gray navigation, active-state affordances, right arrows/badges, and Wizard step semantics.
+
+### Core Component Extraction Matrix
+
+| Component page | Live selectors and classes | Template Option families observed | Reproduction rule |
+| --- | --- | --- | --- |
+| Alert (`alert-region`) | selectors: `alert`; top classes: `apex-item-option, t-Form-fieldContainer, t-Form-fieldContainer--floatingLabel, apex-item-wrapper` | Highlight Background, Alert Display, Horizontal, Wizard, Alert Icons, Hide Icons, Show Default Icons, Show Custom Icons, Alert Type, Warning | Reproduce the observed APEX component frame, spacing, and role semantics before adding custom presentation. |
+| Avatar (`avatar-component`) | selectors: `avatar`; top classes: `t-Avatars-item, t-Avatar, t-Avatar--image, t-Avatar--lg` | No page-level Template Options observed; preserve the component default and its documented attributes. | Use the observed list/card slots: icon or avatar, title/value, secondary text, badge/status, and compact row actions without marketing-card spacing. |
+| Badge (`badge-component`) | selectors: `badge, interactiveReport, gridHeaderCell, gridCell, pagination`; top classes: `t-Badge, t-Badge-value, t-Badge--success, t-Badge--info` | No page-level Template Options observed; preserve the component default and its documented attributes. | Use the observed list/card slots: icon or avatar, title/value, secondary text, badge/status, and compact row actions without marketing-card spacing. |
+| Badge List (`badges-list`) | selectors: `contentBlock/text structure`; top classes: `t-BadgeList-item, t-BadgeList-wrap, t-BadgeList-label, t-BadgeList-value` | Apply Theme Colors, Style, Circular, Grid, Layout, Stacked, 2 Column Grid, 3 Column Grid, 4 Column Grid, 5 Column Grid | Use the observed list/card slots: icon or avatar, title/value, secondary text, badge/status, and compact row actions without marketing-card spacing. |
+| Breadcrumb (`breadcrumb`) | selectors: `breadcrumb, titleBar`; top classes: `t-ContentBlock-headerItems, apex-col-auto, t-Breadcrumb-item, t-Breadcrumb-label` | No page-level Template Options observed; preserve the component default and its documented attributes. | Treat as application navigation, not site marketing navigation: dense rows, icons where supplied, right arrows/badges when enabled, and clear current/active state. |
+| Buttons (`buttons`) | selectors: `primaryButton`; top classes: `apex-item-option, t-Form-fieldContainer, t-Form-fieldContainer--floatingLabel, apex-item-wrapper` | Size, Tiny, Small, Large, Type, Normal, Primary, Warning, Danger, Success | Preserve APEX region mechanics: white surface, small borders, compact controls, and Template Options that visibly alter padding, headers, icons, height, and layout. |
+| Button Group (`button-container-region`) | selectors: `button, formField`; top classes: `t-Icon, t-Button, t-ContentBlock-headerItems, t-Button--noLabel` | No page-level Template Options observed; preserve the component default and its documented attributes. | Preserve APEX region mechanics: white surface, small borders, compact controls, and Template Options that visibly alter padding, headers, icons, height, and layout. |
+| Button Container (`button-container`) | selectors: `primaryButton, toolbar`; top classes: `t-Icon, t-ButtonRegion-col, t-ButtonRegion-buttons, t-Button` | Stick to Bottom for Mobile, Body Padding, No Padding, Slim Padding, Style, Borderless, Heading Level, Item Spacing, Standard, Slim | Preserve APEX region mechanics: white surface, small borders, compact controls, and Template Options that visibly alter padding, headers, icons, height, and layout. |
+| Calendar (`calendars`) | selectors: `calendar`; top classes: `fc-day, fc-scrollgrid-sync-inner, fc-daygrid-day, fc-daygrid-day-frame` | No page-level Template Options observed; preserve the component default and its documented attributes. | Keep the native component frame and APEX density; use Template Options for ratio, icon, size, or featured state without replacing it with a generic hero/card. |
+| Card Regions (`card-regions`) | selectors: `cardList, pagination`; top classes: `a-CardView-item, a-CardView, a-CardView-header, a-CardView-iconWrap` | No page-level Template Options observed; preserve the component default and its documented attributes. | Use the observed list/card slots: icon or avatar, title/value, secondary text, badge/status, and compact row actions without marketing-card spacing. |
+| Card Templates (`card-templates`) | selectors: `card, cardList, pagination`; top classes: `apex-item-option, t-ContentBlock-headerItems, t-Icon, t-Form-fieldContainer` | Apply Theme Colors, Display Subtitle, Style, Basic, Compact, Featured, Block, Icons, No Icons, Display Icons | Use the observed list/card slots: icon or avatar, title/value, secondary text, badge/status, and compact row actions without marketing-card spacing. |
+| Carousel (`carousel-region`) | selectors: `tabs`; top classes: `a-Icon, a-Tabs-after, a-Region-carouselItem, a-Tabs-panel` | Show Next and Previous Buttons, Show Maximize Button, Show Region Icon, Timer, No Timer, 5 Seconds, 10 Seconds, 15 Seconds, 20 Seconds, Body Height | Reproduce the observed APEX component frame, spacing, and role semantics before adding custom presentation. |
+| Charts (`charts`) | selectors: `chart`; top classes: `t-ContentBlock-headerItems, t-ContentBlock-header, t-ContentBlock-headerItems--title, t-ContentBlock-headerIcon` | No page-level Template Options observed; preserve the component default and its documented attributes. | Keep the native component frame and APEX density; use Template Options for ratio, icon, size, or featured state without replacing it with a generic hero/card. |
+| Collapsible (`collapsible-region`) | selectors: `button, region, regionHeader, regionBody, formField`; top classes: `apex-item-option, t-Form-fieldContainer, t-Form-fieldContainer--floatingLabel, apex-item-wrapper` | Collapsible Icon Position, Start, End, Collapsible Button Icons, Arrows, Plus or Minus, Default State, is-expanded, Expanded, is-collapsed | Preserve APEX region mechanics: white surface, small borders, compact controls, and Template Options that visibly alter padding, headers, icons, height, and layout. |
+| Comments Component (`comments-component`) | selectors: `avatar, comment`; top classes: `t-Comments-item, t-Comments-icon, t-Avatar, t-Avatar--initials` | No page-level Template Options observed; preserve the component default and its documented attributes. | Use the observed list/card slots: icon or avatar, title/value, secondary text, badge/status, and compact row actions without marketing-card spacing. |
+| Comments Report (`comments-report`) | selectors: `comment, pagination`; top classes: `t-ContentBlock-headerItems, t-AVPList-label, t-AVPList-value, apex-item-option` | Comments Style, Basic, Speech Bubbles, Icon Shape, Circle, Square, Pagination Display, Hide when all rows displayed | Keep the report/table first: compact toolbar, visible headers, 14px grid text, about 41px data rows, warm neutral borders, and pagination close to the table. |
+| Content Block (`content-block`) | selectors: `contentBlock/text structure`; top classes: `t-ContentBlock-headerItems, t-ContentBlock-header, t-ContentBlock-headerItems--title, t-ContentBlock-headerIcon` | Add Body Padding, Show Region Icon, Large, Medium, Small, Header, Hidden, Hidden but accessible, Body Style, Shadow Background | Preserve APEX region mechanics: white surface, small borders, compact controls, and Template Options that visibly alter padding, headers, icons, height, and layout. |
+| Content Row Component (`content-row-component`) | selectors: `primaryButton, avatar, contentRow`; top classes: `t-Icon, t-Button, t-Button--icon, t-Button--noLabel` | No page-level Template Options observed; preserve the component default and its documented attributes. | Use the observed list/card slots: icon or avatar, title/value, secondary text, badge/status, and compact row actions without marketing-card spacing. |
+| Content Row Report (`content-row-report`) | selectors: `contentRow, pagination`; top classes: `t-Icon, t-Button, t-ContentRow-item, t-ContentRow-wrap` | Style, Compact, Content Alignment, Center (Default), Top, Stack on Mobile, Stack, Pagination Display, Hide when all rows displayed, Selection | Keep the report/table first: compact toolbar, visible headers, 14px grid text, about 41px data rows, warm neutral borders, and pagination close to the table. |
+| Contextual Info (`contextual-info`) | selectors: `pagination`; top classes: `t-ContentBlock-headerItems, t-ContextualInfo-item, t-ContextualInfo-label, t-ContextualInfo-value` | Hide Empty Values, Display Items, Inline (Default), Stacked, Display Labels, Pagination Display, Hide when all rows displayed | Keep the report/table first: compact toolbar, visible headers, 14px grid text, about 41px data rows, warm neutral borders, and pagination close to the table. |
+| Classic Report / Data Tables and Reports (`standard-reports`) | selectors: `classicReport, gridCell, pagination`; top classes: `t-Report-cell, t-Report-colHead, a-Report-SortHeading-Anchor--event, t-ContentBlock-headerItems` | Stretch Report, Alternating Rows, Enable, Disable, Horizontal Only, Vertical Only, No Borders, No Outer Borders, Pagination Display, Hide when all rows displayed | Keep the report/table first: compact toolbar, visible headers, 14px grid text, about 41px data rows, warm neutral borders, and pagination close to the table. |
+| Interactive Report (`interactive-report`) | selectors: `interactiveReport, gridHeaderCell, gridCell, pagination`; top classes: `a-Button, a-IRR-button, a-Icon, a-IRR-header` | Show Maximize Button, Header, Hidden but accessible, Hidden, Heading Level, Item Spacing, Standard, Slim, None, Item Size | Keep the report/table first: compact toolbar, visible headers, 14px grid text, about 41px data rows, warm neutral borders, and pagination close to the table. |
+| Interactive Grid (`interactive-grid`) | selectors: `select, interactiveGrid, gridHeaderCell, gridCell, toolbar, pagination`; top classes: `a-GV-cell, a-Icon, a-Button, a-GV-header` | Show Maximize Button, Header, Hidden but accessible, Hidden, Heading Level, Item Spacing, Standard, Slim, None, Item Size | Keep the report/table first: compact toolbar, visible headers, 14px grid text, about 41px data rows, warm neutral borders, and pagination close to the table. |
+| Faceted Search (`reports-faceted-search`) | selectors: `textInput, classicReport, gridCell, toolbar, pagination`; top classes: `t-Report-cell, apex-item-option, apex-item-option-badge, a-Icon` | Show Maximize Button, Show Region Icon, Body Height, Auto - Default, 240px, 320px, 480px, 640px, Header, Hidden | Keep the report/table first: compact toolbar, visible headers, 14px grid text, about 41px data rows, warm neutral borders, and pagination close to the table. |
+| Smart Filters (`reports-smart-filters`) | selectors: `textInput, classicReport, gridCell, pagination`; top classes: `t-Report-cell, apex-item-option, apex-item-option-badge, t-Report-colHead` | Heading Level, Item Spacing, Standard, Slim, None, Item Size, Large, X Large, Item Width, Stretch Form Fields | Keep the report/table first: compact toolbar, visible headers, 14px grid text, about 41px data rows, warm neutral borders, and pagination close to the table. |
+| Search Region (`reports-search-region`) | selectors: `textInput`; top classes: `t-ContentBlock-headerItems, t-ContentBlock-header, t-ContentBlock-headerItems--title, t-ContentBlock-headerIcon` | Apply Theme Colors, Boxed, Flat, Icon Size, Initial, Small, Medium, Large, Heading Level, Item Spacing | Keep the report/table first: compact toolbar, visible headers, 14px grid text, about 41px data rows, warm neutral borders, and pagination close to the table. |
+| Reflow Report (`reflow-report`) | selectors: `button, region, regionHeader, regionBody, formField`; top classes: `a-Table-cellLabel, apex-item-option, t-Form-fieldContainer, t-Form-fieldContainer--floatingLabel` | Add Body Padding, Show Region Icon, Large, Medium, Small, Header, Hidden, Hidden but accessible, Body Style, Shadow Background | Keep the report/table first: compact toolbar, visible headers, 14px grid text, about 41px data rows, warm neutral borders, and pagination close to the table. |
+| Column Toggle Report (`column-toggle-report`) | selectors: `button`; top classes: `t-ContentBlock-headerItems, t-ContentBlock-header, t-ContentBlock-headerItems--title, t-ContentBlock-headerIcon` | No page-level Template Options observed; preserve the component default and its documented attributes. | Keep the report/table first: compact toolbar, visible headers, 14px grid text, about 41px data rows, warm neutral borders, and pagination close to the table. |
+| Dynamic Content Region (`dynamic-content-region`) | selectors: `contentBlock/text structure`; top classes: `t-ContentBlock-headerItems, t-ContentBlock-header, t-ContentBlock-headerItems--title, t-ContentBlock-headerIcon` | No page-level Template Options observed; preserve the component default and its documented attributes. | Reproduce the observed APEX component frame, spacing, and role semantics before adding custom presentation. |
+| Flexbox Container (`flexbox-container-component`) | selectors: `region, regionHeader, regionBody`; top classes: `t-Region-headerItems, t-Region-buttons, t-Region-buttons-left, t-Region-buttons-right` | No page-level Template Options observed; preserve the component default and its documented attributes. | Reproduce the observed APEX component frame, spacing, and role semantics before adding custom presentation. |
+| Forms (`form-item-types`) | selectors: `textInput, select, toolbar, map`; top classes: `apex-item-option, t-Form-fieldContainer, apex-item-wrapper, t-Form-labelContainer` | Heading Level, Item Spacing, Standard, Slim, None, Item Size, Large, X Large, Item Width, Stretch Form Fields | Preserve APEX region mechanics: white surface, small borders, compact controls, and Template Options that visibly alter padding, headers, icons, height, and layout. |
+| Form Labels (`forms`) | selectors: `textInput`; top classes: `apex-item-option, t-Form-fieldContainer, apex-item-wrapper, t-Form-labelContainer` | Hide Password Visibility, Stretch Form Item, Size, Large, X Large, Item Pre Text, Display as Block, Item Post Text, Top Margin, margin-top-none | Preserve APEX region mechanics: white surface, small borders, compact controls, and Template Options that visibly alter padding, headers, icons, height, and layout. |
+| Help Text (`help-text`) | selectors: `contentBlock/text structure`; top classes: `t-ContentBlock-headerItems, t-ContentBlock, t-ContentBlock--h2, a-Tabs-panel` | No page-level Template Options observed; preserve the component default and its documented attributes. | Reproduce the observed APEX component frame, spacing, and role semantics before adding custom presentation. |
+| Hero (`hero-region`) | selectors: `hero`; top classes: `t-HeroRegion-col, t-ContentBlock-headerItems, t-Icon, t-ContentBlock-header` | Style, Featured, Stacked Featured, Display Icon, No, Icon Shape, Circle, Square, Heading Font, Alternative | Keep the native component frame and APEX density; use Template Options for ratio, icon, size, or featured state without replacing it with a generic hero/card. |
+| Image (`region-image`) | selectors: `image`; top classes: `t-ContentBlock-headerItems, t-ContentBlock-header, t-ContentBlock-headerItems--title, t-ContentBlock-headerIcon` | Image Stretch, Auto, 1:1 (Square), 16:9 (Widescreen), 4:3 (Standard), 2:1 (Univisium), Scale, Contain, Cover, Fill | Keep the native component frame and APEX density; use Template Options for ratio, icon, size, or featured state without replacing it with a generic hero/card. |
+| Links List (`links-list`) | selectors: `linksList, pagination`; top classes: `t-Icon, t-ContentBlock-headerItems, t-LinksList-item, t-LinksList-link` | Show Badges, Show Right Arrow, Disable Text Wrapping, Style, Actions, Display Icons, No Icons, For Top Level Items Only, For All Items | Treat as application navigation, not site marketing navigation: dense rows, icons where supplied, right arrows/badges when enabled, and clear current/active state. |
+| List View (`list-view`) | selectors: `region, regionHeader, regionBody`; top classes: `a-ListView-item, t-ContentBlock-headerItems, apex-col-auto, t-Icon` | No page-level Template Options observed; preserve the component default and its documented attributes. | Reproduce the observed APEX component frame, spacing, and role semantics before adding custom presentation. |
+| Map (`map`) | selectors: `map`; top classes: `t-Region-headerItems, t-ContentBlock-headerItems, a-Icon, t-Region-buttons` | No page-level Template Options observed; preserve the component default and its documented attributes. | Keep the native component frame and APEX density; use Template Options for ratio, icon, size, or featured state without replacing it with a generic hero/card. |
+| Media List Component (`media-list-component`) | selectors: `select, badge, avatar, mediaList`; top classes: `t-MediaList--showIcons, t-MediaList-item, t-MediaList-itemWrap, t-MediaList-itemWrap--showDesc` | No page-level Template Options observed; preserve the component default and its documented attributes. | Use the observed list/card slots: icon or avatar, title/value, secondary text, badge/status, and compact row actions without marketing-card spacing. |
+| Media List Report (`media-list`) | selectors: `mediaList, pagination`; top classes: `t-ContentBlock-headerItems, apex-item-option, t-Icon, t-Form-fieldContainer` | Show Icons, Show Description, Show Badges, Apply Theme Colors, Size, Large, Layout, 2 Column Grid, 3 Column Grid, 4 Column Grid | Keep the report/table first: compact toolbar, visible headers, 14px grid text, about 41px data rows, warm neutral borders, and pagination close to the table. |
+| Menu Bar (`menu-bar-list`) | selectors: `pagination, menuBar`; top classes: `t-ContentBlock-headerItems, t-ContentBlock, t-ContentBlock--h2, t-ContentBlock-header` | Behave Like Tabs, Show Sub Menu Icons, Add Actions, Display Menu Callout | Treat as application navigation, not site marketing navigation: dense rows, icons where supplied, right arrows/badges when enabled, and clear current/active state. |
+| Menu Popup (`menu-popup`) | selectors: `button`; top classes: `t-ContentBlock-headerItems, t-Icon, t-ContentBlock, t-ContentBlock--h2` | No page-level Template Options observed; preserve the component default and its documented attributes. | Preserve APEX region mechanics: white surface, small borders, compact controls, and Template Options that visibly alter padding, headers, icons, height, and layout. |
+| Metric Card (`metric-card`) | selectors: `badge, avatar, metric`; top classes: `t-MetricCards-item, t-MetricCard, t-MetricCard-body, t-MetricCard-avatar` | No page-level Template Options observed; preserve the component default and its documented attributes. | Use the observed list/card slots: icon or avatar, title/value, secondary text, badge/status, and compact row actions without marketing-card spacing. |
+| Modal Dialogs (`page-dialog`) | selectors: `button`; top classes: `t-Button, t-Button-label, t-ContentBlock-headerItems, t-Button--gapLeft` | No page-level Template Options observed; preserve the component default and its documented attributes. | Preserve APEX region mechanics: white surface, small borders, compact controls, and Template Options that visibly alter padding, headers, icons, height, and layout. |
+| Page Drawer (`page-drawer`) | selectors: `button`; top classes: `t-ContentBlock-headerItems, t-Button, t-Button-label, t-ContentBlock-header` | No page-level Template Options observed; preserve the component default and its documented attributes. | Preserve APEX region mechanics: white surface, small borders, compact controls, and Template Options that visibly alter padding, headers, icons, height, and layout. |
+| Inline Dialog (`inline-dialog`) | selectors: `button`; top classes: `t-ContentBlock-headerItems, t-Button, t-Button-label, t-ContentBlock-header` | No page-level Template Options observed; preserve the component default and its documented attributes. | Preserve APEX region mechanics: white surface, small borders, compact controls, and Template Options that visibly alter padding, headers, icons, height, and layout. |
+| Inline Drawer (`inline-drawer`) | selectors: `button`; top classes: `t-ContentBlock-headerItems, t-Button, t-Button-label, t-ContentBlock-header` | No page-level Template Options observed; preserve the component default and its documented attributes. | Preserve APEX region mechanics: white surface, small borders, compact controls, and Template Options that visibly alter padding, headers, icons, height, and layout. |
+| Inline Popup (`inline-popup`) | selectors: `button`; top classes: `t-Button, t-Button-label, t-ContentBlock-headerItems, t-Button--gapLeft` | No page-level Template Options observed; preserve the component default and its documented attributes. | Preserve APEX region mechanics: white surface, small borders, compact controls, and Template Options that visibly alter padding, headers, icons, height, and layout. |
+| Navigation Bar (`navigation`) | selectors: `button`; top classes: `t-Icon, t-ContentBlock-headerItems, t-ContentBlock, t-ContentBlock-header` | No page-level Template Options observed; preserve the component default and its documented attributes. | Treat as application navigation, not site marketing navigation: dense rows, icons where supplied, right arrows/badges when enabled, and clear current/active state. |
+| Standard (`standard-region`) | selectors: `region, regionHeader, regionBody`; top classes: `t-ContentBlock-headerItems, t-Icon, t-Region-headerItems, t-Region-buttons` | Show Maximize Button, Show Region Icon, Body Height, Auto - Default, 240px, 320px, 480px, 640px, Header, Hidden | Preserve APEX region mechanics: white surface, small borders, compact controls, and Template Options that visibly alter padding, headers, icons, height, and layout. |
+| Static Content (`static-content`) | selectors: `contentBlock/text structure`; top classes: `t-ContentBlock-headerItems, t-ContentBlock, t-ContentBlock--h2, a-Tabs-panel` | No page-level Template Options observed; preserve the component default and its documented attributes. | Reproduce the observed APEX component frame, spacing, and role semantics before adding custom presentation. |
+| Region Display Selector (`region-display-selector`) | selectors: `region, regionHeader, regionBody`; top classes: `t-Region-headerItems, t-Region-buttons, t-Region-buttons-left, t-Region-buttons-right` | No page-level Template Options observed; preserve the component default and its documented attributes. | Preserve APEX region mechanics: white surface, small borders, compact controls, and Template Options that visibly alter padding, headers, icons, height, and layout. |
+| Tabs Container (`tabs`) | selectors: `tabs`; top classes: `apex-item-option, t-Form-fieldContainer, t-Form-fieldContainer--floatingLabel, apex-item-wrapper` | Tabs Icon, Above Label, Inline with Label, Layout, Fill Tab Labels, Tabs Style, Simple, Pill, Tabs Size, Small | Preserve APEX region mechanics: white surface, small borders, compact controls, and Template Options that visibly alter padding, headers, icons, height, and layout. |
+| Timeline Component (`timeline-component`) | selectors: `badge, avatar`; top classes: `t-Timeline-item, t-Timeline-wrap, t-Timeline-user, t-Avatar` | No page-level Template Options observed; preserve the component default and its documented attributes. | Use the observed list/card slots: icon or avatar, title/value, secondary text, badge/status, and compact row actions without marketing-card spacing. |
+| Timeline Report (`timeline-reports`) | selectors: `pagination`; top classes: `t-Icon, t-Timeline-item, t-Timeline-wrap, t-Timeline-user` | Style, Compact, Pagination Display, Hide when all rows displayed | Keep the report/table first: compact toolbar, visible headers, 14px grid text, about 41px data rows, warm neutral borders, and pagination close to the table. |
+| Title Bar (`title-bar-region`) | selectors: `breadcrumb, titleBar`; top classes: `t-ContentBlock-headerItems, t-BreadcrumbRegion-buttons, t-ContentBlock-header, t-ContentBlock-headerItems--title` | Show Breadcrumbs, Use Compact Style, Use Current Breadcrumb Entry, Use Region Title, Heading Font, Alternative, Heading Level, Item Spacing, Standard, Slim | Treat as application navigation, not site marketing navigation: dense rows, icons where supplied, right arrows/badges when enabled, and clear current/active state. |
+| Tree (`tree`) | selectors: `tree`; top classes: `a-TreeView-node, a-TreeView-row, a-TreeView-content, a-Icon` | No page-level Template Options observed; preserve the component default and its documented attributes. | Treat as application navigation, not site marketing navigation: dense rows, icons where supplied, right arrows/badges when enabled, and clear current/active state. |
+| Value Attribute Pairs Report (`value-attr-pairs-report`) | selectors: `pagination`; top classes: `t-ContentBlock-headerItems, apex-item-option, t-ContentBlock, t-ContentBlock-header` | Label Width, Fixed - Small, Fixed - Medium, Fixed - Large, Variable - Small, Variable - Medium, Variable - Large, Layout, Left Aligned Details, Pagination Display | Keep the report/table first: compact toolbar, visible headers, 14px grid text, about 41px data rows, warm neutral borders, and pagination close to the table. |
+| Wizards / Wazards (`wizard-region`) | selectors: `primaryButton, wizard`; top classes: `t-WizardSteps-step, t-WizardSteps-wrap, t-WizardSteps-marker, t-WizardSteps-label` | Vertical Orientation, Make Wizard Steps Clickable, Label Display, All Steps, Current Step Only, Hide Labels | Preserve APEX region mechanics: white surface, small borders, compact controls, and Template Options that visibly alter padding, headers, icons, height, and layout. |
+
 ## Full Standard Component Catalog
 
 | Component | APEX Type | Captured roles | Template Options / attributes observed | Canonical page |
@@ -558,6 +645,8 @@ List and navigation components should remain utilitarian and neutral-shelled. Us
 ## Source Coverage
 
 All 71 unique Design, Components, and Icons page paths were HTTP/theme verified for Redwood Light on `oracleapex.cn`: every path returned HTTP 200 with body class `apex-theme-redwood-light`. Browser verification on the same session confirmed root primary token `#5f7d4f`; the page-path inventory follows the Universal Theme Design, Components, and Icons menu and keeps canonical links on `oracleapex.com`.
+
+The later live component extraction pass revisited 59 unique Components pages in the same Redwood Light browser session and captured page anatomy, live demo selectors, Template Option families, top APEX/UT classes, and representative computed styles. That pass is summarized in the Live Redwood Light Component Extraction Pass section above and is intended to guide higher-fidelity Open Design prototype generation.
 
 ### Verified Page Paths
 

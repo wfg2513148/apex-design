@@ -73,6 +73,7 @@ Use semantic versioning tags:
 - `v0.2.1`: clarified Iris and Redwood Light visual-system rules.
 - `v0.2.2`: added public repository documentation and bilingual usage guidance.
 - `v0.2.3`: replaced README diagrams with PNG visual guides for GitHub readers.
+- `v0.2.4`: added live component extraction matrices for Iris, Redwood Light, and Vita.
 
 Future release guidance:
 
