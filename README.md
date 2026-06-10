@@ -8,6 +8,24 @@ This repository is not an Oracle project. It preserves observed Oracle APEX Univ
 
 ## Visual Overview
 
+```mermaid
+flowchart LR
+  source["Oracle APEX Universal Theme evidence"]
+  iris["Iris/DESIGN.md"]
+  redwood["Redwood-Light/DESIGN.md"]
+  vita["Vita/DESIGN.md"]
+  openDesign["Open Design"]
+  prototype["APEX-style prototype"]
+
+  source --> iris
+  source --> redwood
+  source --> vita
+  iris --> openDesign
+  redwood --> openDesign
+  vita --> openDesign
+  openDesign --> prototype
+```
+
 | Theme | Shell sketch | Primary visual rule |
 | --- | --- | --- |
 | Iris | `dark header + dark side nav + pale title band + white regions` | Use `#302D2A` for the app shell and keep `#00688c` for links, focus, badges, and primary actions. |
@@ -58,8 +76,14 @@ Choose one theme directory and use its `DESIGN.md` as the design-system source.
 
 ## Use With Open Design
 
-```text
-Clone repo -> Pick one theme folder -> Import as local design system -> Generate APEX prototype
+```mermaid
+flowchart LR
+  clone["Clone repo"]
+  pick["Pick one theme folder"]
+  importStep["Import as local design system"]
+  generate["Generate APEX prototype"]
+
+  clone --> pick --> importStep --> generate
 ```
 
 Import each theme directory as its own design system. Do not import the repository root if you want independent Iris, Redwood Light, and Vita choices.

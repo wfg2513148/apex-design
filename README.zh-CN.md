@@ -8,6 +8,24 @@
 
 ## 图片概览
 
+```mermaid
+flowchart LR
+  source["Oracle APEX Universal Theme 证据"]
+  iris["Iris/DESIGN.md"]
+  redwood["Redwood-Light/DESIGN.md"]
+  vita["Vita/DESIGN.md"]
+  openDesign["Open Design"]
+  prototype["APEX 风格原型"]
+
+  source --> iris
+  source --> redwood
+  source --> vita
+  iris --> openDesign
+  redwood --> openDesign
+  vita --> openDesign
+  openDesign --> prototype
+```
+
 | 主题 | 应用壳示意 | 主要视觉规则 |
 | --- | --- | --- |
 | Iris | `深色顶栏 + 深色侧边导航 + 浅色标题带 + 白色内容区` | 使用 `#302D2A` 作为应用壳颜色，`#00688c` 只用于链接、焦点、badge 和主要动作。 |
@@ -66,8 +84,14 @@ Vita/DESIGN.md
 
 ## 导入 Open Design
 
-```text
-克隆仓库 -> 选择一个主题目录 -> 作为本地设计体系导入 -> 生成 APEX 原型
+```mermaid
+flowchart LR
+  clone["克隆仓库"]
+  pick["选择一个主题目录"]
+  importStep["作为本地设计体系导入"]
+  generate["生成 APEX 原型"]
+
+  clone --> pick --> importStep --> generate
 ```
 
 在 Open Design 中应逐个导入主题目录，而不是导入仓库根目录。
