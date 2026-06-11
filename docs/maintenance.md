@@ -19,8 +19,9 @@ This guide describes how to maintain the extracted Oracle APEX Universal Theme d
 4. Visit the Design, Components, and Icons page inventory.
 5. Update only the relevant theme `DESIGN.md`.
 6. Update the top-level `DESIGN.md` only when coverage counts or theme inventory change.
-7. Run validation.
-8. Commit and tag the release.
+7. If refreshing companion resources, update the relevant theme's `design-system.manifest.json`, `tokens/*`, `styles/*`, `reference/*`, `patterns/*`, `catalog/*`, and examples that depend on those tokens, patterns, or catalogs.
+8. Run validation.
+9. Commit and tag the release.
 
 ## Current Theme Style Metadata
 
@@ -43,6 +44,23 @@ Each current theme file should cover:
 - 73 required menu entries, including aliases
 - Full standard component catalog
 - Open Design generation rules
+
+Each theme also has companion resources for enterprise-grade prototype generation:
+
+- `<theme>/design-system.manifest.json`
+- `<theme>/tokens/<theme>.tokens.json`
+- `<theme>/styles/<theme>-open-design.css`
+- `<theme>/reference/apex-reference.json`
+- `<theme>/reference/implementation-guidelines.md`
+- `<theme>/patterns/page-templates.json`
+- `<theme>/patterns/enterprise-patterns.json`
+- `<theme>/patterns/component-state-matrix.json`
+- `<theme>/patterns/README.md`
+- `<theme>/catalog/component-catalog.json`
+- `<theme>/catalog/navigation-icon-catalog.json`
+- `<theme>/catalog/open-design-readiness.json`
+- `<theme>/catalog/README.md`
+- `<theme>/examples/enterprise-hr-dashboard.html`
 
 ## Validation Commands
 
@@ -67,6 +85,19 @@ git status --short
 git diff --stat
 ```
 
+Check companion JSON files:
+
+```sh
+python3 - <<'PY'
+import json
+from pathlib import Path
+for theme in ["Iris", "Redwood-Light", "Vita", "Vita-Dark", "Vita-Red", "Vita-Slate"]:
+    for path in Path(theme).glob("**/*.json"):
+        json.loads(path.read_text())
+        print(f"{path}: json ok")
+PY
+```
+
 ## Release Policy
 
 Use semantic versioning tags:
@@ -78,6 +109,7 @@ Use semantic versioning tags:
 - `v0.2.3`: replaced README diagrams with PNG visual guides for GitHub readers.
 - `v0.2.4`: added live component extraction matrices for Iris, Redwood Light, and Vita.
 - `v0.3.0`: added Vita - Dark, Vita - Red, and Vita - Slate design systems with live component extraction matrices.
+- `v0.4.0`: added companion manifest, token JSON, CSS adapter, Reference layer, enterprise pattern layer, machine-readable catalogs, and enterprise HR example for higher-fidelity Open Design prototypes across all six theme styles.
 
 Future release guidance:
 

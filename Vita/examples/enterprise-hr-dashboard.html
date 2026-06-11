@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>APEX Vita Enterprise HR Dashboard Example</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../styles/vita-open-design.css">
+</head>
+<body class="t-PageBody apex-side-nav apex-icons-fontapex apex-theme-vita">
+  <header class="t-Header">
+    <button class="t-Button t-Button--icon t-Button--header" aria-label="Main Navigation"><span class="t-Icon fa fa-bars"></span></button>
+    <div class="t-Header-logo">Universal Theme HR</div>
+    <div style="margin-left:auto;display:flex;gap:8px;align-items:center;">
+      <button class="t-Button t-Button--header"><span class="t-Icon fa fa-bell"></span> Alerts</button>
+      <button class="t-Button t-Button--header"><span class="t-Icon fa fa-user"></span> HR Admin</button>
+    </div>
+  </header>
+
+  <div class="t-Body app-shell">
+    <nav class="t-Body-nav app-nav" aria-label="Application">
+      <a class="a-TreeView-content app-nav-link is-selected is-current--top" href="#"><span class="t-Icon fa fa-dashboard"></span>Dashboard</a>
+      <a class="a-TreeView-content app-nav-link" href="#"><span class="t-Icon fa fa-users"></span>Employees</a>
+      <a class="a-TreeView-content app-nav-link" href="#"><span class="t-Icon fa fa-calendar"></span>Leave Requests</a>
+      <a class="a-TreeView-content app-nav-link" href="#"><span class="t-Icon fa fa-line-chart"></span>Workforce Analytics</a>
+      <a class="a-TreeView-content app-nav-link" href="#"><span class="t-Icon fa fa-cog"></span>Administration</a>
+    </nav>
+
+    <div>
+      <section class="t-Body-title page-title-region">
+        <div>
+          <div class="t-Breadcrumb breadcrumb">Human Resources / Workforce Operations</div>
+          <h1 style="margin:4px 0 0;font-size:32px;line-height:40px;font-weight:600;">HR Operations Dashboard</h1>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center;">
+          <button class="t-Button">Export</button>
+          <button class="t-Button t-Button--hot">Create Employee</button>
+        </div>
+      </section>
+
+      <main class="t-Body-content page-content">
+        <ul class="t-Cards cards" aria-label="HR metrics">
+          <li class="t-Card card">
+            <div class="t-Badge badge">Active</div>
+            <h2 style="font-size:24px;line-height:32px;margin:12px 0 4px;">1,248</h2>
+            <div style="font-size:12px;color:var(--apex-vita-muted-text);">Employees</div>
+          </li>
+          <li class="t-Card card">
+            <div class="t-Badge badge">Pending</div>
+            <h2 style="font-size:24px;line-height:32px;margin:12px 0 4px;">37</h2>
+            <div style="font-size:12px;color:var(--apex-vita-muted-text);">Leave approvals</div>
+          </li>
+          <li class="t-Card card">
+            <div class="t-Badge badge">Open</div>
+            <h2 style="font-size:24px;line-height:32px;margin:12px 0 4px;">18</h2>
+            <div style="font-size:12px;color:var(--apex-vita-muted-text);">Recruiting requests</div>
+          </li>
+        </ul>
+
+        <section class="t-Region region">
+          <header class="t-Region-header region-header">
+            <h2 class="t-Region-title region-title">Employee Directory</h2>
+            <div class="toolbar">
+              <input class="apex-item-text" type="search" value="" placeholder="Search employees">
+              <button class="t-Button">Actions</button>
+            </div>
+          </header>
+          <div class="t-Region-body region-body">
+            <table class="a-IRR-table report">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Department</th>
+                  <th>Location</th>
+                  <th>Status</th>
+                  <th>Manager</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Jane Cooper</td>
+                  <td>Finance</td>
+                  <td>New York</td>
+                  <td><span class="t-Badge badge">Active</span></td>
+                  <td>Leslie Alexander</td>
+                </tr>
+                <tr>
+                  <td>Michael Foster</td>
+                  <td>Operations</td>
+                  <td>Chicago</td>
+                  <td><span class="t-Badge badge">On Leave</span></td>
+                  <td>Brooklyn Simmons</td>
+                </tr>
+                <tr>
+                  <td>Sara Wilson</td>
+                  <td>Engineering</td>
+                  <td>Seattle</td>
+                  <td><span class="t-Badge badge">Active</span></td>
+                  <td>Jenny Wilson</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <div class="row apex-row">
+          <section class="t-Region region col-6">
+            <header class="t-Region-header region-header">
+              <h2 class="t-Region-title region-title">Leave Request Form</h2>
+            </header>
+            <div class="t-Region-body region-body" style="display:grid;gap:12px;">
+              <label>Employee<input class="apex-item-text" type="text" value="Jane Cooper"></label>
+              <label>Leave Type<select class="apex-item-select"><option>Annual Leave</option><option>Sick Leave</option></select></label>
+              <label>Reason<textarea rows="3">Family travel</textarea></label>
+              <div style="display:flex;justify-content:flex-end;gap:8px;">
+                <button class="t-Button">Cancel</button>
+                <button class="t-Button t-Button--hot">Submit</button>
+              </div>
+            </div>
+          </section>
+
+          <section class="t-Region region col-6">
+            <header class="t-Region-header region-header">
+              <h2 class="t-Region-title region-title">Recent Activity</h2>
+            </header>
+            <div class="t-Region-body region-body">
+              <ol class="timeline">
+                <li class="timeline-item"><span class="t-Icon fa fa-check"></span><span>Offer approved for Payroll Analyst</span></li>
+                <li class="timeline-item"><span class="t-Icon fa fa-clock-o"></span><span>Three leave requests await manager action</span></li>
+                <li class="timeline-item"><span class="t-Icon fa fa-info-circle"></span><span>Benefits enrollment closes this Friday</span></li>
+              </ol>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

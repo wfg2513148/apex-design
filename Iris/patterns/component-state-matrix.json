@@ -1,0 +1,389 @@
+{
+  "name": "Oracle APEX Universal Theme Iris Component State Matrix",
+  "themeStyle": "Iris",
+  "source": {
+    "canonicalBase": "https://oracleapex.com/ords/r/apex_pm/ut",
+    "fallbackEvidenceBase": "https://oracleapex.cn/ords/r/test/ut",
+    "verifiedBodyClass": "apex-theme-iris",
+    "verifiedPrimaryToken": "#00688c",
+    "evidencePages": [
+      "buttons",
+      "forms",
+      "form-item-types",
+      "interactive-report",
+      "interactive-grid",
+      "badge-component",
+      "alert-region",
+      "inline-dialog",
+      "inline-drawer",
+      "timeline-component",
+      "wizard-region",
+      "color-and-status-modifiers",
+      "layout-modifiers",
+      "content-modifiers"
+    ],
+    "capturedAt": "2026-06-11T02:31:00Z"
+  },
+  "states": {
+    "button": {
+      "baseClasses": [
+        "t-Button",
+        "a-Button"
+      ],
+      "variants": {
+        "default": [
+          "t-Button"
+        ],
+        "primary": [
+          "t-Button--hot",
+          "t-Button--primary"
+        ],
+        "iconOnly": [
+          "t-Button--icon",
+          "t-Button--noLabel"
+        ],
+        "header": [
+          "t-Button--header",
+          "t-Button--navBar"
+        ],
+        "reportToolbar": [
+          "a-Button",
+          "a-IRR-button",
+          "a-Toolbar-item"
+        ],
+        "danger": [
+          "t-Button--danger"
+        ],
+        "gapLeft": [
+          "t-Button--gapLeft"
+        ],
+        "noUi": [
+          "t-Button--noUI"
+        ]
+      },
+      "interactiveStates": [
+        "hover",
+        "focus",
+        "active",
+        "disabled",
+        "aria-expanded"
+      ],
+      "generationRules": [
+        "Use t-Button for Universal Theme page and region actions.",
+        "Use a-Button variants inside Interactive Report, Interactive Grid, and toolbar controls.",
+        "Use icon-only buttons only when the icon meaning is conventional or a tooltip/aria-label is present."
+      ]
+    },
+    "form": {
+      "baseClasses": [
+        "t-Form-fieldContainer",
+        "t-Form-labelContainer",
+        "t-Form-inputContainer",
+        "t-Form-itemWrapper",
+        "apex-item-wrapper"
+      ],
+      "variants": {
+        "floatingLabel": [
+          "t-Form-fieldContainer--floatingLabel"
+        ],
+        "text": [
+          "apex-item-wrapper--text-field",
+          "apex-item-text"
+        ],
+        "select": [
+          "apex-item-wrapper--select-list",
+          "apex-item-select"
+        ],
+        "textarea": [
+          "apex-item-wrapper--textarea",
+          "apex-item-textarea"
+        ],
+        "radioGroup": [
+          "apex-item-wrapper--radiogroup",
+          "apex-item-group",
+          "apex-item-group--rc"
+        ],
+        "singleCheckbox": [
+          "apex-item-wrapper--single-checkbox"
+        ],
+        "passwordVisibility": [
+          "t-Button--passwordVisibility"
+        ]
+      },
+      "interactiveStates": [
+        "focus",
+        "required",
+        "disabled",
+        "readonly",
+        "invalid",
+        "warning",
+        "success"
+      ],
+      "generationRules": [
+        "Use observed APEX form wrappers even when a simplified prototype uses native input elements.",
+        "Group enterprise forms into clear t-Region sections rather than free-floating fields.",
+        "Show validation state using error text, field border, and Alert region when the prompt includes errors."
+      ]
+    },
+    "region": {
+      "baseClasses": [
+        "t-Region",
+        "t-Region-header",
+        "t-Region-body"
+      ],
+      "variants": {
+        "collapsibleExpanded": [
+          "t-Region--hideShow",
+          "is-expanded",
+          "a-Collapsible"
+        ],
+        "collapsibleCollapsed": [
+          "t-Region--hideShow",
+          "is-collapsed",
+          "a-Collapsible"
+        ],
+        "noPadding": [
+          "t-Region--noPadding",
+          "t-Form--noPadding"
+        ],
+        "noUi": [
+          "t-Region--noUI"
+        ],
+        "scrollBody": [
+          "t-Region--scrollBody"
+        ],
+        "hiddenHeader": [
+          "t-Region--hideHeader"
+        ]
+      },
+      "interactiveStates": [
+        "expanded",
+        "collapsed",
+        "loading",
+        "empty",
+        "error"
+      ],
+      "generationRules": [
+        "Use regions as the main grouping primitive for enterprise screens.",
+        "Use collapsible regions for advanced options and dense configuration sections.",
+        "Do not wrap page sections in decorative cards when t-Region already provides the structure."
+      ]
+    },
+    "interactiveReport": {
+      "baseClasses": [
+        "t-IRR-region",
+        "a-IRR",
+        "a-IRR-table",
+        "a-IRR-button"
+      ],
+      "variants": {
+        "columnSearch": [
+          "a-IRR-button--colSearch"
+        ],
+        "pagination": [
+          "a-IRR-button--pagination"
+        ],
+        "toolbar": [
+          "a-Toolbar",
+          "a-Toolbar-item"
+        ]
+      },
+      "interactiveStates": [
+        "filtered",
+        "sorted",
+        "selected",
+        "paginated",
+        "empty",
+        "loading"
+      ],
+      "generationRules": [
+        "Include search and Actions controls when the report is the primary work surface.",
+        "Use badges inside report cells for status values.",
+        "Use dense 12px table typography and 32px row rhythm."
+      ]
+    },
+    "interactiveGrid": {
+      "baseClasses": [
+        "a-IG-gridView",
+        "a-GV",
+        "a-GV-table",
+        "a-GV-header",
+        "a-GV-cell"
+      ],
+      "variants": {
+        "cellEditMode": [
+          "a-GV-dataEntryMode--cell"
+        ],
+        "readonly": [
+          "is-readonly"
+        ],
+        "row": [
+          "a-GV-row"
+        ],
+        "headerLabel": [
+          "a-GV-headerLabel"
+        ]
+      },
+      "interactiveStates": [
+        "activeCell",
+        "selectedRow",
+        "readonly",
+        "dirty",
+        "invalid",
+        "loading"
+      ],
+      "generationRules": [
+        "Use Interactive Grid for editable tabular workflows, not static lists.",
+        "Show readonly cells distinctly from editable cells.",
+        "Keep toolbar actions visible but compact."
+      ]
+    },
+    "searchAndFilters": {
+      "baseClasses": [
+        "t-Region",
+        "apex-item-option",
+        "apex-item-option-badge",
+        "apex-item-group",
+        "apex-item-group--rc"
+      ],
+      "variants": {
+        "facetedSearch": [
+          "reports-faceted-search",
+          "apex-item-option-badge"
+        ],
+        "smartFilters": [
+          "reports-smart-filters",
+          "apex-item-option-badge"
+        ],
+        "searchRegion": [
+          "reports-search-region"
+        ]
+      },
+      "interactiveStates": [
+        "selected",
+        "unselected",
+        "countBadge",
+        "resetAvailable",
+        "collapsed",
+        "expanded"
+      ],
+      "generationRules": [
+        "Use filter count badges when showing faceted search options.",
+        "Keep filters persistent and visibly connected to the result report.",
+        "Provide Reset when filters are active."
+      ]
+    },
+    "badgeAndStatus": {
+      "baseClasses": [
+        "t-Badge",
+        "t-Badge-value"
+      ],
+      "variants": {
+        "success": [
+          "t-Badge--success",
+          "u-success"
+        ],
+        "warning": [
+          "t-Badge--warning",
+          "u-warning"
+        ],
+        "danger": [
+          "t-Badge--danger",
+          "u-danger"
+        ],
+        "info": [
+          "t-Badge--info",
+          "u-info"
+        ]
+      },
+      "interactiveStates": [
+        "neutral",
+        "success",
+        "warning",
+        "danger",
+        "info"
+      ],
+      "generationRules": [
+        "Use status badges for business state values in cards, reports, and approval queues.",
+        "Use the Vita status token set; do not add unrelated colors for ordinary state labels."
+      ]
+    },
+    "dialogAndDrawer": {
+      "baseClasses": [
+        "ui-dialog",
+        "t-Dialog",
+        "t-Drawer"
+      ],
+      "variants": {
+        "pageDialog": [
+          "page-dialog"
+        ],
+        "pageDrawer": [
+          "page-drawer"
+        ],
+        "inlineDialog": [
+          "inline-dialog",
+          "ui-dialog"
+        ],
+        "inlineDrawer": [
+          "inline-drawer"
+        ]
+      },
+      "interactiveStates": [
+        "open",
+        "closing",
+        "modal",
+        "resizable",
+        "autoSize",
+        "fixedSize"
+      ],
+      "generationRules": [
+        "Use page dialog for short modal tasks.",
+        "Use page drawer or inline drawer for context-preserving review and edit workflows.",
+        "Keep close, cancel, and commit actions clear."
+      ]
+    },
+    "timelineAndWizard": {
+      "baseClasses": [
+        "t-Timeline",
+        "t-Wizard",
+        "t-Icon"
+      ],
+      "variants": {
+        "timeline": [
+          "timeline-component"
+        ],
+        "wizard": [
+          "wizard-region"
+        ]
+      },
+      "interactiveStates": [
+        "current",
+        "complete",
+        "upcoming",
+        "blocked",
+        "error"
+      ],
+      "generationRules": [
+        "Use Timeline for audit history, HR activities, project events, and approval logs.",
+        "Use Wizard only for ordered workflows with explicit Back, Next, Cancel, and Finish behavior."
+      ]
+    }
+  },
+  "canonicalUrls": {
+    "buttons": "https://oracleapex.com/ords/r/apex_pm/ut/buttons",
+    "forms": "https://oracleapex.com/ords/r/apex_pm/ut/forms",
+    "form-item-types": "https://oracleapex.com/ords/r/apex_pm/ut/form-item-types",
+    "interactive-report": "https://oracleapex.com/ords/r/apex_pm/ut/interactive-report",
+    "interactive-grid": "https://oracleapex.com/ords/r/apex_pm/ut/interactive-grid",
+    "badge-component": "https://oracleapex.com/ords/r/apex_pm/ut/badge-component",
+    "alert-region": "https://oracleapex.com/ords/r/apex_pm/ut/alert-region",
+    "inline-dialog": "https://oracleapex.com/ords/r/apex_pm/ut/inline-dialog",
+    "inline-drawer": "https://oracleapex.com/ords/r/apex_pm/ut/inline-drawer",
+    "timeline-component": "https://oracleapex.com/ords/r/apex_pm/ut/timeline-component",
+    "wizard-region": "https://oracleapex.com/ords/r/apex_pm/ut/wizard-region",
+    "color-and-status-modifiers": "https://oracleapex.com/ords/r/apex_pm/ut/color-and-status-modifiers",
+    "layout-modifiers": "https://oracleapex.com/ords/r/apex_pm/ut/layout-modifiers",
+    "content-modifiers": "https://oracleapex.com/ords/r/apex_pm/ut/content-modifiers"
+  }
+}

@@ -1,0 +1,298 @@
+{
+  "name": "Oracle APEX Universal Theme Vita Enterprise Patterns",
+  "themeStyle": "Vita",
+  "source": {
+    "canonicalBase": "https://oracleapex.com/ords/r/apex_pm/ut",
+    "fallbackEvidenceBase": "https://oracleapex.cn/ords/r/test/ut",
+    "verifiedBodyClass": "apex-theme-vita",
+    "verifiedPrimaryToken": "#056ac8",
+    "evidencePages": [
+      "forms",
+      "form-item-types",
+      "interactive-report",
+      "interactive-grid",
+      "standard-reports",
+      "reports-faceted-search",
+      "reports-smart-filters",
+      "reports-search-region",
+      "card-regions",
+      "metric-card",
+      "badge-component",
+      "timeline-component",
+      "wizard-region",
+      "alert-region",
+      "buttons"
+    ],
+    "capturedAt": "2026-06-11T01:46:02Z"
+  },
+  "compositionRules": [
+    "Use the Vita shell and title region for every full-page enterprise prototype.",
+    "Keep operational actions in the title region, report toolbar, or region header actions.",
+    "Use Cards or Metric Cards for summarized KPIs, not oversized marketing hero sections.",
+    "Use Interactive Report for read-heavy exploration and Interactive Grid for editable tabular work.",
+    "Use Faceted Search or Smart Filters when a report requires persistent business filters.",
+    "Use Page Drawer or Inline Drawer for contextual edit and approval tasks.",
+    "Use Badge, Alert, and color/status modifiers for semantic state; do not invent unrelated status colors.",
+    "Use Wizard only for genuinely sequential workflows with a known step order."
+  ],
+  "patterns": [
+    {
+      "id": "enterprise-dashboard",
+      "name": "Enterprise Operations Dashboard",
+      "useFor": [
+        "HR overview",
+        "finance operations",
+        "service queue",
+        "sales operations"
+      ],
+      "evidencePaths": [
+        "card-regions",
+        "metric-card",
+        "standard-reports",
+        "timeline-component"
+      ],
+      "layout": [
+        "t-Body-title with title, breadcrumb, and page actions",
+        "row with 3 or 4 Metric Card regions",
+        "row with primary report region and secondary activity/timeline region",
+        "optional Alert region for operational exceptions"
+      ],
+      "preferredClasses": [
+        "t-Region",
+        "t-Cards",
+        "t-Card",
+        "t-Badge",
+        "t-Report-report",
+        "t-Button"
+      ],
+      "generationRules": [
+        "Use compact KPI cards with real labels and trend/status badges.",
+        "Make the main report the dominant scanning surface.",
+        "Keep charts, timeline, and alerts secondary unless the prompt makes them primary."
+      ]
+    },
+    {
+      "id": "interactive-report-workspace",
+      "name": "Interactive Report Workspace",
+      "useFor": [
+        "employee list",
+        "case backlog",
+        "asset inventory",
+        "audit log"
+      ],
+      "evidencePaths": [
+        "interactive-report",
+        "reports-faceted-search",
+        "reports-smart-filters",
+        "reports-search-region"
+      ],
+      "layout": [
+        "title region with Create and Export actions",
+        "optional filter region above or beside results",
+        "t-IRR-region with a-IRR toolbar",
+        "a-IRR-table with row actions and status badges"
+      ],
+      "preferredClasses": [
+        "t-IRR-region",
+        "a-IRR",
+        "a-IRR-button",
+        "a-Button",
+        "t-Badge",
+        "t-Report-cell"
+      ],
+      "generationRules": [
+        "Include search, Actions, Go, and reset/filter affordances when showing report controls.",
+        "Use row-level action buttons sparingly; prefer a leading action column or detail links.",
+        "Show realistic column density rather than card-only summaries."
+      ]
+    },
+    {
+      "id": "interactive-grid-editing",
+      "name": "Interactive Grid Editing",
+      "useFor": [
+        "compensation planning",
+        "bulk assignment",
+        "budget allocation",
+        "editable project roster"
+      ],
+      "evidencePaths": [
+        "interactive-grid"
+      ],
+      "layout": [
+        "title region with Save and Cancel actions",
+        "t-IRR-region wrapper",
+        "a-IG-gridView a-GV a-GV-dataEntryMode--cell",
+        "a-GV-table with editable cell affordances"
+      ],
+      "preferredClasses": [
+        "a-IG-gridView",
+        "a-GV",
+        "a-GV-table",
+        "a-GV-header",
+        "a-GV-cell",
+        "a-Toolbar"
+      ],
+      "generationRules": [
+        "Use grid editing only when the user needs batch row edits.",
+        "Show selection, readonly, dirty, validation, and active-cell states when demonstrating interaction.",
+        "Keep grid toolbars compact and business-focused."
+      ]
+    },
+    {
+      "id": "master-detail-management",
+      "name": "Master Detail Management",
+      "useFor": [
+        "employee profile",
+        "customer account",
+        "project detail",
+        "supplier record"
+      ],
+      "evidencePaths": [
+        "pages",
+        "forms",
+        "interactive-report",
+        "page-drawer"
+      ],
+      "layout": [
+        "Marquee Detail or Standard page title",
+        "primary form/detail region",
+        "tabbed or stacked child regions",
+        "related Interactive Report or Timeline region",
+        "Page Drawer for side edits"
+      ],
+      "preferredClasses": [
+        "t-Region",
+        "t-Form-fieldContainer",
+        "t-Tabs",
+        "t-IRR-region",
+        "t-Badge"
+      ],
+      "generationRules": [
+        "Keep identity and status visible in the title or marquee area.",
+        "Use child report regions for assignments, transactions, documents, or activity.",
+        "Use drawer edits for secondary fields so the detail page remains stable."
+      ]
+    },
+    {
+      "id": "transaction-form",
+      "name": "Transaction Form",
+      "useFor": [
+        "employee onboarding",
+        "request submission",
+        "expense entry",
+        "policy update"
+      ],
+      "evidencePaths": [
+        "forms",
+        "form-item-types",
+        "buttons",
+        "alert-region"
+      ],
+      "layout": [
+        "title region with primary submit action",
+        "one or more t-Region form sections",
+        "t-Form-fieldContainer groups using label-above or floating label behavior",
+        "Alert region for validation or policy messages"
+      ],
+      "preferredClasses": [
+        "t-Form-fieldContainer",
+        "t-Form-fieldContainer--floatingLabel",
+        "apex-item-wrapper",
+        "apex-item-text",
+        "apex-item-select",
+        "t-Button--hot"
+      ],
+      "generationRules": [
+        "Use concise section regions; do not nest cards inside cards.",
+        "Expose required, error, disabled, and readonly states when relevant.",
+        "Place destructive actions away from the primary submit action."
+      ]
+    },
+    {
+      "id": "approval-workflow",
+      "name": "Approval Workflow",
+      "useFor": [
+        "leave approval",
+        "expense approval",
+        "access request",
+        "procurement review"
+      ],
+      "evidencePaths": [
+        "page-drawer",
+        "inline-drawer",
+        "timeline-component",
+        "badge-component",
+        "alert-region"
+      ],
+      "layout": [
+        "report or card queue",
+        "right-side drawer with request details",
+        "timeline region for history",
+        "badge statuses for pending, approved, rejected, and escalated",
+        "Approve, Reject, and Request Info buttons"
+      ],
+      "preferredClasses": [
+        "t-Badge",
+        "t-Badge--success",
+        "t-Badge--warning",
+        "t-Badge--danger",
+        "t-Button",
+        "t-Button--hot",
+        "t-Alert"
+      ],
+      "generationRules": [
+        "Keep decisions adjacent to the request details.",
+        "Use semantic status colors and badges rather than decorative accent colors.",
+        "Show audit trail or timeline when the workflow has history."
+      ]
+    },
+    {
+      "id": "guided-wizard",
+      "name": "Guided Wizard",
+      "useFor": [
+        "setup flow",
+        "multi-step onboarding",
+        "policy configuration"
+      ],
+      "evidencePaths": [
+        "wizard-region",
+        "forms",
+        "buttons"
+      ],
+      "layout": [
+        "wizard progress region",
+        "single active step content region",
+        "Back, Next, Cancel, and Finish actions"
+      ],
+      "preferredClasses": [
+        "t-Wizard",
+        "t-Button",
+        "t-Button--noLabel",
+        "t-Icon",
+        "t-Form-fieldContainer"
+      ],
+      "generationRules": [
+        "Use a wizard only when each step gates the next.",
+        "Keep step count visible and action ordering predictable.",
+        "Avoid using a wizard for ordinary single-page forms."
+      ]
+    }
+  ],
+  "canonicalUrls": {
+    "forms": "https://oracleapex.com/ords/r/apex_pm/ut/forms",
+    "form-item-types": "https://oracleapex.com/ords/r/apex_pm/ut/form-item-types",
+    "interactive-report": "https://oracleapex.com/ords/r/apex_pm/ut/interactive-report",
+    "interactive-grid": "https://oracleapex.com/ords/r/apex_pm/ut/interactive-grid",
+    "standard-reports": "https://oracleapex.com/ords/r/apex_pm/ut/standard-reports",
+    "reports-faceted-search": "https://oracleapex.com/ords/r/apex_pm/ut/reports-faceted-search",
+    "reports-smart-filters": "https://oracleapex.com/ords/r/apex_pm/ut/reports-smart-filters",
+    "reports-search-region": "https://oracleapex.com/ords/r/apex_pm/ut/reports-search-region",
+    "card-regions": "https://oracleapex.com/ords/r/apex_pm/ut/card-regions",
+    "metric-card": "https://oracleapex.com/ords/r/apex_pm/ut/metric-card",
+    "badge-component": "https://oracleapex.com/ords/r/apex_pm/ut/badge-component",
+    "timeline-component": "https://oracleapex.com/ords/r/apex_pm/ut/timeline-component",
+    "wizard-region": "https://oracleapex.com/ords/r/apex_pm/ut/wizard-region",
+    "alert-region": "https://oracleapex.com/ords/r/apex_pm/ut/alert-region",
+    "buttons": "https://oracleapex.com/ords/r/apex_pm/ut/buttons"
+  }
+}

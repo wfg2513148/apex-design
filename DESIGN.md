@@ -6,12 +6,12 @@ This repository contains extracted design-system documentation for Oracle APEX U
 
 | Theme style | File | Source coverage | Component coverage |
 | --- | --- | --- | --- |
-| Iris | `Iris/DESIGN.md` | 71 unique Design/Components/Icons pages HTTP/theme verified | 73 required menu entries covered; 59 live component pages scraped; 31 pages with Template Options captured |
-| Redwood Light | `Redwood-Light/DESIGN.md` | 71 unique Design/Components/Icons pages HTTP/theme verified | 73 required menu entries covered; 59 live component pages scraped; 31 pages with Template Options captured |
-| Vita | `Vita/DESIGN.md` | 71 unique Design/Components/Icons pages verified in Vita | 73 required menu entries covered; 59 live component pages scraped; 31 pages with Template Options captured |
-| Vita - Dark | `Vita-Dark/DESIGN.md` | 71 unique Design/Components/Icons pages verified in Vita - Dark | 73 required menu entries covered; 59 live component pages scraped; 31 pages with Template Options captured |
-| Vita - Red | `Vita-Red/DESIGN.md` | 71 unique Design/Components/Icons pages verified in Vita - Red | 73 required menu entries covered; 59 live component pages scraped; 31 pages with Template Options captured |
-| Vita - Slate | `Vita-Slate/DESIGN.md` | 71 unique Design/Components/Icons pages verified in Vita - Slate | 73 required menu entries covered; 59 live component pages scraped; 31 pages with Template Options captured |
+| Iris | `Iris/DESIGN.md` + `Iris/design-system.manifest.json` | 71 unique Design/Components/Icons pages HTTP/theme verified; companion tokens/CSS/Reference/patterns/catalogs/example added | 73 required menu entries covered; 59 live component pages scraped; 31 pages with Template Options captured |
+| Redwood Light | `Redwood-Light/DESIGN.md` + `Redwood-Light/design-system.manifest.json` | 71 unique Design/Components/Icons pages HTTP/theme verified; companion tokens/CSS/Reference/patterns/catalogs/example added | 73 required menu entries covered; 59 live component pages scraped; 31 pages with Template Options captured |
+| Vita | `Vita/DESIGN.md` + `Vita/design-system.manifest.json` | 71 unique Design/Components/Icons pages verified in Vita; companion tokens/CSS/Reference/patterns/catalogs/example added | 73 required menu entries covered; 59 live component pages scraped; 31 pages with Template Options captured |
+| Vita - Dark | `Vita-Dark/DESIGN.md` + `Vita-Dark/design-system.manifest.json` | 71 unique Design/Components/Icons pages verified in Vita - Dark; companion tokens/CSS/Reference/patterns/catalogs/example added | 73 required menu entries covered; 59 live component pages scraped; 31 pages with Template Options captured |
+| Vita - Red | `Vita-Red/DESIGN.md` + `Vita-Red/design-system.manifest.json` | 71 unique Design/Components/Icons pages verified in Vita - Red; companion tokens/CSS/Reference/patterns/catalogs/example added | 73 required menu entries covered; 59 live component pages scraped; 31 pages with Template Options captured |
+| Vita - Slate | `Vita-Slate/DESIGN.md` + `Vita-Slate/design-system.manifest.json` | 71 unique Design/Components/Icons pages verified in Vita - Slate; companion tokens/CSS/Reference/patterns/catalogs/example added | 73 required menu entries covered; 59 live component pages scraped; 31 pages with Template Options captured |
 
 ## Notes
 

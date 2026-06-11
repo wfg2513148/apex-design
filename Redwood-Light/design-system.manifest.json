@@ -1,0 +1,93 @@
+{
+  "name": "Oracle APEX Universal Theme - Redwood Light",
+  "id": "oracle-apex-universal-theme-redwood-light",
+  "version": "0.4.0",
+  "entrypoint": "DESIGN.md",
+  "themeStyle": "Redwood Light",
+  "category": "Oracle APEX",
+  "scope": "enterprise web application prototypes using Oracle APEX Universal Theme Redwood Light",
+  "source": {
+    "canonicalGettingStarted": "https://oracleapex.com/ords/r/apex_pm/ut/getting-started",
+    "fallbackEvidenceGettingStarted": "https://oracleapex.cn/ords/r/test/ut/getting-started",
+    "apexVersion": "26.1.0",
+    "themeId": "42",
+    "themeStyleId": "2599349576570175875",
+    "verifiedBodyClass": "apex-theme-redwood-light",
+    "verifiedPrimaryToken": "#5f7d4f",
+    "evidenceCapturedAt": "2026-06-11T02:31:00Z"
+  },
+  "files": {
+    "design": "DESIGN.md",
+    "readme": "README.md",
+    "tokens": "tokens/redwood-light.tokens.json",
+    "css": "styles/redwood-light-open-design.css",
+    "reference": "reference/apex-reference.json",
+    "referenceGuide": "reference/implementation-guidelines.md",
+    "pageTemplates": "patterns/page-templates.json",
+    "enterprisePatterns": "patterns/enterprise-patterns.json",
+    "componentStates": "patterns/component-state-matrix.json",
+    "patternsGuide": "patterns/README.md",
+    "componentCatalog": "catalog/component-catalog.json",
+    "navigationIconCatalog": "catalog/navigation-icon-catalog.json",
+    "openDesignReadiness": "catalog/open-design-readiness.json",
+    "catalogGuide": "catalog/README.md",
+    "example": "examples/enterprise-hr-dashboard.html"
+  },
+  "runtimeAssets": {
+    "stylesheets": [
+      "https://oracleapex.com/i/app_ui/css/Core.min.css?v=26.1.0",
+      "https://oracleapex.com/i/app_ui/css/Theme-Standard.min.css?v=26.1.0",
+      "https://oracleapex.com/i/libraries/font-apex/2.5.1/css/font-apex.min.css?v=26.1.0",
+      "https://oracleapex.com/i/themes/theme_42/26.1/css/Core.min.css?v=26.1.0",
+      "https://oracleapex.com/i/themes/theme_42/26.1/css/Redwood-Light.min.css?v=26.1.0"
+    ],
+    "scripts": [
+      "https://oracleapex.com/i/libraries/apex/minified/desktop_all.min.js?v=26.1.0",
+      "https://oracleapex.com/i/themes/theme_42/26.1/js/theme42.min.js?v=26.1.0",
+      "https://oracleapex.com/i/libraries/apex/minified/widget.treeView.min.js?v=26.1.0"
+    ],
+    "fonts": [
+      {
+        "family": "apex-core-font",
+        "source": "Oracle APEX runtime"
+      },
+      {
+        "family": "Font APEX Small",
+        "source": "Oracle APEX Font APEX 2.5.1 runtime"
+      },
+      {
+        "family": "Font APEX Large",
+        "source": "Oracle APEX Font APEX 2.5.1 runtime"
+      }
+    ],
+    "distributionPolicy": "Do not vendor Oracle runtime CSS, JavaScript, or font files in this repository. Reference official APEX runtime assets when an implementation can load them; otherwise use the local CSS as a prototype-safe approximation."
+  },
+  "openDesignHints": {
+    "importDirectory": "Redwood-Light",
+    "preferredMode": "hybrid",
+    "useFilesTogether": [
+      "DESIGN.md",
+      "README.md",
+      "tokens/redwood-light.tokens.json",
+      "styles/redwood-light-open-design.css",
+      "reference/apex-reference.json",
+      "reference/implementation-guidelines.md",
+      "patterns/page-templates.json",
+      "patterns/enterprise-patterns.json",
+      "patterns/component-state-matrix.json",
+      "patterns/README.md",
+      "catalog/component-catalog.json",
+      "catalog/navigation-icon-catalog.json",
+      "catalog/open-design-readiness.json",
+      "catalog/README.md",
+      "examples/enterprise-hr-dashboard.html"
+    ],
+    "doNotMixWith": [
+      "Iris",
+      "Vita",
+      "Vita-Dark",
+      "Vita-Red",
+      "Vita-Slate"
+    ]
+  }
+}

@@ -1,0 +1,350 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "name": "Oracle APEX Universal Theme Vita - Slate Tokens",
+  "source": {
+    "canonical": "https://oracleapex.com/ords/r/apex_pm/ut/getting-started",
+    "fallbackEvidence": "https://oracleapex.cn/ords/r/test/ut/getting-started",
+    "apexVersion": "26.1.0",
+    "themeStyle": "Vita - Slate",
+    "themeStyleId": "3294906487728305352",
+    "verifiedBodyClass": "apex-theme-vita-slate",
+    "verifiedPrimary": "#505f6d"
+  },
+  "color": {
+    "primary": {
+      "value": "#505f6d",
+      "type": "color",
+      "sourceVariable": "--ut-palette-primary"
+    },
+    "primaryShade": {
+      "value": "#eeeff0",
+      "type": "color",
+      "sourceVariable": "--ut-palette-primary-shade"
+    },
+    "primaryText": {
+      "value": "#505f6d",
+      "type": "color",
+      "sourceVariable": "--ut-palette-primary-text"
+    },
+    "warning": {
+      "value": "#ffc628",
+      "type": "color",
+      "sourceVariable": "--ut-palette-warning"
+    },
+    "success": {
+      "value": "#278701",
+      "type": "color",
+      "sourceVariable": "--ut-palette-success"
+    },
+    "danger": {
+      "value": "#cb1100",
+      "type": "color",
+      "sourceVariable": "--ut-palette-danger"
+    },
+    "info": {
+      "value": "#056ac8",
+      "type": "color",
+      "sourceVariable": "--ut-palette-info"
+    },
+    "bodyBackground": {
+      "value": "#f5f5f5",
+      "type": "color",
+      "sourceVariable": "--ut-body-background-color"
+    },
+    "surface": {
+      "value": "#fff",
+      "type": "color",
+      "sourceVariable": "--ut-region-background-color"
+    },
+    "surfaceAlt": {
+      "value": "#dee1e4",
+      "type": "color"
+    },
+    "inputSurface": {
+      "value": "#f9f9f9",
+      "type": "color"
+    },
+    "text": {
+      "value": "#000000",
+      "type": "color"
+    },
+    "componentText": {
+      "value": "#000000",
+      "type": "color"
+    },
+    "mutedText": {
+      "value": "#666666",
+      "type": "color"
+    },
+    "border": {
+      "value": "rgba(0,0,0,.1)",
+      "type": "color"
+    },
+    "reportCellBorder": {
+      "value": "#e6e6e6",
+      "type": "color"
+    },
+    "headerBackground": {
+      "value": "#505f6d",
+      "type": "color",
+      "sourceVariable": "--ut-header-background-color"
+    },
+    "sideNavigationBackground": {
+      "value": "#2c2c2c",
+      "type": "color",
+      "observedSelector": ".t-Body-nav"
+    },
+    "sideNavigationText": {
+      "value": "#f8f8f8",
+      "type": "color",
+      "observedSelector": ".t-Body-nav"
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "base": {
+        "value": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif",
+        "type": "fontFamily"
+      },
+      "mono": {
+        "value": "ui-monospace, SFMono-Regular, Menlo, Consolas, Liberation Mono, monospace",
+        "type": "fontFamily"
+      },
+      "apexCore": {
+        "value": "apex-core-font",
+        "type": "fontFamily",
+        "source": "Oracle APEX runtime"
+      },
+      "fontApexSmall": {
+        "value": "Font APEX Small",
+        "type": "fontFamily",
+        "source": "Oracle APEX Font APEX runtime"
+      },
+      "fontApexLarge": {
+        "value": "Font APEX Large",
+        "type": "fontFamily",
+        "source": "Oracle APEX Font APEX runtime"
+      }
+    },
+    "fontSize": {
+      "pageBody": {
+        "value": "16px",
+        "type": "dimension"
+      },
+      "body": {
+        "value": "14px",
+        "type": "dimension"
+      },
+      "dense": {
+        "value": "12px",
+        "type": "dimension"
+      },
+      "nav": {
+        "value": "14px",
+        "type": "dimension",
+        "observedSelector": ".a-TreeView-content"
+      },
+      "regionTitle": {
+        "value": "16px",
+        "type": "dimension"
+      },
+      "heroTitle": {
+        "value": "32px",
+        "type": "dimension"
+      },
+      "display": {
+        "value": "64px",
+        "type": "dimension"
+      }
+    },
+    "fontWeight": {
+      "normal": {
+        "value": 400,
+        "type": "fontWeight"
+      },
+      "semibold": {
+        "value": 600,
+        "type": "fontWeight"
+      },
+      "bold": {
+        "value": 700,
+        "type": "fontWeight"
+      }
+    },
+    "lineHeight": {
+      "button": {
+        "value": "16px",
+        "type": "dimension"
+      },
+      "body": {
+        "value": 1.43,
+        "type": "number"
+      },
+      "heading": {
+        "value": 1.25,
+        "type": "number"
+      }
+    }
+  },
+  "size": {
+    "headerHeight": {
+      "value": "48px",
+      "type": "dimension",
+      "observedSelector": ".t-Header"
+    },
+    "titleRegionHeight": {
+      "value": "96px",
+      "type": "dimension",
+      "observedSelector": ".t-Body-title"
+    },
+    "navRowHeight": {
+      "value": "44px",
+      "type": "dimension",
+      "observedSelector": ".a-TreeView-content"
+    },
+    "buttonHeight": {
+      "value": "32px",
+      "type": "dimension",
+      "observedSelector": ".t-Button"
+    },
+    "reportRowHeight": {
+      "value": "32px",
+      "type": "dimension"
+    }
+  },
+  "spacing": {
+    "base": {
+      "value": "8px",
+      "type": "dimension"
+    },
+    "buttonPadding": {
+      "value": "7px",
+      "type": "dimension"
+    },
+    "navPadding": {
+      "value": "10px 8px",
+      "type": "dimension"
+    },
+    "regionPadding": {
+      "value": "16px",
+      "type": "dimension"
+    },
+    "contentGap": {
+      "value": "16px",
+      "type": "dimension"
+    },
+    "sectionGap": {
+      "value": "32px",
+      "type": "dimension"
+    }
+  },
+  "radius": {
+    "component": {
+      "value": "0.125rem",
+      "type": "dimension",
+      "sourceVariable": "--ut-component-border-radius"
+    },
+    "button": {
+      "value": "2px",
+      "type": "dimension"
+    },
+    "region": {
+      "value": "2px",
+      "type": "dimension"
+    },
+    "card": {
+      "value": "3px",
+      "type": "dimension"
+    },
+    "pill": {
+      "value": "9999px",
+      "type": "dimension"
+    }
+  },
+  "shadow": {
+    "titleRegion": {
+      "value": "rgba(0, 0, 0, 0.1) 0px 1px 0px 0px",
+      "type": "shadow",
+      "observedSelector": ".t-Body-title"
+    },
+    "sideNavigationInset": {
+      "value": "rgba(0, 0, 0, 0.1) -1px 0px 0px 0px inset",
+      "type": "shadow",
+      "observedSelector": ".t-Body-nav"
+    },
+    "region": {
+      "value": "0 2px 4px -2px rgba(0,0,0,.1)",
+      "type": "shadow"
+    },
+    "button": {
+      "value": "0 2px 4px -3px rgba(0,0,0,.1)",
+      "type": "shadow"
+    },
+    "cardHover": {
+      "value": "0 4px .5rem 0 rgba(0,0,0,.1)",
+      "type": "shadow"
+    }
+  },
+  "componentClassMap": {
+    "applicationShell": [
+      "t-PageBody",
+      "t-Header",
+      "t-Body",
+      "t-Body-nav",
+      "t-Body-title",
+      "t-Body-content",
+      "apex-side-nav",
+      "apex-theme-vita-slate"
+    ],
+    "navigation": [
+      "a-TreeView-node",
+      "a-TreeView-content",
+      "a-TreeView-label",
+      "is-selected",
+      "is-current--top"
+    ],
+    "button": [
+      "t-Button",
+      "t-Button--hot",
+      "t-Button--primary",
+      "t-Button--icon",
+      "t-Button--header",
+      "t-Button--navBar"
+    ],
+    "region": [
+      "t-Region",
+      "t-Region-header",
+      "t-Region-title",
+      "t-ContentBlock"
+    ],
+    "cards": [
+      "t-Cards",
+      "t-Cards-item",
+      "t-Card",
+      "t-Card-wrap",
+      "t-Card-title",
+      "t-Card-body"
+    ],
+    "reports": [
+      "a-IRR",
+      "a-IRR-table",
+      "a-GV",
+      "a-GV-table",
+      "a-GV-header",
+      "a-GV-cell",
+      "t-Report"
+    ],
+    "forms": [
+      "t-Form",
+      "t-Form-label",
+      "t-Form-inputContainer",
+      "apex-item-text",
+      "apex-item-select"
+    ],
+    "icons": [
+      "a-Icon",
+      "t-Icon",
+      "fa"
+    ]
+  }
+}

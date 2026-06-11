@@ -1,0 +1,239 @@
+{
+  "name": "Oracle APEX Universal Theme Vita - Dark Navigation and Icon Catalog",
+  "themeStyle": "Vita - Dark",
+  "source": {
+    "canonicalBase": "https://oracleapex.com/ords/r/apex_pm/ut",
+    "fallbackEvidenceBase": "https://oracleapex.cn/ords/r/test/ut",
+    "verifiedBodyClass": "apex-theme-vita-dark",
+    "verifiedPrimaryToken": "#056ac8",
+    "iconsPageVisibleIconClassCount": 1546,
+    "capturedAt": "2026-06-11T02:31:00Z"
+  },
+  "navigationEntries": [
+    {
+      "group": "Design",
+      "entry": "Design Overview",
+      "canonicalPath": "design-overview"
+    },
+    {
+      "group": "Design",
+      "entry": "Colors",
+      "canonicalPath": "colors"
+    },
+    {
+      "group": "Design",
+      "entry": "Navigation",
+      "canonicalPath": "navigation"
+    },
+    {
+      "group": "Design",
+      "entry": "Grid Layout",
+      "canonicalPath": "grid-layout"
+    },
+    {
+      "group": "Design",
+      "entry": "Page Templates",
+      "canonicalPath": "pages"
+    },
+    {
+      "group": "Design",
+      "entry": "Theme Styles",
+      "canonicalPath": "theme-styles"
+    },
+    {
+      "group": "Design",
+      "entry": "Mobile Patterns / Navigation",
+      "canonicalPath": "navigation2"
+    },
+    {
+      "group": "Design",
+      "entry": "Headers and Footers",
+      "canonicalPath": "headers-and-footers"
+    },
+    {
+      "group": "Design",
+      "entry": "Data Entry",
+      "canonicalPath": "data-entry2"
+    },
+    {
+      "group": "Design",
+      "entry": "Touch Gestures",
+      "canonicalPath": "touch-gestures"
+    },
+    {
+      "group": "Design",
+      "entry": "jQuery Mobile Components",
+      "canonicalPath": "jquery-mobile-components"
+    },
+    {
+      "group": "Components",
+      "entry": "Breadcrumb",
+      "canonicalPath": "breadcrumb"
+    },
+    {
+      "group": "Components",
+      "entry": "Links List",
+      "canonicalPath": "links-list"
+    },
+    {
+      "group": "Components",
+      "entry": "List View",
+      "canonicalPath": "list-view"
+    },
+    {
+      "group": "Components",
+      "entry": "Menu Bar",
+      "canonicalPath": "menu-bar-list"
+    },
+    {
+      "group": "Components",
+      "entry": "Menu Popup",
+      "canonicalPath": "menu-popup"
+    },
+    {
+      "group": "Components",
+      "entry": "Navigation Bar",
+      "canonicalPath": "navigation"
+    },
+    {
+      "group": "Components",
+      "entry": "Region Display Selector",
+      "canonicalPath": "region-display-selector"
+    },
+    {
+      "group": "Components",
+      "entry": "Tabs Container",
+      "canonicalPath": "tabs"
+    },
+    {
+      "group": "Components",
+      "entry": "Title Bar",
+      "canonicalPath": "title-bar-region"
+    },
+    {
+      "group": "Components",
+      "entry": "Tree",
+      "canonicalPath": "tree"
+    },
+    {
+      "group": "Components",
+      "entry": "Wizards / Wazards",
+      "canonicalPath": "wizard-region"
+    }
+  ],
+  "navigationClasses": {
+    "applicationShell": [
+      "t-Header",
+      "t-Body-nav",
+      "t-Body-title",
+      "t-Body-content",
+      "apex-side-nav"
+    ],
+    "treeNavigation": [
+      "a-TreeView-node",
+      "a-TreeView-row",
+      "a-TreeView-content",
+      "a-TreeView-label",
+      "is-current--top",
+      "is-selected"
+    ],
+    "breadcrumb": [
+      "t-Breadcrumb",
+      "t-Breadcrumb-item",
+      "t-Breadcrumb-label"
+    ],
+    "tabs": [
+      "t-Tabs",
+      "t-Tabs-link",
+      "is-active"
+    ],
+    "menu": [
+      "a-MenuBar",
+      "a-Menu",
+      "a-Menu-item"
+    ],
+    "wizard": [
+      "t-WizardSteps",
+      "t-WizardSteps-step",
+      "t-WizardSteps-marker",
+      "t-WizardSteps-label"
+    ]
+  },
+  "iconSystem": {
+    "families": [
+      "Font APEX Small",
+      "Font APEX Large",
+      "apex-core-font"
+    ],
+    "classes": [
+      "fa",
+      "fa-*",
+      "a-Icon",
+      "t-Icon"
+    ],
+    "categoriesObservedOnIconsPage": [
+      "new",
+      "accessibility",
+      "ai",
+      "business",
+      "calendar",
+      "chart",
+      "construction",
+      "country flag",
+      "currency",
+      "directional",
+      "file type",
+      "form control",
+      "maps",
+      "medical",
+      "numbers",
+      "payment",
+      "spinner",
+      "status",
+      "transportation",
+      "user interface"
+    ],
+    "representativeClasses": [
+      "fa-apex",
+      "fa-home",
+      "fa-search",
+      "fa-plus",
+      "fa-edit",
+      "fa-trash",
+      "fa-save",
+      "fa-check",
+      "fa-times",
+      "fa-warning",
+      "fa-info-circle",
+      "fa-user",
+      "fa-users",
+      "fa-calendar",
+      "fa-chart-bar",
+      "fa-table",
+      "fa-filter",
+      "fa-download",
+      "fa-upload",
+      "fa-angle-right",
+      "fa-angle-down",
+      "fa-badge-check",
+      "fa-ai",
+      "fa-ai-generative"
+    ],
+    "rules": [
+      "Use Font APEX classes for APEX prototypes; do not substitute emoji or unrelated SVG icon sets by default.",
+      "Use icons inside buttons only when the icon meaning is conventional or a label/aria-label is present.",
+      "Use status icons together with Badge or Alert semantics."
+    ]
+  },
+  "canonicalUrls": {
+    "navigation": "https://oracleapex.com/ords/r/apex_pm/ut/navigation",
+    "breadcrumb": "https://oracleapex.com/ords/r/apex_pm/ut/breadcrumb",
+    "links-list": "https://oracleapex.com/ords/r/apex_pm/ut/links-list",
+    "menu-bar-list": "https://oracleapex.com/ords/r/apex_pm/ut/menu-bar-list",
+    "menu-popup": "https://oracleapex.com/ords/r/apex_pm/ut/menu-popup",
+    "tabs": "https://oracleapex.com/ords/r/apex_pm/ut/tabs",
+    "tree": "https://oracleapex.com/ords/r/apex_pm/ut/tree",
+    "wizard-region": "https://oracleapex.com/ords/r/apex_pm/ut/wizard-region",
+    "icons": "https://oracleapex.com/ords/r/apex_pm/ut/icons"
+  }
+}

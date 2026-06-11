@@ -1,0 +1,63 @@
+{
+  "name": "Oracle APEX Universal Theme Vita - Slate Open Design Readiness Audit",
+  "themeStyle": "Vita - Slate",
+  "capturedAt": "2026-06-11T02:31:00Z",
+  "evidenceBoundary": {
+    "canonicalBase": "https://oracleapex.com/ords/r/apex_pm/ut",
+    "fallbackEvidenceBase": "https://oracleapex.cn/ords/r/test/ut",
+    "verifiedBodyClass": "apex-theme-vita-slate",
+    "verifiedPrimaryToken": "#505f6d"
+  },
+  "requirements": [
+    {
+      "requirement": "human-readable design contract",
+      "artifact": "DESIGN.md",
+      "status": "present"
+    },
+    {
+      "requirement": "machine-readable package manifest",
+      "artifact": "design-system.manifest.json",
+      "status": "present"
+    },
+    {
+      "requirement": "machine-readable design tokens",
+      "artifact": "tokens/vita-slate.tokens.json",
+      "status": "present"
+    },
+    {
+      "requirement": "prototype-safe CSS adapter",
+      "artifact": "styles/vita-slate-open-design.css",
+      "status": "present"
+    },
+    {
+      "requirement": "APEX Reference implementation guidance",
+      "artifact": "reference/apex-reference.json",
+      "status": "present"
+    },
+    {
+      "requirement": "page-template and enterprise pattern blueprints",
+      "artifact": "patterns/*.json",
+      "status": "present"
+    },
+    {
+      "requirement": "standard component catalog",
+      "artifact": "catalog/component-catalog.json",
+      "status": "present"
+    },
+    {
+      "requirement": "navigation and icon catalog",
+      "artifact": "catalog/navigation-icon-catalog.json",
+      "status": "present"
+    },
+    {
+      "requirement": "runnable enterprise example",
+      "artifact": "examples/enterprise-hr-dashboard.html",
+      "status": "present"
+    }
+  ],
+  "knownBoundaries": [
+    "Oracle runtime CSS, JavaScript, and font files are referenced but not vendored.",
+    "Local CSS is a prototype adapter, not a byte-for-byte copy of Oracle APEX runtime CSS.",
+    "Evidence is Vita - Slate-only and must not be mixed with other theme styles unless explicitly requested."
+  ]
+}

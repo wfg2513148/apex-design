@@ -1,0 +1,225 @@
+/*
+ * Oracle APEX Universal Theme Redwood Light approximation for Open Design prototypes.
+ * This is a compact, source-backed adapter. Load official APEX runtime assets when exact fidelity is needed.
+ */
+
+:root,
+.apex-theme-redwood-light {
+  --ut-palette-primary: #5f7d4f;
+  --ut-palette-primary-shade: #f7fcf3;
+  --ut-palette-primary-text: #5f7d4f;
+  --ut-palette-success: #508223;
+  --ut-palette-warning: #ac630c;
+  --ut-palette-danger: #d63b25;
+  --ut-palette-info: #227e9e;
+  --ut-body-background-color: #f5f4f2;
+  --ut-header-background-color: #f5f4f2;
+  --ut-region-background-color: #ffffff;
+  --ut-component-border-radius: .375rem;
+
+  --apex-redwood-light-font-family-base: "Oracle Sans", -apple-system, "system-ui", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  --apex-redwood-light-font-family-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  --apex-redwood-light-font-family-icon: "Font APEX Small", "Font APEX Large", "apex-core-font";
+  --apex-redwood-light-body: #f5f4f2;
+  --apex-redwood-light-surface: #ffffff;
+  --apex-redwood-light-surface-alt: #f5f4f2;
+  --apex-redwood-light-input: #f9f9f9;
+  --apex-redwood-light-text: #161513;
+  --apex-redwood-light-component-text: #161513;
+  --apex-redwood-light-muted-text: #666666;
+  --apex-redwood-light-border: rgba(0,0,0,.1);
+  --apex-redwood-light-report-border: #e6e6e6;
+  --apex-redwood-light-side-nav: #ffffff;
+  --apex-redwood-light-side-nav-text: #161513;
+  --apex-redwood-light-header-height: 56px;
+  --apex-redwood-light-title-height: 128px;
+  --apex-redwood-light-nav-row-height: 48px;
+  --apex-redwood-light-button-height: 36px;
+  --apex-redwood-light-report-row-height: 32px;
+  --apex-redwood-light-radius: 4px;
+}
+
+.apex-theme-redwood-light,
+body.apex-theme-redwood-light,
+.t-PageBody.apex-theme-redwood-light {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--apex-redwood-light-text);
+  background: var(--ut-body-background-color);
+  font-family: var(--apex-redwood-light-font-family-base);
+  font-size: 16px;
+}
+
+.apex-theme-redwood-light *, .apex-theme-redwood-light *::before, .apex-theme-redwood-light *::after { box-sizing: border-box; }
+
+.apex-theme-redwood-light .t-Header, .apex-theme-redwood-light.t-PageBody > .t-Header, .apex-theme-redwood-light .app-header {
+  min-height: var(--apex-redwood-light-header-height);
+  background: var(--ut-header-background-color);
+  color: var(--apex-redwood-light-text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 8px;
+}
+
+.apex-theme-redwood-light .t-Header-logo, .apex-theme-redwood-light .app-logo {
+  color: currentColor;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: var(--apex-redwood-light-header-height);
+}
+
+.apex-theme-redwood-light .t-Body, .apex-theme-redwood-light .app-shell {
+  display: grid;
+  grid-template-columns: 256px minmax(0, 1fr);
+  min-height: calc(100vh - var(--apex-redwood-light-header-height));
+}
+
+.apex-theme-redwood-light .t-Body-nav, .apex-theme-redwood-light .app-nav {
+  background: var(--apex-redwood-light-side-nav);
+  color: var(--apex-redwood-light-side-nav-text);
+  box-shadow: -1px 0 0 rgba(0, 0, 0, .1) inset;
+}
+
+.apex-theme-redwood-light .a-TreeView-content, .apex-theme-redwood-light .app-nav-link {
+  min-height: var(--apex-redwood-light-nav-row-height);
+  padding: 8px 8px 8px 14px;
+  color: var(--apex-redwood-light-side-nav-text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  line-height: 16px;
+  text-decoration: none;
+}
+
+.apex-theme-redwood-light .a-TreeView-content.is-selected,
+.apex-theme-redwood-light .a-TreeView-content.is-current--top,
+.apex-theme-redwood-light .app-nav-link[aria-current="page"] {
+  background: var(--ut-palette-primary);
+  color: #fff;
+}
+
+.apex-theme-redwood-light .t-Body-title, .apex-theme-redwood-light .page-title-region {
+  min-height: var(--apex-redwood-light-title-height);
+  background: var(--apex-redwood-light-surface-alt);
+  color: var(--apex-redwood-light-text);
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 24px;
+}
+
+.apex-theme-redwood-light .t-Body-content, .apex-theme-redwood-light .page-content {
+  padding: 16px 24px 32px;
+  background: var(--apex-redwood-light-body);
+}
+
+.apex-theme-redwood-light .row, .apex-theme-redwood-light .apex-row {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 16px;
+}
+.apex-theme-redwood-light .col-12 { grid-column: span 12; }
+.apex-theme-redwood-light .col-8 { grid-column: span 8; }
+.apex-theme-redwood-light .col-6 { grid-column: span 6; }
+.apex-theme-redwood-light .col-4 { grid-column: span 4; }
+.apex-theme-redwood-light .col-3 { grid-column: span 3; }
+
+.apex-theme-redwood-light .t-Region, .apex-theme-redwood-light .t-ContentBlock, .apex-theme-redwood-light .region {
+  background: var(--ut-region-background-color);
+  color: var(--apex-redwood-light-component-text);
+  border: 1px solid var(--apex-redwood-light-border);
+  border-radius: var(--apex-redwood-light-radius);
+  box-shadow: 0 2px 4px -2px rgba(0, 0, 0, .1);
+  margin-block-end: 16px;
+}
+
+.apex-theme-redwood-light .t-Region-header, .apex-theme-redwood-light .region-header {
+  min-height: 48px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--apex-redwood-light-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.apex-theme-redwood-light .t-Region-title, .apex-theme-redwood-light .region-title {
+  margin: 0;
+  color: var(--apex-redwood-light-component-text);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.apex-theme-redwood-light .t-Region-body, .apex-theme-redwood-light .region-body { padding: 16px; }
+
+.apex-theme-redwood-light .t-Button, .apex-theme-redwood-light .a-Button, .apex-theme-redwood-light button, .apex-theme-redwood-light .button {
+  min-height: var(--apex-redwood-light-button-height);
+  border: 1px solid var(--apex-redwood-light-border);
+  border-radius: var(--apex-redwood-light-radius);
+  background: #f8f8f8;
+  color: #161513;
+  box-shadow: 0 2px 4px -3px rgba(0, 0, 0, .1);
+  padding: 7px;
+  font: 600 14px/20px var(--apex-redwood-light-font-family-base);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-decoration: none;
+}
+.apex-theme-redwood-light .t-Button:hover, .apex-theme-redwood-light .a-Button:hover, .apex-theme-redwood-light .button:hover { filter: brightness(1.04); }
+.apex-theme-redwood-light .t-Button:focus-visible, .apex-theme-redwood-light .a-Button:focus-visible, .apex-theme-redwood-light .button:focus-visible { outline: 2px solid var(--ut-palette-primary); outline-offset: 2px; }
+.apex-theme-redwood-light .t-Button:disabled, .apex-theme-redwood-light .a-Button:disabled, .apex-theme-redwood-light .is-disabled { opacity: .45; cursor: not-allowed; }
+.apex-theme-redwood-light .t-Button--hot, .apex-theme-redwood-light .t-Button--primary, .apex-theme-redwood-light .a-Button--hot, .apex-theme-redwood-light .button-primary { background: var(--ut-palette-primary); border-color: var(--ut-palette-primary); color: #fff; }
+.apex-theme-redwood-light .t-Button--danger, .apex-theme-redwood-light .button-danger { background: var(--ut-palette-danger); border-color: var(--ut-palette-danger); color: #fff; }
+
+.apex-theme-redwood-light .t-Form-label, .apex-theme-redwood-light label { color: var(--apex-redwood-light-component-text); font-size: 12px; font-weight: 600; line-height: 16px; }
+.apex-theme-redwood-light .apex-item-text, .apex-theme-redwood-light .apex-item-select, .apex-theme-redwood-light input, .apex-theme-redwood-light select, .apex-theme-redwood-light textarea {
+  min-height: 32px;
+  border: 1px solid var(--apex-redwood-light-border);
+  border-radius: var(--apex-redwood-light-radius);
+  background: var(--apex-redwood-light-input);
+  color: var(--apex-redwood-light-component-text);
+  padding: 4px 7px;
+  font: 400 12px/16px var(--apex-redwood-light-font-family-base);
+}
+.apex-theme-redwood-light input:focus, .apex-theme-redwood-light select:focus, .apex-theme-redwood-light textarea:focus { outline: none; border-color: var(--ut-palette-primary); box-shadow: 0 0 0 1px var(--ut-palette-primary); }
+.apex-theme-redwood-light .is-invalid input, .apex-theme-redwood-light input[aria-invalid="true"] { border-color: var(--ut-palette-danger); box-shadow: 0 0 0 1px var(--ut-palette-danger); }
+
+.apex-theme-redwood-light .t-Cards, .apex-theme-redwood-light .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; padding: 0; margin: 0; list-style: none; }
+.apex-theme-redwood-light .t-Card, .apex-theme-redwood-light .card { background: var(--ut-region-background-color); border: 1px solid var(--apex-redwood-light-border); border-radius: var(--apex-redwood-light-radius); box-shadow: 0 2px 4px -2px rgba(0, 0, 0, .075); padding: 16px; }
+.apex-theme-redwood-light .t-Card:hover, .apex-theme-redwood-light .card:hover { box-shadow: 0 4px .5rem 0 rgba(0, 0, 0, .1); }
+
+.apex-theme-redwood-light .t-Badge, .apex-theme-redwood-light .badge { display: inline-flex; align-items: center; min-height: 20px; padding: 2px 8px; border-radius: 16px; background: rgba(128,128,128,.18); color: var(--apex-redwood-light-component-text); font-size: 12px; line-height: 16px; }
+.apex-theme-redwood-light .t-Badge--success, .apex-theme-redwood-light .badge-success { color: var(--ut-palette-success); }
+.apex-theme-redwood-light .t-Badge--warning, .apex-theme-redwood-light .badge-warning { color: var(--ut-palette-warning); }
+.apex-theme-redwood-light .t-Badge--danger, .apex-theme-redwood-light .badge-danger { color: var(--ut-palette-danger); }
+.apex-theme-redwood-light .t-Badge--info, .apex-theme-redwood-light .badge-info { color: var(--ut-palette-info); }
+
+.apex-theme-redwood-light .t-Alert, .apex-theme-redwood-light .alert { border: 1px solid var(--apex-redwood-light-border); border-radius: var(--apex-redwood-light-radius); background: var(--ut-region-background-color); padding: 12px 16px; color: var(--apex-redwood-light-component-text); }
+
+.apex-theme-redwood-light .a-IRR-table, .apex-theme-redwood-light .a-GV-table, .apex-theme-redwood-light .t-Report-report, .apex-theme-redwood-light table.report { width: 100%; border-collapse: collapse; background: var(--ut-region-background-color); color: var(--apex-redwood-light-component-text); font-size: 12px; line-height: 16px; }
+.apex-theme-redwood-light .a-IRR-table th, .apex-theme-redwood-light .a-GV-header, .apex-theme-redwood-light .t-Report-colHead, .apex-theme-redwood-light table.report th { min-height: var(--apex-redwood-light-report-row-height); background: var(--ut-region-background-color); border: 1px solid var(--apex-redwood-light-report-border); color: var(--apex-redwood-light-component-text); font-weight: 600; padding: 8px; text-align: left; }
+.apex-theme-redwood-light .a-IRR-table td, .apex-theme-redwood-light .a-GV-cell, .apex-theme-redwood-light .t-Report-cell, .apex-theme-redwood-light table.report td { height: var(--apex-redwood-light-report-row-height); border: 1px solid var(--apex-redwood-light-report-border); padding: 8px; vertical-align: middle; }
+.apex-theme-redwood-light .a-GV-cell.is-active, .apex-theme-redwood-light .a-GV-cell.is-selected, .apex-theme-redwood-light table.report tr.is-selected td { background: var(--ut-palette-primary-shade); }
+
+.apex-theme-redwood-light .toolbar, .apex-theme-redwood-light .a-Toolbar { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-block-end: 8px; }
+.apex-theme-redwood-light .tabs, .apex-theme-redwood-light .t-Tabs { display: flex; align-items: center; gap: 2px; border-bottom: 1px solid var(--apex-redwood-light-border); }
+.apex-theme-redwood-light .tab, .apex-theme-redwood-light .t-Tabs-link { padding: 8px 12px; color: var(--apex-redwood-light-component-text); font-size: 12px; line-height: 16px; text-decoration: none; }
+.apex-theme-redwood-light .tab[aria-selected="true"], .apex-theme-redwood-light .t-Tabs-link.is-active { color: var(--ut-palette-primary); box-shadow: inset 0 -2px 0 var(--ut-palette-primary); }
+
+.apex-theme-redwood-light .modal, .apex-theme-redwood-light .drawer, .apex-theme-redwood-light .ui-dialog, .apex-theme-redwood-light .t-Dialog, .apex-theme-redwood-light .t-Drawer { background: var(--ut-region-background-color); border: 1px solid var(--apex-redwood-light-border); border-radius: var(--apex-redwood-light-radius); box-shadow: 0 8px 32px rgba(0, 0, 0, .24); }
+.apex-theme-redwood-light .timeline { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.apex-theme-redwood-light .timeline-item { display: grid; grid-template-columns: 32px 1fr; gap: 8px; padding: 8px 0; }
+.apex-theme-redwood-light .a-Icon, .apex-theme-redwood-light .t-Icon, .apex-theme-redwood-light .fa { font-family: var(--apex-redwood-light-font-family-icon), var(--apex-redwood-light-font-family-base); font-style: normal; line-height: 1; }
+
+@media (max-width: 800px) {
+  .apex-theme-redwood-light .t-Body, .apex-theme-redwood-light .app-shell { grid-template-columns: 1fr; }
+  .apex-theme-redwood-light .t-Body-nav, .apex-theme-redwood-light .app-nav { display: none; }
+  .apex-theme-redwood-light .row, .apex-theme-redwood-light .apex-row { grid-template-columns: 1fr; }
+  .apex-theme-redwood-light .col-12, .apex-theme-redwood-light .col-8, .apex-theme-redwood-light .col-6, .apex-theme-redwood-light .col-4, .apex-theme-redwood-light .col-3 { grid-column: span 1; }
+}

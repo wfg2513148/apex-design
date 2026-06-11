@@ -1,0 +1,2006 @@
+{
+  "name": "Oracle APEX Universal Theme Vita Component Catalog",
+  "themeStyle": "Vita",
+  "source": {
+    "canonicalBase": "https://oracleapex.com/ords/r/apex_pm/ut",
+    "fallbackEvidenceBase": "https://oracleapex.cn/ords/r/test/ut",
+    "verifiedBodyClass": "apex-theme-vita",
+    "verifiedPrimaryToken": "#056ac8",
+    "componentCount": 46,
+    "capturedAt": "2026-06-11T02:06:40Z"
+  },
+  "generationGroups": {
+    "dataEntry": [
+      "Button",
+      "Button Container",
+      "Button Group",
+      "Form Field"
+    ],
+    "dataDisplay": [
+      "Calendar",
+      "Charts",
+      "Classic Report",
+      "Column Toggle Report",
+      "Contextual Info",
+      "Interactive Grid",
+      "Interactive Report",
+      "Reflow Report",
+      "Value Attribute Pairs"
+    ],
+    "navigation": [
+      "Breadcrumb",
+      "Links List",
+      "List View",
+      "Menu Bar",
+      "Menu Popup",
+      "Navigation Bar",
+      "Region Display Selector",
+      "Tabs Container",
+      "Title Bar",
+      "Tree",
+      "Wizard"
+    ],
+    "layoutRegion": [
+      "Button Container",
+      "Card Regions",
+      "Carousel",
+      "Collapsible",
+      "Content Block",
+      "Flexbox Container",
+      "Help Text",
+      "Hero",
+      "Image",
+      "Inline Dialog",
+      "PL/SQL Dynamic Content",
+      "Region Display Selector",
+      "Standard",
+      "Static Content",
+      "Tabs Container",
+      "Title Bar",
+      "Wizard"
+    ],
+    "feedbackStatus": [
+      "Alert",
+      "Badges List",
+      "Badge",
+      "Timeline"
+    ],
+    "contentMedia": [
+      "Avatar",
+      "Card Regions",
+      "Card Templates",
+      "Comments",
+      "Content Row",
+      "Hero",
+      "Image",
+      "Media List",
+      "Metric Card",
+      "Timeline"
+    ],
+    "actionControl": [
+      "Button",
+      "Button Container",
+      "Button Group",
+      "Menu Bar",
+      "Menu Popup"
+    ]
+  },
+  "components": [
+    {
+      "name": "Alert",
+      "apexType": [
+        "Region"
+      ],
+      "roles": [
+        "button",
+        "region",
+        "region-header",
+        "alert",
+        "breadcrumb",
+        "button-group",
+        "collapsible",
+        "content-block",
+        "form-field",
+        "nav"
+      ],
+      "templateOptionsOrAttributes": [
+        "Highlight Background",
+        "Alert Display",
+        "Horizontal",
+        "Wizard",
+        "Alert Icons",
+        "Hide Icons",
+        "Show Default Icons",
+        "Show Custom Icons",
+        "Alert Type",
+        "Warning",
+        "Danger",
+        "Information",
+        "Success",
+        "Alert Title"
+      ],
+      "usesComponentDefault": false,
+      "canonicalPath": "alert-region",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/alert-region",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/alert-region",
+      "generationCategories": [
+        "feedbackStatus"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "communicating validation, status, alert, or workflow state"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Avatar",
+      "apexType": [
+        "Partial"
+      ],
+      "roles": [
+        "button",
+        "region",
+        "region-header",
+        "avatar",
+        "breadcrumb",
+        "classic-report",
+        "collapsible",
+        "content-block",
+        "form-field",
+        "interactive-report"
+      ],
+      "templateOptionsOrAttributes": [],
+      "usesComponentDefault": true,
+      "canonicalPath": "avatar-component",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/avatar-component",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/avatar-component",
+      "generationCategories": [
+        "contentMedia"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "showing rich business objects with icons, avatars, cards, comments, media, or timeline entries"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Badges List",
+      "apexType": [
+        "List"
+      ],
+      "roles": [
+        "button",
+        "region",
+        "region-header",
+        "breadcrumb",
+        "button-group",
+        "collapsible",
+        "content-block",
+        "form-field",
+        "nav",
+        "plsql"
+      ],
+      "templateOptionsOrAttributes": [
+        "Apply Theme Colors",
+        "Style",
+        "Circular",
+        "Grid",
+        "Layout",
+        "Stacked",
+        "2 Column Grid",
+        "3 Column Grid",
+        "4 Column Grid",
+        "5 Column Grid",
+        "Span Horizontally",
+        "Float Items",
+        "Flexible Box",
+        "Badge Size"
+      ],
+      "usesComponentDefault": false,
+      "canonicalPath": "badges-list",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/badges-list",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/badges-list",
+      "generationCategories": [
+        "feedbackStatus"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "communicating validation, status, alert, or workflow state"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Badge",
+      "apexType": [
+        "Partial"
+      ],
+      "roles": [
+        "button",
+        "region",
+        "region-header",
+        "badge",
+        "breadcrumb",
+        "classic-report",
+        "collapsible",
+        "content-block",
+        "form-field",
+        "interactive-report"
+      ],
+      "templateOptionsOrAttributes": [],
+      "usesComponentDefault": true,
+      "canonicalPath": "badge-component",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/badge-component",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/badge-component",
+      "generationCategories": [
+        "feedbackStatus"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "communicating validation, status, alert, or workflow state"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Breadcrumb",
+      "apexType": [
+        "Region"
+      ],
+      "roles": [
+        "button",
+        "breadcrumb",
+        "content-block",
+        "form-field",
+        "nav",
+        "rds",
+        "tabs",
+        "title-bar"
+      ],
+      "templateOptionsOrAttributes": [],
+      "usesComponentDefault": true,
+      "canonicalPath": "breadcrumb",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/breadcrumb",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/breadcrumb",
+      "generationCategories": [
+        "navigation"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "moving between application pages, sections, tabs, menus, or hierarchy nodes"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Button",
+      "apexType": [
+        "Button"
+      ],
+      "roles": [
+        "button",
+        "region",
+        "region-header",
+        "breadcrumb",
+        "button-group",
+        "collapsible",
+        "content-block",
+        "form-field",
+        "nav",
+        "plsql"
+      ],
+      "templateOptionsOrAttributes": [
+        "Size",
+        "Default",
+        "Tiny",
+        "Small",
+        "Large",
+        "Type",
+        "Normal",
+        "Primary",
+        "Warning",
+        "Danger",
+        "Success",
+        "Style",
+        "Simple",
+        "Remove UI Decoration"
+      ],
+      "usesComponentDefault": false,
+      "canonicalPath": "buttons",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/buttons",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/buttons",
+      "generationCategories": [
+        "dataEntry",
+        "actionControl"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "collecting or validating business data",
+          "triggering page, region, toolbar, or row-level actions"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Button Container",
+      "apexType": [
+        "Region"
+      ],
+      "roles": [
+        "button",
+        "region",
+        "region-header",
+        "breadcrumb",
+        "button-group",
+        "collapsible",
+        "content-block",
+        "form-field",
+        "nav",
+        "plsql"
+      ],
+      "templateOptionsOrAttributes": [
+        "Stick to Bottom for Mobile",
+        "Body Padding",
+        "Default",
+        "No Padding",
+        "Slim Padding",
+        "Style",
+        "Borderless",
+        "Remove UI Decoration",
+        "Heading Level",
+        "H1",
+        "H2",
+        "H3",
+        "H4",
+        "H5"
+      ],
+      "usesComponentDefault": false,
+      "canonicalPath": "button-container",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/button-container",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/button-container",
+      "generationCategories": [
+        "dataEntry",
+        "layoutRegion",
+        "actionControl"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "collecting or validating business data",
+          "grouping enterprise screen content into APEX regions",
+          "triggering page, region, toolbar, or row-level actions"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Button Group",
+      "apexType": [
+        "Button"
+      ],
+      "roles": [
+        "button",
+        "breadcrumb",
+        "button-group",
+        "content-block",
+        "form-field",
+        "nav",
+        "rds",
+        "tabs",
+        "title-bar"
+      ],
+      "templateOptionsOrAttributes": [
+        "Radio Group",
+        "Option A",
+        "Option B",
+        "Option C",
+        "Radio Button Group"
+      ],
+      "usesComponentDefault": false,
+      "canonicalPath": "button-container-region",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/button-container-region",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/button-container-region",
+      "generationCategories": [
+        "dataEntry",
+        "actionControl"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "collecting or validating business data",
+          "triggering page, region, toolbar, or row-level actions"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Calendar",
+      "apexType": [
+        "Region"
+      ],
+      "roles": [
+        "button",
+        "breadcrumb",
+        "calendar",
+        "content-block",
+        "form-field",
+        "nav",
+        "report",
+        "rds",
+        "tabs",
+        "title-bar"
+      ],
+      "templateOptionsOrAttributes": [],
+      "usesComponentDefault": true,
+      "canonicalPath": "calendars",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/calendars",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/calendars",
+      "generationCategories": [
+        "dataDisplay"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "rendering enterprise records, lists, audit logs, metrics, or report-backed content"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Card Regions",
+      "apexType": [
+        "Region"
+      ],
+      "roles": [
+        "button",
+        "region",
+        "region-header",
+        "breadcrumb",
+        "card",
+        "collapsible",
+        "content-block",
+        "form-field",
+        "nav",
+        "rds"
+      ],
+      "templateOptionsOrAttributes": [],
+      "usesComponentDefault": true,
+      "canonicalPath": "card-regions",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/card-regions",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/card-regions",
+      "generationCategories": [
+        "layoutRegion",
+        "contentMedia"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "grouping enterprise screen content into APEX regions",
+          "showing rich business objects with icons, avatars, cards, comments, media, or timeline entries"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Card Templates",
+      "apexType": [
+        "Report",
+        "List"
+      ],
+      "roles": [
+        "button",
+        "region",
+        "region-header",
+        "breadcrumb",
+        "button-group",
+        "card",
+        "collapsible",
+        "content-block",
+        "form-field",
+        "nav"
+      ],
+      "templateOptionsOrAttributes": [
+        "Apply Theme Colors",
+        "Display Subtitle",
+        "Style",
+        "Basic",
+        "Compact",
+        "Featured",
+        "Block",
+        "Icons",
+        "No Icons",
+        "Display Icons",
+        "Display Initials",
+        "Layout",
+        "Stacked",
+        "2 Columns"
+      ],
+      "usesComponentDefault": false,
+      "canonicalPath": "card-templates",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/card-templates",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/card-templates",
+      "generationCategories": [
+        "contentMedia"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "showing rich business objects with icons, avatars, cards, comments, media, or timeline entries"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Carousel",
+      "apexType": [
+        "Region"
+      ],
+      "roles": [
+        "button",
+        "region",
+        "region-header",
+        "breadcrumb",
+        "button-group",
+        "collapsible",
+        "content-block",
+        "form-field",
+        "nav",
+        "plsql"
+      ],
+      "templateOptionsOrAttributes": [
+        "Remove Body Padding",
+        "Remember Carousel Slide",
+        "Show Next and Previous Buttons",
+        "Show Maximize Button",
+        "Show Region Icon",
+        "Timer",
+        "No Timer",
+        "5 Seconds",
+        "10 Seconds",
+        "15 Seconds",
+        "20 Seconds",
+        "Body Height",
+        "Auto - Default",
+        "240px"
+      ],
+      "usesComponentDefault": false,
+      "canonicalPath": "carousel-region",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/carousel-region",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/carousel-region",
+      "generationCategories": [
+        "layoutRegion"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "grouping enterprise screen content into APEX regions"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Charts",
+      "apexType": [
+        "Region"
+      ],
+      "roles": [
+        "button",
+        "breadcrumb",
+        "chart",
+        "content-block",
+        "form-field",
+        "nav",
+        "rds",
+        "tabs",
+        "title-bar"
+      ],
+      "templateOptionsOrAttributes": [],
+      "usesComponentDefault": true,
+      "canonicalPath": "charts",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/charts",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/charts",
+      "generationCategories": [
+        "dataDisplay"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "rendering enterprise records, lists, audit logs, metrics, or report-backed content"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Classic Report",
+      "apexType": [
+        "Report"
+      ],
+      "roles": [
+        "button",
+        "region",
+        "region-header",
+        "breadcrumb",
+        "button-group",
+        "classic-report",
+        "collapsible",
+        "content-block",
+        "form-field",
+        "nav"
+      ],
+      "templateOptionsOrAttributes": [
+        "Stretch Report",
+        "Alternating Rows",
+        "Enable",
+        "Disable",
+        "Row Highlighting",
+        "Report Border",
+        "Default",
+        "Horizontal Only",
+        "Vertical Only",
+        "No Borders",
+        "No Outer Borders",
+        "Pagination Display",
+        "Hide when all rows displayed"
+      ],
+      "usesComponentDefault": false,
+      "canonicalPath": "standard-reports",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/standard-reports",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/standard-reports",
+      "generationCategories": [
+        "dataDisplay"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "rendering enterprise records, lists, audit logs, metrics, or report-backed content"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Collapsible",
+      "apexType": [
+        "Region"
+      ],
+      "roles": [
+        "button",
+        "region",
+        "region-header",
+        "breadcrumb",
+        "button-group",
+        "collapsible",
+        "content-block",
+        "form-field",
+        "nav",
+        "plsql"
+      ],
+      "templateOptionsOrAttributes": [
+        "Remove Body Padding",
+        "Remember Collapsible State",
+        "Collapsible Icon Position",
+        "Start",
+        "End",
+        "Collapsible Button Icons",
+        "Arrows",
+        "Plus or Minus",
+        "Default State",
+        "Expanded",
+        "Collapsed",
+        "Body Height",
+        "Auto - Default",
+        "240px"
+      ],
+      "usesComponentDefault": false,
+      "canonicalPath": "collapsible-region",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/collapsible-region",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/collapsible-region",
+      "generationCategories": [
+        "layoutRegion"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "grouping enterprise screen content into APEX regions"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Column Toggle Report",
+      "apexType": [
+        "Report"
+      ],
+      "roles": [
+        "button",
+        "breadcrumb",
+        "content-block",
+        "form-field",
+        "nav",
+        "report",
+        "rds",
+        "tabs",
+        "title-bar"
+      ],
+      "templateOptionsOrAttributes": [
+        "Task Name",
+        "Start Date",
+        "End Date",
+        "Status",
+        "Assigned To",
+        "Cost",
+        "Budget"
+      ],
+      "usesComponentDefault": false,
+      "canonicalPath": "column-toggle-report",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/column-toggle-report",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/column-toggle-report",
+      "generationCategories": [
+        "dataDisplay"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "rendering enterprise records, lists, audit logs, metrics, or report-backed content"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Comments",
+      "apexType": [
+        "Region"
+      ],
+      "roles": [
+        "button",
+        "region",
+        "region-header",
+        "avatar",
+        "breadcrumb",
+        "collapsible",
+        "comments",
+        "content-block",
+        "form-field",
+        "nav"
+      ],
+      "templateOptionsOrAttributes": [],
+      "usesComponentDefault": true,
+      "canonicalPath": "comments-component",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/comments-component",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/comments-component",
+      "generationCategories": [
+        "contentMedia"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "showing rich business objects with icons, avatars, cards, comments, media, or timeline entries"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Content Block",
+      "apexType": [
+        "Region"
+      ],
+      "roles": [
+        "button",
+        "region",
+        "region-header",
+        "breadcrumb",
+        "button-group",
+        "collapsible",
+        "content-block",
+        "form-field",
+        "nav",
+        "plsql"
+      ],
+      "templateOptionsOrAttributes": [
+        "Add Body Padding",
+        "Show Region Icon",
+        "Region Title",
+        "Large",
+        "Medium",
+        "Small",
+        "Header",
+        "Visible - Default",
+        "Hidden",
+        "Hidden but accessible",
+        "Body Style",
+        "Default",
+        "Shadow Background",
+        "Light Background"
+      ],
+      "usesComponentDefault": false,
+      "canonicalPath": "content-block",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/content-block",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/content-block",
+      "generationCategories": [
+        "layoutRegion"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "grouping enterprise screen content into APEX regions"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Content Row",
+      "apexType": [
+        "Region"
+      ],
+      "roles": [
+        "button",
+        "region",
+        "region-header",
+        "avatar",
+        "breadcrumb",
+        "collapsible",
+        "content-block",
+        "content-row",
+        "form-field",
+        "nav"
+      ],
+      "templateOptionsOrAttributes": [],
+      "usesComponentDefault": true,
+      "canonicalPath": "content-row-component",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/content-row-component",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/content-row-component",
+      "generationCategories": [
+        "contentMedia"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "showing rich business objects with icons, avatars, cards, comments, media, or timeline entries"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Contextual Info",
+      "apexType": [
+        "Report"
+      ],
+      "roles": [
+        "button",
+        "region",
+        "region-header",
+        "breadcrumb",
+        "button-group",
+        "collapsible",
+        "content-block",
+        "contextual-info",
+        "form-field",
+        "nav"
+      ],
+      "templateOptionsOrAttributes": [
+        "Hide Empty Values",
+        "Display Items",
+        "Inline (Default)",
+        "Stacked",
+        "Display Labels",
+        "Pagination Display",
+        "Default",
+        "Hide when all rows displayed"
+      ],
+      "usesComponentDefault": false,
+      "canonicalPath": "contextual-info",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/contextual-info",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/contextual-info",
+      "generationCategories": [
+        "dataDisplay"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "rendering enterprise records, lists, audit logs, metrics, or report-backed content"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Flexbox Container",
+      "apexType": [
+        "Region"
+      ],
+      "roles": [
+        "button",
+        "region",
+        "region-header",
+        "breadcrumb",
+        "content-block",
+        "form-field",
+        "nav",
+        "plsql",
+        "rds",
+        "standard-region"
+      ],
+      "templateOptionsOrAttributes": [],
+      "usesComponentDefault": true,
+      "canonicalPath": "flexbox-container-component",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/flexbox-container-component",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/flexbox-container-component",
+      "generationCategories": [
+        "layoutRegion"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "grouping enterprise screen content into APEX regions"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Form Field",
+      "apexType": [
+        "Form"
+      ],
+      "roles": [
+        "button",
+        "region",
+        "region-header",
+        "breadcrumb",
+        "button-group",
+        "collapsible",
+        "content-block",
+        "form-field",
+        "nav",
+        "plsql"
+      ],
+      "templateOptionsOrAttributes": [
+        "Text Field",
+        "Hide Password Visibility",
+        "Stretch Form Item",
+        "Size",
+        "Default",
+        "Large",
+        "X Large",
+        "Item Pre Text",
+        "Display as Block",
+        "Item Post Text",
+        "Top Margin",
+        "None",
+        "Small",
+        "Medium"
+      ],
+      "usesComponentDefault": false,
+      "canonicalPath": "forms",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/forms",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/forms",
+      "generationCategories": [
+        "dataEntry"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "collecting or validating business data"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Help Text",
+      "apexType": [
+        "Region"
+      ],
+      "roles": [
+        "button",
+        "breadcrumb",
+        "content-block",
+        "form-field",
+        "nav",
+        "rds",
+        "tabs",
+        "title-bar"
+      ],
+      "templateOptionsOrAttributes": [],
+      "usesComponentDefault": true,
+      "canonicalPath": "help-text",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/help-text",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/help-text",
+      "generationCategories": [
+        "layoutRegion"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "grouping enterprise screen content into APEX regions"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Hero",
+      "apexType": [
+        "Region"
+      ],
+      "roles": [
+        "button",
+        "region",
+        "region-header",
+        "breadcrumb",
+        "button-group",
+        "collapsible",
+        "content-block",
+        "form-field",
+        "hero",
+        "nav"
+      ],
+      "templateOptionsOrAttributes": [
+        "Remove Body Padding",
+        "Style",
+        "Default",
+        "Featured",
+        "Stacked Featured",
+        "Display Icon",
+        "Yes (Default)",
+        "No",
+        "Icon Shape",
+        "Rounded Corners",
+        "Circle",
+        "Square",
+        "Heading Font",
+        "Alternative"
+      ],
+      "usesComponentDefault": false,
+      "canonicalPath": "hero-region",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/hero-region",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/hero-region",
+      "generationCategories": [
+        "layoutRegion",
+        "contentMedia"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "grouping enterprise screen content into APEX regions",
+          "showing rich business objects with icons, avatars, cards, comments, media, or timeline entries"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Image",
+      "apexType": [
+        "Region"
+      ],
+      "roles": [
+        "button",
+        "region",
+        "region-header",
+        "breadcrumb",
+        "button-group",
+        "collapsible",
+        "content-block",
+        "form-field",
+        "image",
+        "nav"
+      ],
+      "templateOptionsOrAttributes": [
+        "Image Stretch",
+        "Ratio",
+        "Auto",
+        "1:1 (Square)",
+        "16:9 (Widescreen)",
+        "4:3 (Standard)",
+        "2:1 (Univisium)",
+        "Scale",
+        "Contain",
+        "Cover",
+        "Fill",
+        "Scale Down",
+        "Shape",
+        "Square"
+      ],
+      "usesComponentDefault": false,
+      "canonicalPath": "region-image",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/region-image",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/region-image",
+      "generationCategories": [
+        "layoutRegion",
+        "contentMedia"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "grouping enterprise screen content into APEX regions",
+          "showing rich business objects with icons, avatars, cards, comments, media, or timeline entries"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Inline Dialog",
+      "apexType": [
+        "Region"
+      ],
+      "roles": [
+        "button",
+        "breadcrumb",
+        "content-block",
+        "form-field",
+        "nav",
+        "rds",
+        "tabs",
+        "title-bar"
+      ],
+      "templateOptionsOrAttributes": [],
+      "usesComponentDefault": true,
+      "canonicalPath": "inline-dialog",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/inline-dialog",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/inline-dialog",
+      "generationCategories": [
+        "layoutRegion"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "grouping enterprise screen content into APEX regions"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Interactive Grid",
+      "apexType": [
+        "Report"
+      ],
+      "roles": [
+        "button",
+        "region",
+        "region-header",
+        "breadcrumb",
+        "button-group",
+        "collapsible",
+        "content-block",
+        "form-field",
+        "interactive-grid",
+        "nav"
+      ],
+      "templateOptionsOrAttributes": [
+        "Remove Borders",
+        "Show Maximize Button",
+        "Header",
+        "Hidden but accessible",
+        "Hidden",
+        "Heading Level",
+        "Default",
+        "H1",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H6",
+        "Item Spacing"
+      ],
+      "usesComponentDefault": false,
+      "canonicalPath": "interactive-grid",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/interactive-grid",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/interactive-grid",
+      "generationCategories": [
+        "dataDisplay"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "rendering enterprise records, lists, audit logs, metrics, or report-backed content"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Interactive Report",
+      "apexType": [
+        "Report"
+      ],
+      "roles": [
+        "button",
+        "region",
+        "region-header",
+        "breadcrumb",
+        "button-group",
+        "collapsible",
+        "content-block",
+        "form-field",
+        "interactive-report",
+        "nav"
+      ],
+      "templateOptionsOrAttributes": [
+        "Remove Borders",
+        "Show Maximize Button",
+        "Header",
+        "Hidden but accessible",
+        "Hidden",
+        "Heading Level",
+        "Default",
+        "H1",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H6",
+        "Item Spacing"
+      ],
+      "usesComponentDefault": false,
+      "canonicalPath": "interactive-report",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/interactive-report",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/interactive-report",
+      "generationCategories": [
+        "dataDisplay"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "rendering enterprise records, lists, audit logs, metrics, or report-backed content"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Links List",
+      "apexType": [
+        "List"
+      ],
+      "roles": [
+        "button",
+        "region",
+        "region-header",
+        "breadcrumb",
+        "button-group",
+        "collapsible",
+        "content-block",
+        "form-field",
+        "links-list",
+        "nav"
+      ],
+      "templateOptionsOrAttributes": [
+        "Show Badges",
+        "Show Right Arrow",
+        "Disable Text Wrapping",
+        "Style",
+        "Default",
+        "Actions",
+        "Display Icons",
+        "No Icons",
+        "For Top Level Items Only",
+        "For All Items"
+      ],
+      "usesComponentDefault": false,
+      "canonicalPath": "links-list",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/links-list",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/links-list",
+      "generationCategories": [
+        "navigation"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "moving between application pages, sections, tabs, menus, or hierarchy nodes"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "List View",
+      "apexType": [
+        "List"
+      ],
+      "roles": [
+        "button",
+        "region",
+        "region-header",
+        "breadcrumb",
+        "content-block",
+        "form-field",
+        "list-view",
+        "nav",
+        "plsql",
+        "rds"
+      ],
+      "templateOptionsOrAttributes": [],
+      "usesComponentDefault": true,
+      "canonicalPath": "list-view",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/list-view",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/list-view",
+      "generationCategories": [
+        "navigation"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "moving between application pages, sections, tabs, menus, or hierarchy nodes"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Media List",
+      "apexType": [
+        "Region"
+      ],
+      "roles": [
+        "button",
+        "region",
+        "region-header",
+        "avatar",
+        "badge",
+        "breadcrumb",
+        "collapsible",
+        "content-block",
+        "form-field",
+        "media-list"
+      ],
+      "templateOptionsOrAttributes": [
+        "Order By"
+      ],
+      "usesComponentDefault": false,
+      "canonicalPath": "media-list-component",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/media-list-component",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/media-list-component",
+      "generationCategories": [
+        "contentMedia"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "showing rich business objects with icons, avatars, cards, comments, media, or timeline entries"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Menu Bar",
+      "apexType": [
+        "List"
+      ],
+      "roles": [
+        "button",
+        "region",
+        "region-header",
+        "breadcrumb",
+        "collapsible",
+        "content-block",
+        "form-field",
+        "menu",
+        "nav",
+        "plsql"
+      ],
+      "templateOptionsOrAttributes": [
+        "Behave Like Tabs",
+        "Show Sub Menu Icons",
+        "Add Actions",
+        "Display Menu Callout"
+      ],
+      "usesComponentDefault": false,
+      "canonicalPath": "menu-bar-list",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/menu-bar-list",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/menu-bar-list",
+      "generationCategories": [
+        "navigation",
+        "actionControl"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "moving between application pages, sections, tabs, menus, or hierarchy nodes",
+          "triggering page, region, toolbar, or row-level actions"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Menu Popup",
+      "apexType": [
+        "List"
+      ],
+      "roles": [
+        "button",
+        "breadcrumb",
+        "content-block",
+        "form-field",
+        "nav",
+        "rds",
+        "tabs",
+        "title-bar"
+      ],
+      "templateOptionsOrAttributes": [],
+      "usesComponentDefault": true,
+      "canonicalPath": "menu-popup",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/menu-popup",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/menu-popup",
+      "generationCategories": [
+        "navigation",
+        "actionControl"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "moving between application pages, sections, tabs, menus, or hierarchy nodes",
+          "triggering page, region, toolbar, or row-level actions"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Metric Card",
+      "apexType": [
+        "Region"
+      ],
+      "roles": [
+        "button",
+        "region",
+        "region-header",
+        "avatar",
+        "badge",
+        "breadcrumb",
+        "collapsible",
+        "content-block",
+        "form-field",
+        "metric-card"
+      ],
+      "templateOptionsOrAttributes": [],
+      "usesComponentDefault": true,
+      "canonicalPath": "metric-card",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/metric-card",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/metric-card",
+      "generationCategories": [
+        "contentMedia"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "showing rich business objects with icons, avatars, cards, comments, media, or timeline entries"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Navigation Bar",
+      "apexType": [
+        "List"
+      ],
+      "roles": [
+        "button",
+        "breadcrumb",
+        "content-block",
+        "form-field",
+        "nav",
+        "title-bar"
+      ],
+      "templateOptionsOrAttributes": [],
+      "usesComponentDefault": true,
+      "canonicalPath": "navigation",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/navigation",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/navigation",
+      "generationCategories": [
+        "navigation"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "moving between application pages, sections, tabs, menus, or hierarchy nodes"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "PL/SQL Dynamic Content",
+      "apexType": [
+        "Region"
+      ],
+      "roles": [
+        "button",
+        "breadcrumb",
+        "content-block",
+        "form-field",
+        "nav",
+        "rds",
+        "tabs",
+        "title-bar"
+      ],
+      "templateOptionsOrAttributes": [],
+      "usesComponentDefault": true,
+      "canonicalPath": "dynamic-content-region",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/dynamic-content-region",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/dynamic-content-region",
+      "generationCategories": [
+        "layoutRegion"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "grouping enterprise screen content into APEX regions"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Reflow Report",
+      "apexType": [
+        "Report"
+      ],
+      "roles": [
+        "button",
+        "region",
+        "region-header",
+        "breadcrumb",
+        "button-group",
+        "collapsible",
+        "content-block",
+        "form-field",
+        "nav",
+        "plsql"
+      ],
+      "templateOptionsOrAttributes": [
+        "Add Body Padding",
+        "Show Region Icon",
+        "Region Title",
+        "Large",
+        "Medium",
+        "Small",
+        "Header",
+        "Visible - Default",
+        "Hidden",
+        "Hidden but accessible",
+        "Body Style",
+        "Default",
+        "Shadow Background",
+        "Light Background"
+      ],
+      "usesComponentDefault": false,
+      "canonicalPath": "reflow-report",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/reflow-report",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/reflow-report",
+      "generationCategories": [
+        "dataDisplay"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "rendering enterprise records, lists, audit logs, metrics, or report-backed content"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Region Display Selector",
+      "apexType": [
+        "Region"
+      ],
+      "roles": [
+        "button",
+        "region",
+        "region-header",
+        "breadcrumb",
+        "content-block",
+        "form-field",
+        "nav",
+        "plsql",
+        "rds",
+        "standard-region"
+      ],
+      "templateOptionsOrAttributes": [],
+      "usesComponentDefault": true,
+      "canonicalPath": "region-display-selector",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/region-display-selector",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/region-display-selector",
+      "generationCategories": [
+        "navigation",
+        "layoutRegion"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "moving between application pages, sections, tabs, menus, or hierarchy nodes",
+          "grouping enterprise screen content into APEX regions"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Standard",
+      "apexType": [
+        "Region"
+      ],
+      "roles": [
+        "button",
+        "region",
+        "region-header",
+        "breadcrumb",
+        "button-group",
+        "collapsible",
+        "content-block",
+        "form-field",
+        "nav",
+        "plsql"
+      ],
+      "templateOptionsOrAttributes": [
+        "Remove Body Padding",
+        "Show Maximize Button",
+        "Show Region Icon",
+        "Body Height",
+        "Auto - Default",
+        "240px",
+        "320px",
+        "480px",
+        "640px",
+        "Header",
+        "Visible - Default",
+        "Hidden",
+        "Hidden but accessible",
+        "Accent"
+      ],
+      "usesComponentDefault": false,
+      "canonicalPath": "standard-region",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/standard-region",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/standard-region",
+      "generationCategories": [
+        "layoutRegion"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "grouping enterprise screen content into APEX regions"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Static Content",
+      "apexType": [
+        "Region"
+      ],
+      "roles": [
+        "button",
+        "breadcrumb",
+        "content-block",
+        "form-field",
+        "nav",
+        "rds",
+        "tabs",
+        "title-bar"
+      ],
+      "templateOptionsOrAttributes": [],
+      "usesComponentDefault": true,
+      "canonicalPath": "static-content",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/static-content",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/static-content",
+      "generationCategories": [
+        "layoutRegion"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "grouping enterprise screen content into APEX regions"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Tabs Container",
+      "apexType": [
+        "Region",
+        "List"
+      ],
+      "roles": [
+        "button",
+        "region",
+        "region-header",
+        "breadcrumb",
+        "button-group",
+        "collapsible",
+        "content-block",
+        "form-field",
+        "nav",
+        "plsql"
+      ],
+      "templateOptionsOrAttributes": [
+        "Remember Active Tab",
+        "Tabs Icon",
+        "None - Default",
+        "Above Label",
+        "Inline with Label",
+        "Layout",
+        "Default",
+        "Fill Tab Labels",
+        "Tabs Style",
+        "Simple",
+        "Pill",
+        "Tabs Size",
+        "Small",
+        "Large"
+      ],
+      "usesComponentDefault": false,
+      "canonicalPath": "tabs",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/tabs",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/tabs",
+      "generationCategories": [
+        "navigation",
+        "layoutRegion"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "moving between application pages, sections, tabs, menus, or hierarchy nodes",
+          "grouping enterprise screen content into APEX regions"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Timeline",
+      "apexType": [
+        "Region"
+      ],
+      "roles": [
+        "button",
+        "region",
+        "region-header",
+        "avatar",
+        "badge",
+        "breadcrumb",
+        "collapsible",
+        "content-block",
+        "form-field",
+        "nav"
+      ],
+      "templateOptionsOrAttributes": [],
+      "usesComponentDefault": true,
+      "canonicalPath": "timeline-component",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/timeline-component",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/timeline-component",
+      "generationCategories": [
+        "feedbackStatus",
+        "contentMedia"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "communicating validation, status, alert, or workflow state",
+          "showing rich business objects with icons, avatars, cards, comments, media, or timeline entries"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Title Bar",
+      "apexType": [
+        "Region"
+      ],
+      "roles": [
+        "button",
+        "region",
+        "region-header",
+        "breadcrumb",
+        "button-group",
+        "collapsible",
+        "content-block",
+        "form-field",
+        "nav",
+        "plsql"
+      ],
+      "templateOptionsOrAttributes": [
+        "Show Breadcrumbs",
+        "Use Compact Style",
+        "Region Title",
+        "Use Current Breadcrumb Entry",
+        "Use Region Title",
+        "Heading Font",
+        "Default",
+        "Alternative",
+        "Heading Level",
+        "H1",
+        "H2",
+        "H3",
+        "H4",
+        "H5"
+      ],
+      "usesComponentDefault": false,
+      "canonicalPath": "title-bar-region",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/title-bar-region",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/title-bar-region",
+      "generationCategories": [
+        "navigation",
+        "layoutRegion"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "moving between application pages, sections, tabs, menus, or hierarchy nodes",
+          "grouping enterprise screen content into APEX regions"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Tree",
+      "apexType": [
+        "Region"
+      ],
+      "roles": [
+        "button",
+        "breadcrumb",
+        "content-block",
+        "form-field",
+        "nav",
+        "rds",
+        "tabs",
+        "title-bar",
+        "tree"
+      ],
+      "templateOptionsOrAttributes": [],
+      "usesComponentDefault": true,
+      "canonicalPath": "tree",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/tree",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/tree",
+      "generationCategories": [
+        "navigation"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "moving between application pages, sections, tabs, menus, or hierarchy nodes"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Value Attribute Pairs",
+      "apexType": [
+        "Report"
+      ],
+      "roles": [
+        "button",
+        "region",
+        "region-header",
+        "breadcrumb",
+        "button-group",
+        "collapsible",
+        "content-block",
+        "form-field",
+        "nav",
+        "plsql"
+      ],
+      "templateOptionsOrAttributes": [
+        "Label Width",
+        "Default",
+        "Fixed - Small",
+        "Fixed - Medium",
+        "Fixed - Large",
+        "Variable - Small",
+        "Variable - Medium",
+        "Variable - Large",
+        "Layout",
+        "Left Aligned Details",
+        "Right Aligned Details",
+        "Pagination Display",
+        "Hide when all rows displayed",
+        "Hide Empty Values"
+      ],
+      "usesComponentDefault": false,
+      "canonicalPath": "value-attr-pairs-report",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/value-attr-pairs-report",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/value-attr-pairs-report",
+      "generationCategories": [
+        "dataDisplay"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "rendering enterprise records, lists, audit logs, metrics, or report-backed content"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    },
+    {
+      "name": "Wizard",
+      "apexType": [
+        "Region",
+        "List",
+        "Page"
+      ],
+      "roles": [
+        "button",
+        "region",
+        "region-header",
+        "breadcrumb",
+        "button-group",
+        "collapsible",
+        "content-block",
+        "form-field",
+        "nav",
+        "plsql"
+      ],
+      "templateOptionsOrAttributes": [
+        "Vertical Orientation",
+        "Make Wizard Steps Clickable",
+        "Label Display",
+        "All Steps",
+        "Current Step Only",
+        "Hide Labels"
+      ],
+      "usesComponentDefault": false,
+      "canonicalPath": "wizard-region",
+      "canonicalUrl": "https://oracleapex.com/ords/r/apex_pm/ut/wizard-region",
+      "fallbackEvidenceUrl": "https://oracleapex.cn/ords/r/test/ut/wizard-region",
+      "generationCategories": [
+        "navigation",
+        "layoutRegion"
+      ],
+      "openDesignUse": {
+        "primaryWhen": [
+          "moving between application pages, sections, tabs, menus, or hierarchy nodes",
+          "grouping enterprise screen content into APEX regions"
+        ],
+        "avoidWhen": [
+          "a simpler APEX component already matches the requested enterprise workflow"
+        ]
+      }
+    }
+  ],
+  "rules": [
+    "Prefer the smallest APEX component that matches the requested workflow.",
+    "Use Report components for data-heavy surfaces and Card/Metric components for summaries.",
+    "Use List and navigation components for app navigation; do not replace them with marketing navigation patterns.",
+    "Use Region components as the structural container layer for enterprise screens.",
+    "Use Button and Button Group semantics for all page, region, toolbar, and row actions.",
+    "Use Badge, Alert, Timeline, and status modifiers for business state and workflow feedback."
+  ]
+}

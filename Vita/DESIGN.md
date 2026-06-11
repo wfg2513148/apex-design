@@ -178,6 +178,22 @@ coverage:
   liveComponentTemplateOptionPages: 31
   liveComponentEvidenceAt: "2026-06-10T18:08:40Z"
   capturedAt: "2026-06-10T10:33:53Z"
+resources:
+  readme: "README.md"
+  manifest: "design-system.manifest.json"
+  tokens: "tokens/vita.tokens.json"
+  css: "styles/vita-open-design.css"
+  reference: "reference/apex-reference.json"
+  referenceGuide: "reference/implementation-guidelines.md"
+  pageTemplates: "patterns/page-templates.json"
+  enterprisePatterns: "patterns/enterprise-patterns.json"
+  componentStates: "patterns/component-state-matrix.json"
+  patternsGuide: "patterns/README.md"
+  componentCatalog: "catalog/component-catalog.json"
+  navigationIconCatalog: "catalog/navigation-icon-catalog.json"
+  openDesignReadiness: "catalog/open-design-readiness.json"
+  catalogGuide: "catalog/README.md"
+  example: "examples/enterprise-hr-dashboard.html"
 componentPatterns:
   shell:
     bodyBackground: "#FFFFFF"
@@ -260,6 +276,56 @@ The source evidence was collected from the public Universal Theme application af
 - Unique Design, Components, and Icons pages verified: 71 / 71
 - Required menu entries covered: 73 / 73, including repeated aliases such as Navigation / Navigation Bar and Modal Dialogs / Page Dialog
 - Capture timestamp: 2026-06-10T10:33:53Z
+
+## Companion Resources
+
+Use these files with this `DESIGN.md` when Open Design or another prototyping tool needs more than prose guidance:
+
+- `design-system.manifest.json`: machine-readable package manifest, canonical/fallback source URLs, official runtime asset references, and Open Design import hints.
+- `README.md`: local package guide for using the Vita directory as a complete Open Design design-system package.
+- `tokens/vita.tokens.json`: machine-readable Vita tokens for colors, typography, spacing, radius, shadows, sizes, and APEX class mappings.
+- `styles/vita-open-design.css`: compact prototype CSS that maps Vita tokens to common APEX classes such as `t-Header`, `t-Body-nav`, `t-Region`, `t-Button`, `a-IRR-table`, `a-GV-table`, `t-Card`, and `t-Icon`.
+- `reference/apex-reference.json`: machine-readable Reference layer covering APEX tools, utility classes, CSS variables, JavaScript events/APIs, and change-log boundaries.
+- `reference/implementation-guidelines.md`: implementation guidance for using Reference pages in enterprise prototypes without inventing non-APEX CSS or runtime contracts.
+- `patterns/page-templates.json`: Vita page shell, 12-column grid, page-template, Dialog, Drawer, and inline overlay guidance.
+- `patterns/enterprise-patterns.json`: enterprise page blueprints for dashboards, report workspaces, editable grids, master-detail pages, transaction forms, approvals, and wizards.
+- `patterns/component-state-matrix.json`: component variants and interaction states for buttons, forms, regions, reports, grids, filters, badges, overlays, timelines, and wizards.
+- `patterns/README.md`: usage notes for the Vita-only enterprise pattern layer.
+- `catalog/component-catalog.json`: machine-readable standard component catalog derived from the 46-component Vita extraction table.
+- `catalog/navigation-icon-catalog.json`: navigation entries, navigation classes, Font APEX families, observed icon categories, and representative `fa-*` classes.
+- `catalog/open-design-readiness.json`: readiness audit for the artifacts needed to generate enterprise Open Design prototypes.
+- `catalog/README.md`: usage notes for the Vita-only machine-readable catalogs.
+- `examples/enterprise-hr-dashboard.html`: an enterprise HR dashboard example showing shell, title region, cards, report, form, and timeline patterns using the local Vita CSS.
+
+The manifest records the official Oracle APEX runtime CSS, JavaScript, and Font APEX resources. Do not vendor Oracle runtime assets into this repository; load them from an APEX runtime when exact fidelity is required.
+
+## Reference Implementation Layer
+
+The Vita package includes a Reference layer verified from the Universal Theme Reference navigation after switching the source app to Vita. The 11 verified pages cover Reference Overview, Migration Guide, Button Builder, Template Directives, Color and Status Modifiers, Layout Modifiers, Content Modifiers, CSS Variables, JavaScript Events, JavaScript APIs, and Change Log.
+
+Use this layer when a generated prototype needs enterprise implementation discipline:
+
+- Use APEX utility classes and CSS variables before adding one-off CSS.
+- Use Button Builder semantics for report links, static content buttons, toolbar buttons, and icon buttons.
+- Use color/status modifiers for semantic states instead of arbitrary colors.
+- Use layout/content modifiers for spacing, alignment, responsive visibility, wrapping, heading treatment, and text density.
+- Preserve Template Directives only when demonstrating APEX template logic; otherwise render the resulting user-facing state.
+- Treat JavaScript Events and APIs as implementation notes for behavior, not visible product copy.
+- Target Universal Theme 26.1 behavior unless a prompt explicitly asks for migration from an older theme.
+
+## Enterprise Application Pattern Layer
+
+The Vita package includes enterprise pattern resources verified from pages directly reachable from the Universal Theme `getting-started` application after switching Theme Style to Vita. These resources translate observed APEX page/component evidence into generation blueprints for Open Design:
+
+- Page templates and layout: Standard, Left Side Column, Right Side Column, Both Side Column, Marquee Detail, Page Dialog, Page Drawer, Inline Dialog, Inline Drawer, and the 12-column responsive grid.
+- Enterprise page blueprints: operations dashboard, Interactive Report workspace, Interactive Grid editing, master-detail management, transaction form, approval workflow, and guided wizard.
+- Component states: button variants, form field states, collapsible regions, Interactive Report/Grid states, faceted/smart filters, badges, dialogs/drawers, timelines, and wizards.
+
+Use these files when a generated prototype needs an enterprise application structure rather than a single isolated component. Keep the output Vita-only and continue to prefer APEX class semantics over unrelated web-framework primitives.
+
+## Machine-Readable Catalog Layer
+
+The `catalog/` files mirror the standard component table, navigation evidence, icon system, and readiness audit in a format that Open Design can consume without parsing Markdown. Use them for component selection, navigation/icon fidelity, and import completeness checks.
 
 ## Vita Coverage Model
 

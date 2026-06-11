@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>APEX Vita - Dark Enterprise HR Dashboard Example</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../styles/vita-dark-open-design.css">
+</head>
+<body class="t-PageBody apex-side-nav apex-icons-fontapex apex-theme-vita-dark">
+  <header class="t-Header app-header">
+    <div class="t-Header-logo app-logo">HR Operations</div>
+    <div class="toolbar" aria-label="Global actions">
+      <button class="t-Button t-Button--header">Search</button>
+      <button class="t-Button t-Button--hot">Create</button>
+    </div>
+  </header>
+  <div class="t-Body app-shell">
+    <nav class="t-Body-nav app-nav" aria-label="Application">
+      <a class="a-TreeView-content app-nav-link is-selected" href="#"><span class="fa fa-home"></span>Dashboard</a>
+      <a class="a-TreeView-content app-nav-link" href="#"><span class="fa fa-users"></span>Employees</a>
+      <a class="a-TreeView-content app-nav-link" href="#"><span class="fa fa-calendar"></span>Leave</a>
+      <a class="a-TreeView-content app-nav-link" href="#"><span class="fa fa-table"></span>Reports</a>
+    </nav>
+    <main class="t-Body-main">
+      <section class="t-Body-title page-title-region">
+        <div>
+          <div class="t-Breadcrumb breadcrumb">Human Resources / Operations</div>
+          <h1>HR Operations Dashboard</h1>
+        </div>
+        <div class="toolbar">
+          <button class="t-Button">Export</button>
+          <button class="t-Button t-Button--hot">New Employee</button>
+        </div>
+      </section>
+      <section class="t-Body-content page-content">
+        <div class="row apex-row">
+          <article class="t-Card col-4"><strong>Open Requisitions</strong><h2>24</h2><span class="t-Badge t-Badge--info">+3 this week</span></article>
+          <article class="t-Card col-4"><strong>Pending Approvals</strong><h2>18</h2><span class="t-Badge t-Badge--warning">Needs review</span></article>
+          <article class="t-Card col-4"><strong>At-Risk Onboarding</strong><h2>5</h2><span class="t-Badge t-Badge--danger">Escalated</span></article>
+        </div>
+        <div class="row apex-row">
+          <section class="t-Region col-8">
+            <div class="t-Region-header"><h2 class="t-Region-title">Employee Actions</h2><div class="toolbar"><button class="a-Button">Go</button><button class="a-Button">Actions</button></div></div>
+            <div class="t-Region-body">
+              <table class="a-IRR-table report"><thead><tr><th>Employee</th><th>Department</th><th>Status</th><th>Action</th></tr></thead><tbody><tr><td>Ana Diaz</td><td>Finance</td><td><span class="t-Badge t-Badge--success">Active</span></td><td><button class="t-Button">View</button></td></tr><tr><td>Marcus Lee</td><td>Engineering</td><td><span class="t-Badge t-Badge--warning">Pending</span></td><td><button class="t-Button">Review</button></td></tr></tbody></table>
+            </div>
+          </section>
+          <aside class="t-Region col-4">
+            <div class="t-Region-header"><h2 class="t-Region-title">Quick Review</h2></div>
+            <div class="t-Region-body">
+              <label class="t-Form-label" for="reviewer">Reviewer</label>
+              <input id="reviewer" class="apex-item-text" value="HR Manager">
+              <p><button class="t-Button t-Button--hot">Approve</button> <button class="t-Button">Request Info</button></p>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

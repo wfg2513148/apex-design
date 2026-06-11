@@ -1,0 +1,223 @@
+{
+  "name": "Oracle APEX Universal Theme Vita Page Templates",
+  "themeStyle": "Vita",
+  "source": {
+    "canonicalBase": "https://oracleapex.com/ords/r/apex_pm/ut",
+    "fallbackEvidenceBase": "https://oracleapex.cn/ords/r/test/ut",
+    "verifiedBodyClass": "apex-theme-vita",
+    "verifiedPrimaryToken": "#056ac8",
+    "evidencePages": [
+      "pages",
+      "grid-layout",
+      "page-dialog",
+      "page-drawer",
+      "inline-dialog",
+      "inline-drawer"
+    ],
+    "capturedAt": "2026-06-11T01:46:02Z"
+  },
+  "shell": {
+    "bodyClasses": [
+      "t-PageBody",
+      "t-PageTemplate--standard",
+      "apex-side-nav",
+      "apex-icons-fontapex",
+      "apex-theme-vita",
+      "t-PageBody--leftNav"
+    ],
+    "requiredRegions": [
+      "t-Header",
+      "t-Body-nav",
+      "t-Body-title",
+      "t-Body-content"
+    ],
+    "navigation": {
+      "containerClass": "a-TreeView t-TreeNav js-defaultCollapsed t-TreeNav--styleA",
+      "rowHeight": "44px",
+      "currentStateClasses": [
+        "is-current--top",
+        "is-selected"
+      ]
+    }
+  },
+  "grid": {
+    "model": "12-column responsive grid",
+    "classes": [
+      "row",
+      "col",
+      "col-start",
+      "col-end",
+      "col-12",
+      "col-8",
+      "col-6",
+      "col-4",
+      "col-3",
+      "col-xxs-12",
+      "col-xs-6",
+      "col-sm-4",
+      "col-md-3",
+      "col-lg-2",
+      "col-xl-2",
+      "col-xxl-1",
+      "apex-col-auto"
+    ],
+    "generationRules": [
+      "Use row and col classes for page composition before adding custom layout CSS.",
+      "Use 12-column desktop composition for dashboards and dense report pages.",
+      "Collapse multi-column KPI and form regions to single-column flow on narrow screens.",
+      "Keep page title and action bar outside individual content cards."
+    ]
+  },
+  "templates": [
+    {
+      "name": "Standard",
+      "observedHeading": "Standard",
+      "bodyClass": "t-PageTemplate--standard",
+      "useFor": [
+        "dashboard",
+        "report workspace",
+        "form detail page",
+        "administration page"
+      ],
+      "structure": [
+        "Header",
+        "Side Navigation",
+        "Title Region",
+        "Content Grid",
+        "Footer"
+      ]
+    },
+    {
+      "name": "Left Side Column",
+      "observedHeading": "Left Side Column",
+      "useFor": [
+        "filter sidebar with report results",
+        "master navigation with detail content"
+      ],
+      "structure": [
+        "Header",
+        "Side Navigation",
+        "Title Region",
+        "Left Column Region",
+        "Main Content Region"
+      ]
+    },
+    {
+      "name": "Right Side Column",
+      "observedHeading": "Right Side Column",
+      "useFor": [
+        "detail inspector",
+        "activity feed",
+        "contextual actions"
+      ],
+      "structure": [
+        "Header",
+        "Side Navigation",
+        "Title Region",
+        "Main Content Region",
+        "Right Column Region"
+      ]
+    },
+    {
+      "name": "Both Side Column",
+      "observedHeading": "Both Side Column",
+      "useFor": [
+        "complex administration workspace",
+        "filter plus inspector workflow"
+      ],
+      "structure": [
+        "Header",
+        "Side Navigation",
+        "Title Region",
+        "Left Column Region",
+        "Main Content Region",
+        "Right Column Region"
+      ]
+    },
+    {
+      "name": "Marquee Detail",
+      "observedHeading": "Marquee Detail",
+      "useFor": [
+        "employee profile",
+        "case detail",
+        "asset detail",
+        "account detail"
+      ],
+      "structure": [
+        "Header",
+        "Side Navigation",
+        "Marquee Title Region",
+        "Primary Detail Region",
+        "Supporting Regions"
+      ]
+    },
+    {
+      "name": "Page Dialog",
+      "observedHeading": "Page Dialog",
+      "evidencePath": "page-dialog",
+      "useFor": [
+        "short create/edit task",
+        "confirmation workflow",
+        "focused lookup"
+      ],
+      "triggerClass": "t-Button",
+      "generationRules": [
+        "Use for focused workflows that should not displace the current workspace.",
+        "Keep the dialog body compact and action buttons explicit.",
+        "Preserve the parent page context behind the modal surface."
+      ]
+    },
+    {
+      "name": "Page Drawer",
+      "observedHeading": "Page Drawer",
+      "evidencePath": "page-drawer",
+      "useFor": [
+        "side edit panel",
+        "record preview",
+        "approval detail"
+      ],
+      "triggerClass": "t-Button",
+      "generationRules": [
+        "Use for workflows that need context from the underlying page.",
+        "Prefer right-side drawers for record details and inline decisions.",
+        "Keep navigation shell visible outside the drawer."
+      ]
+    },
+    {
+      "name": "Inline Dialog",
+      "observedHeading": "Inline Dialog",
+      "evidencePath": "inline-dialog",
+      "componentClasses": [
+        "ui-dialog",
+        "t-Region",
+        "t-Region--hideShow",
+        "a-Collapsible"
+      ],
+      "useFor": [
+        "inline settings",
+        "quick selector",
+        "contextual help"
+      ]
+    },
+    {
+      "name": "Inline Drawer",
+      "observedHeading": "Inline Drawer",
+      "evidencePath": "inline-drawer",
+      "useFor": [
+        "inline auxiliary panel",
+        "quick edit drawer"
+      ],
+      "generationRules": [
+        "Use as a local region-level overlay rather than a full page navigation target."
+      ]
+    }
+  ],
+  "canonicalUrls": {
+    "pages": "https://oracleapex.com/ords/r/apex_pm/ut/pages",
+    "grid-layout": "https://oracleapex.com/ords/r/apex_pm/ut/grid-layout",
+    "page-dialog": "https://oracleapex.com/ords/r/apex_pm/ut/page-dialog",
+    "page-drawer": "https://oracleapex.com/ords/r/apex_pm/ut/page-drawer",
+    "inline-dialog": "https://oracleapex.com/ords/r/apex_pm/ut/inline-dialog",
+    "inline-drawer": "https://oracleapex.com/ords/r/apex_pm/ut/inline-drawer"
+  }
+}

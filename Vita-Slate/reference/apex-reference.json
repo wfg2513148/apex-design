@@ -1,0 +1,132 @@
+{
+  "name": "Oracle APEX Universal Theme Vita - Slate Reference Layer",
+  "themeStyle": "Vita - Slate",
+  "source": {
+    "canonicalBase": "https://oracleapex.com/ords/r/apex_pm/ut",
+    "fallbackEvidenceBase": "https://oracleapex.cn/ords/r/test/ut",
+    "entrypoint": "https://oracleapex.cn/ords/r/test/ut/getting-started",
+    "verifiedBodyClass": "apex-theme-vita-slate",
+    "verifiedPrimaryToken": "#505f6d",
+    "checkedPages": 11,
+    "failedPages": 0,
+    "capturedAt": "2026-06-11T02:31:00Z"
+  },
+  "referencePages": [
+    {
+      "label": "Reference Overview",
+      "path": "reference",
+      "h1": "Reference",
+      "purpose": "Index for Universal Theme tools, migration guides, CSS utilities, CSS variables, JavaScript events, JavaScript APIs, and change log.",
+      "generationUse": "Use this Universal Theme reference evidence while preserving the current theme style boundary."
+    },
+    {
+      "label": "Migration Guide",
+      "path": "migration-guide",
+      "h1": "Migration Guides",
+      "purpose": "Guidance for refreshing Universal Theme, re-applying theme styles, restoring subscriptions, and migrating from other themes.",
+      "generationUse": "Use this Universal Theme reference evidence while preserving the current theme style boundary."
+    },
+    {
+      "label": "Button Builder",
+      "path": "button-builder",
+      "h1": "Button Builder",
+      "purpose": "Builds APEX button markup and link attributes with appearance, Template Options, advanced settings, and icon picker choices.",
+      "generationUse": "Use this Universal Theme reference evidence while preserving the current theme style boundary."
+    },
+    {
+      "label": "Template Directives",
+      "path": "template-directives",
+      "h1": "If Directives",
+      "purpose": "Documents conditional, case, loop, and token modifier directives for processing substitution strings and content.",
+      "generationUse": "Use this Universal Theme reference evidence while preserving the current theme style boundary."
+    },
+    {
+      "label": "Color and Status Modifiers",
+      "path": "color-and-status-modifiers",
+      "h1": "Color, Status, and Style Modifiers",
+      "purpose": "Documents color utility classes, stateful color classes, opacity classes, and shadow classes.",
+      "generationUse": "Use this Universal Theme reference evidence while preserving the current theme style boundary."
+    },
+    {
+      "label": "Layout Modifiers",
+      "path": "layout-modifiers",
+      "h1": "Layout Modifiers",
+      "purpose": "Documents floats, vertical alignment, flex utilities, spacing, margins, padding, display, visibility, and responsive layout classes.",
+      "generationUse": "Use this Universal Theme reference evidence while preserving the current theme style boundary."
+    },
+    {
+      "label": "Content Modifiers",
+      "path": "content-modifiers",
+      "h1": "Content Modifiers",
+      "purpose": "Documents text, heading, alignment, transform, style, weight, wrapping, and overflow content utility classes.",
+      "generationUse": "Use this Universal Theme reference evidence while preserving the current theme style boundary."
+    },
+    {
+      "label": "CSS Variables",
+      "path": "css-variables",
+      "h1": "CSS Variables",
+      "purpose": "Documents color variables, palette variables, stateful variables, component variables, shadow variables, and sample component CSS.",
+      "generationUse": "Use this Universal Theme reference evidence while preserving the current theme style boundary."
+    },
+    {
+      "label": "JavaScript Events",
+      "path": "javascript-events",
+      "h1": "JavaScript Events",
+      "purpose": "Documents Universal Theme events that implementation code can listen to and respond to.",
+      "generationUse": "Use this Universal Theme reference evidence while preserving the current theme style boundary."
+    },
+    {
+      "label": "JavaScript APIs",
+      "path": "javascript-apis",
+      "h1": "JavaScript APIs",
+      "purpose": "Documents Universal Theme widget APIs available for runtime extension.",
+      "generationUse": "Use this Universal Theme reference evidence while preserving the current theme style boundary."
+    },
+    {
+      "label": "Change Log",
+      "path": "change-log",
+      "h1": "Change Log",
+      "purpose": "Documents Universal Theme version changes, improvements, accessibility updates, and bug fixes.",
+      "generationUse": "Use this Universal Theme reference evidence while preserving the current theme style boundary."
+    }
+  ],
+  "referenceGroups": {
+    "tools": [
+      "migration-guide",
+      "button-builder",
+      "template-directives",
+      "change-log"
+    ],
+    "cssUtilities": [
+      "color-and-status-modifiers",
+      "layout-modifiers",
+      "content-modifiers",
+      "css-variables"
+    ],
+    "runtimeExtension": [
+      "javascript-events",
+      "javascript-apis"
+    ]
+  },
+  "enterprisePrototypeRules": [
+    "Use APEX utility classes and CSS variables before adding custom CSS.",
+    "Use Button Builder semantics for report links, static content buttons, toolbar buttons, and icon buttons.",
+    "Use color and status modifiers for semantic status states.",
+    "Use layout/content modifiers for spacing, alignment, responsive visibility, wrapping, and dense enterprise copy.",
+    "Keep Template Directives visible only when demonstrating APEX template logic.",
+    "Target Universal Theme 26.1 behavior unless a prompt explicitly asks for legacy migration."
+  ],
+  "canonicalUrls": {
+    "reference": "https://oracleapex.com/ords/r/apex_pm/ut/reference",
+    "migration-guide": "https://oracleapex.com/ords/r/apex_pm/ut/migration-guide",
+    "button-builder": "https://oracleapex.com/ords/r/apex_pm/ut/button-builder",
+    "template-directives": "https://oracleapex.com/ords/r/apex_pm/ut/template-directives",
+    "color-and-status-modifiers": "https://oracleapex.com/ords/r/apex_pm/ut/color-and-status-modifiers",
+    "layout-modifiers": "https://oracleapex.com/ords/r/apex_pm/ut/layout-modifiers",
+    "content-modifiers": "https://oracleapex.com/ords/r/apex_pm/ut/content-modifiers",
+    "css-variables": "https://oracleapex.com/ords/r/apex_pm/ut/css-variables",
+    "javascript-events": "https://oracleapex.com/ords/r/apex_pm/ut/javascript-events",
+    "javascript-apis": "https://oracleapex.com/ords/r/apex_pm/ut/javascript-apis",
+    "change-log": "https://oracleapex.com/ords/r/apex_pm/ut/change-log"
+  }
+}

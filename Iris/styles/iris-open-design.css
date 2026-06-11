@@ -1,0 +1,225 @@
+/*
+ * Oracle APEX Universal Theme Iris approximation for Open Design prototypes.
+ * This is a compact, source-backed adapter. Load official APEX runtime assets when exact fidelity is needed.
+ */
+
+:root,
+.apex-theme-iris {
+  --ut-palette-primary: #00688c;
+  --ut-palette-primary-shade: #e4f1f7;
+  --ut-palette-primary-text: #00688c;
+  --ut-palette-success: #436b1d;
+  --ut-palette-warning: #8f520a;
+  --ut-palette-danger: #b3311f;
+  --ut-palette-info: #227e9e;
+  --ut-body-background-color: #fbf9f8;
+  --ut-header-background-color: #302d2a;
+  --ut-region-background-color: #fff;
+  --ut-component-border-radius: 0.25rem;
+
+  --apex-iris-font-family-base: -apple-system, "system-ui", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  --apex-iris-font-family-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  --apex-iris-font-family-icon: "Font APEX Small", "Font APEX Large", "apex-core-font";
+  --apex-iris-body: #fbf9f8;
+  --apex-iris-surface: #fff;
+  --apex-iris-surface-alt: #f1efed;
+  --apex-iris-input: #f9f9f9;
+  --apex-iris-text: #161513;
+  --apex-iris-component-text: #161513;
+  --apex-iris-muted-text: #666666;
+  --apex-iris-border: rgba(0,0,0,.1);
+  --apex-iris-report-border: #e6e6e6;
+  --apex-iris-side-nav: #302d2a;
+  --apex-iris-side-nav-text: #ffffff;
+  --apex-iris-header-height: 62px;
+  --apex-iris-title-height: 96px;
+  --apex-iris-nav-row-height: 44px;
+  --apex-iris-button-height: 32px;
+  --apex-iris-report-row-height: 32px;
+  --apex-iris-radius: 4px;
+}
+
+.apex-theme-iris,
+body.apex-theme-iris,
+.t-PageBody.apex-theme-iris {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--apex-iris-text);
+  background: var(--ut-body-background-color);
+  font-family: var(--apex-iris-font-family-base);
+  font-size: 16px;
+}
+
+.apex-theme-iris *, .apex-theme-iris *::before, .apex-theme-iris *::after { box-sizing: border-box; }
+
+.apex-theme-iris .t-Header, .apex-theme-iris.t-PageBody > .t-Header, .apex-theme-iris .app-header {
+  min-height: var(--apex-iris-header-height);
+  background: var(--ut-header-background-color);
+  color: var(--apex-iris-text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 8px;
+}
+
+.apex-theme-iris .t-Header-logo, .apex-theme-iris .app-logo {
+  color: currentColor;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: var(--apex-iris-header-height);
+}
+
+.apex-theme-iris .t-Body, .apex-theme-iris .app-shell {
+  display: grid;
+  grid-template-columns: 256px minmax(0, 1fr);
+  min-height: calc(100vh - var(--apex-iris-header-height));
+}
+
+.apex-theme-iris .t-Body-nav, .apex-theme-iris .app-nav {
+  background: var(--apex-iris-side-nav);
+  color: var(--apex-iris-side-nav-text);
+  box-shadow: -1px 0 0 rgba(0, 0, 0, .1) inset;
+}
+
+.apex-theme-iris .a-TreeView-content, .apex-theme-iris .app-nav-link {
+  min-height: var(--apex-iris-nav-row-height);
+  padding: 10px 8px;
+  color: var(--apex-iris-side-nav-text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 16px;
+  text-decoration: none;
+}
+
+.apex-theme-iris .a-TreeView-content.is-selected,
+.apex-theme-iris .a-TreeView-content.is-current--top,
+.apex-theme-iris .app-nav-link[aria-current="page"] {
+  background: var(--ut-palette-primary);
+  color: #fff;
+}
+
+.apex-theme-iris .t-Body-title, .apex-theme-iris .page-title-region {
+  min-height: var(--apex-iris-title-height);
+  background: var(--apex-iris-surface-alt);
+  color: var(--apex-iris-text);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 24px;
+}
+
+.apex-theme-iris .t-Body-content, .apex-theme-iris .page-content {
+  padding: 16px 24px 32px;
+  background: var(--apex-iris-body);
+}
+
+.apex-theme-iris .row, .apex-theme-iris .apex-row {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 16px;
+}
+.apex-theme-iris .col-12 { grid-column: span 12; }
+.apex-theme-iris .col-8 { grid-column: span 8; }
+.apex-theme-iris .col-6 { grid-column: span 6; }
+.apex-theme-iris .col-4 { grid-column: span 4; }
+.apex-theme-iris .col-3 { grid-column: span 3; }
+
+.apex-theme-iris .t-Region, .apex-theme-iris .t-ContentBlock, .apex-theme-iris .region {
+  background: var(--ut-region-background-color);
+  color: var(--apex-iris-component-text);
+  border: 1px solid var(--apex-iris-border);
+  border-radius: var(--apex-iris-radius);
+  box-shadow: 0 2px 4px -2px rgba(0, 0, 0, .1);
+  margin-block-end: 16px;
+}
+
+.apex-theme-iris .t-Region-header, .apex-theme-iris .region-header {
+  min-height: 48px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--apex-iris-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.apex-theme-iris .t-Region-title, .apex-theme-iris .region-title {
+  margin: 0;
+  color: var(--apex-iris-component-text);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.apex-theme-iris .t-Region-body, .apex-theme-iris .region-body { padding: 16px; }
+
+.apex-theme-iris .t-Button, .apex-theme-iris .a-Button, .apex-theme-iris button, .apex-theme-iris .button {
+  min-height: var(--apex-iris-button-height);
+  border: 1px solid var(--apex-iris-border);
+  border-radius: var(--apex-iris-radius);
+  background: #f8f8f8;
+  color: #fff;
+  box-shadow: 0 2px 4px -3px rgba(0, 0, 0, .1);
+  padding: 7px;
+  font: 600 12px/16px var(--apex-iris-font-family-base);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-decoration: none;
+}
+.apex-theme-iris .t-Button:hover, .apex-theme-iris .a-Button:hover, .apex-theme-iris .button:hover { filter: brightness(1.04); }
+.apex-theme-iris .t-Button:focus-visible, .apex-theme-iris .a-Button:focus-visible, .apex-theme-iris .button:focus-visible { outline: 2px solid var(--ut-palette-primary); outline-offset: 2px; }
+.apex-theme-iris .t-Button:disabled, .apex-theme-iris .a-Button:disabled, .apex-theme-iris .is-disabled { opacity: .45; cursor: not-allowed; }
+.apex-theme-iris .t-Button--hot, .apex-theme-iris .t-Button--primary, .apex-theme-iris .a-Button--hot, .apex-theme-iris .button-primary { background: var(--ut-palette-primary); border-color: var(--ut-palette-primary); color: #fff; }
+.apex-theme-iris .t-Button--danger, .apex-theme-iris .button-danger { background: var(--ut-palette-danger); border-color: var(--ut-palette-danger); color: #fff; }
+
+.apex-theme-iris .t-Form-label, .apex-theme-iris label { color: var(--apex-iris-component-text); font-size: 12px; font-weight: 600; line-height: 16px; }
+.apex-theme-iris .apex-item-text, .apex-theme-iris .apex-item-select, .apex-theme-iris input, .apex-theme-iris select, .apex-theme-iris textarea {
+  min-height: 32px;
+  border: 1px solid var(--apex-iris-border);
+  border-radius: var(--apex-iris-radius);
+  background: var(--apex-iris-input);
+  color: var(--apex-iris-component-text);
+  padding: 4px 7px;
+  font: 400 12px/16px var(--apex-iris-font-family-base);
+}
+.apex-theme-iris input:focus, .apex-theme-iris select:focus, .apex-theme-iris textarea:focus { outline: none; border-color: var(--ut-palette-primary); box-shadow: 0 0 0 1px var(--ut-palette-primary); }
+.apex-theme-iris .is-invalid input, .apex-theme-iris input[aria-invalid="true"] { border-color: var(--ut-palette-danger); box-shadow: 0 0 0 1px var(--ut-palette-danger); }
+
+.apex-theme-iris .t-Cards, .apex-theme-iris .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; padding: 0; margin: 0; list-style: none; }
+.apex-theme-iris .t-Card, .apex-theme-iris .card { background: var(--ut-region-background-color); border: 1px solid var(--apex-iris-border); border-radius: var(--apex-iris-radius); box-shadow: 0 2px 4px -2px rgba(0, 0, 0, .075); padding: 16px; }
+.apex-theme-iris .t-Card:hover, .apex-theme-iris .card:hover { box-shadow: 0 4px .5rem 0 rgba(0, 0, 0, .1); }
+
+.apex-theme-iris .t-Badge, .apex-theme-iris .badge { display: inline-flex; align-items: center; min-height: 20px; padding: 2px 8px; border-radius: 16px; background: rgba(128,128,128,.18); color: var(--apex-iris-component-text); font-size: 12px; line-height: 16px; }
+.apex-theme-iris .t-Badge--success, .apex-theme-iris .badge-success { color: var(--ut-palette-success); }
+.apex-theme-iris .t-Badge--warning, .apex-theme-iris .badge-warning { color: var(--ut-palette-warning); }
+.apex-theme-iris .t-Badge--danger, .apex-theme-iris .badge-danger { color: var(--ut-palette-danger); }
+.apex-theme-iris .t-Badge--info, .apex-theme-iris .badge-info { color: var(--ut-palette-info); }
+
+.apex-theme-iris .t-Alert, .apex-theme-iris .alert { border: 1px solid var(--apex-iris-border); border-radius: var(--apex-iris-radius); background: var(--ut-region-background-color); padding: 12px 16px; color: var(--apex-iris-component-text); }
+
+.apex-theme-iris .a-IRR-table, .apex-theme-iris .a-GV-table, .apex-theme-iris .t-Report-report, .apex-theme-iris table.report { width: 100%; border-collapse: collapse; background: var(--ut-region-background-color); color: var(--apex-iris-component-text); font-size: 12px; line-height: 16px; }
+.apex-theme-iris .a-IRR-table th, .apex-theme-iris .a-GV-header, .apex-theme-iris .t-Report-colHead, .apex-theme-iris table.report th { min-height: var(--apex-iris-report-row-height); background: var(--ut-region-background-color); border: 1px solid var(--apex-iris-report-border); color: var(--apex-iris-component-text); font-weight: 600; padding: 8px; text-align: left; }
+.apex-theme-iris .a-IRR-table td, .apex-theme-iris .a-GV-cell, .apex-theme-iris .t-Report-cell, .apex-theme-iris table.report td { height: var(--apex-iris-report-row-height); border: 1px solid var(--apex-iris-report-border); padding: 8px; vertical-align: middle; }
+.apex-theme-iris .a-GV-cell.is-active, .apex-theme-iris .a-GV-cell.is-selected, .apex-theme-iris table.report tr.is-selected td { background: var(--ut-palette-primary-shade); }
+
+.apex-theme-iris .toolbar, .apex-theme-iris .a-Toolbar { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-block-end: 8px; }
+.apex-theme-iris .tabs, .apex-theme-iris .t-Tabs { display: flex; align-items: center; gap: 2px; border-bottom: 1px solid var(--apex-iris-border); }
+.apex-theme-iris .tab, .apex-theme-iris .t-Tabs-link { padding: 8px 12px; color: var(--apex-iris-component-text); font-size: 12px; line-height: 16px; text-decoration: none; }
+.apex-theme-iris .tab[aria-selected="true"], .apex-theme-iris .t-Tabs-link.is-active { color: var(--ut-palette-primary); box-shadow: inset 0 -2px 0 var(--ut-palette-primary); }
+
+.apex-theme-iris .modal, .apex-theme-iris .drawer, .apex-theme-iris .ui-dialog, .apex-theme-iris .t-Dialog, .apex-theme-iris .t-Drawer { background: var(--ut-region-background-color); border: 1px solid var(--apex-iris-border); border-radius: var(--apex-iris-radius); box-shadow: 0 8px 32px rgba(0, 0, 0, .24); }
+.apex-theme-iris .timeline { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.apex-theme-iris .timeline-item { display: grid; grid-template-columns: 32px 1fr; gap: 8px; padding: 8px 0; }
+.apex-theme-iris .a-Icon, .apex-theme-iris .t-Icon, .apex-theme-iris .fa { font-family: var(--apex-iris-font-family-icon), var(--apex-iris-font-family-base); font-style: normal; line-height: 1; }
+
+@media (max-width: 800px) {
+  .apex-theme-iris .t-Body, .apex-theme-iris .app-shell { grid-template-columns: 1fr; }
+  .apex-theme-iris .t-Body-nav, .apex-theme-iris .app-nav { display: none; }
+  .apex-theme-iris .row, .apex-theme-iris .apex-row { grid-template-columns: 1fr; }
+  .apex-theme-iris .col-12, .apex-theme-iris .col-8, .apex-theme-iris .col-6, .apex-theme-iris .col-4, .apex-theme-iris .col-3 { grid-column: span 1; }
+}

@@ -15,7 +15,22 @@ Vita-Red/
 Vita-Slate/
 ```
 
-Do not import the repository root if you want separate design-system choices. Each theme directory contains its own canonical `DESIGN.md`.
+Do not import the repository root if you want separate design-system choices. Each theme directory contains its own canonical `DESIGN.md` and companion resources for higher-fidelity prototypes:
+
+```text
+<theme>/design-system.manifest.json
+<theme>/tokens/<theme>.tokens.json
+<theme>/styles/<theme>-open-design.css
+<theme>/reference/apex-reference.json
+<theme>/reference/implementation-guidelines.md
+<theme>/patterns/page-templates.json
+<theme>/patterns/enterprise-patterns.json
+<theme>/patterns/component-state-matrix.json
+<theme>/catalog/component-catalog.json
+<theme>/catalog/navigation-icon-catalog.json
+<theme>/catalog/open-design-readiness.json
+<theme>/examples/enterprise-hr-dashboard.html
+```
 
 ## Manual Import In Open Design
 
@@ -42,7 +57,7 @@ Use absolute paths on your machine. For example, if the repository is cloned at 
 
 ## Import Modes
 
-Use `hybrid` for most prototype work. It preserves the design-system document while allowing Open Design to create normalized helper files.
+Use `hybrid` for most prototype work. It preserves the design-system document while allowing Open Design to use normalized helper files such as the theme token JSON, CSS adapter, patterns, and catalogs.
 
 Use `verbatim` when you want the imported package to stay as close as possible to the source `DESIGN.md`.
 
@@ -104,6 +119,7 @@ If the imported design system looks too generic:
 
 - Confirm you imported the theme directory, not the repository root.
 - Confirm Open Design is reading the intended `DESIGN.md`.
+- Confirm Open Design can also read `design-system.manifest.json`, the theme token JSON, the theme CSS adapter, `reference/`, `patterns/`, `catalog/`, and `examples/enterprise-hr-dashboard.html`.
 - Confirm the body includes the theme-specific "Open Design Generation Rules" section.
 - Reimport or update the existing design-system id after pulling new repository changes.
 

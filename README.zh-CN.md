@@ -27,14 +27,14 @@
 
 | 主题样式 | 设计体系文件 | 验证覆盖范围 | 视觉特征 |
 | --- | --- | --- | --- |
-| Iris | [Iris/DESIGN.md](Iris/DESIGN.md) | 71 个 Design / Components / Icons 唯一路径；73 个菜单条目 | 深色中性导航壳、暖白页面背景、浅色标题带、蓝绿色动作强调 |
-| Redwood Light | [Redwood-Light/DESIGN.md](Redwood-Light/DESIGN.md) | 71 个 Design / Components / Icons 唯一路径；73 个菜单条目 | 白色顶栏、暖灰导航、Redwood 标题装饰条、sage/teal 强调色 |
-| Vita | [Vita/DESIGN.md](Vita/DESIGN.md) | 71 个 Design / Components / Icons 唯一路径；73 个菜单条目 | 白色内容面、蓝色导航/动作强调、紧凑 APEX 应用壳 |
-| Vita - Dark | [Vita-Dark/DESIGN.md](Vita-Dark/DESIGN.md) | 71 个 Design / Components / Icons 唯一路径；73 个菜单条目 | 炭黑应用壳、深色 Region、Vita 蓝色动作强调 |
-| Vita - Red | [Vita-Red/DESIGN.md](Vita-Red/DESIGN.md) | 71 个 Design / Components / Icons 唯一路径；73 个菜单条目 | 白色内容面、红色顶栏/动作强调、紧凑 Vita 结构 |
-| Vita - Slate | [Vita-Slate/DESIGN.md](Vita-Slate/DESIGN.md) | 71 个 Design / Components / Icons 唯一路径；73 个菜单条目 | slate 导航壳、浅灰标题带、灰蓝主强调色 |
+| Iris | [Iris/DESIGN.md](Iris/DESIGN.md) + [manifest](Iris/design-system.manifest.json) | 71 个 Design / Components / Icons 唯一路径；73 个菜单条目；含 tokens/CSS/Reference/patterns/catalogs/示例配套资源 | 深色中性导航壳、暖白页面背景、浅色标题带、蓝绿色动作强调 |
+| Redwood Light | [Redwood-Light/DESIGN.md](Redwood-Light/DESIGN.md) + [manifest](Redwood-Light/design-system.manifest.json) | 71 个 Design / Components / Icons 唯一路径；73 个菜单条目；含 tokens/CSS/Reference/patterns/catalogs/示例配套资源 | 白色顶栏、暖灰导航、Redwood 标题装饰条、sage/teal 强调色 |
+| Vita | [Vita/DESIGN.md](Vita/DESIGN.md) + [manifest](Vita/design-system.manifest.json) | 71 个 Design / Components / Icons 唯一路径；73 个菜单条目；含 tokens/CSS/Reference/patterns/catalogs/示例配套资源 | 白色内容面、蓝色导航/动作强调、紧凑 APEX 应用壳 |
+| Vita - Dark | [Vita-Dark/DESIGN.md](Vita-Dark/DESIGN.md) + [manifest](Vita-Dark/design-system.manifest.json) | 71 个 Design / Components / Icons 唯一路径；73 个菜单条目；含 tokens/CSS/Reference/patterns/catalogs/示例配套资源 | 炭黑应用壳、深色 Region、Vita 蓝色动作强调 |
+| Vita - Red | [Vita-Red/DESIGN.md](Vita-Red/DESIGN.md) + [manifest](Vita-Red/design-system.manifest.json) | 71 个 Design / Components / Icons 唯一路径；73 个菜单条目；含 tokens/CSS/Reference/patterns/catalogs/示例配套资源 | 白色内容面、红色顶栏/动作强调、紧凑 Vita 结构 |
+| Vita - Slate | [Vita-Slate/DESIGN.md](Vita-Slate/DESIGN.md) + [manifest](Vita-Slate/design-system.manifest.json) | 71 个 Design / Components / Icons 唯一路径；73 个菜单条目；含 tokens/CSS/Reference/patterns/catalogs/示例配套资源 | slate 导航壳、浅灰标题带、灰蓝主强调色 |
 
-顶层 [DESIGN.md](DESIGN.md) 是主题索引。每个主题目录都是独立设计体系，目录中只有一个规范文件 `DESIGN.md`，包含机器可读 YAML front matter 和面向人/AI 的设计说明。
+顶层 [DESIGN.md](DESIGN.md) 是主题索引。每个主题目录都是独立设计体系，目录中有规范文件 `DESIGN.md`，包含机器可读 YAML front matter 和面向人/AI 的设计说明。每个主题都额外提供企业级高保真原型所需的 manifest、机器可读 tokens、轻量 CSS 适配层、Reference 实现层、企业模式层、结构化目录和 HTML 示例。
 
 ## 目录结构
 
@@ -44,17 +44,59 @@
 |-- README.zh-CN.md
 |-- DESIGN.md
 |-- Iris/
-|   `-- DESIGN.md
+|   |-- DESIGN.md
+|   |-- catalog/
+|   |-- design-system.manifest.json
+|   |-- examples/
+|   |-- patterns/
+|   |-- reference/
+|   |-- styles/
+|   `-- tokens/
 |-- Redwood-Light/
-|   `-- DESIGN.md
+|   |-- DESIGN.md
+|   |-- catalog/
+|   |-- design-system.manifest.json
+|   |-- examples/
+|   |-- patterns/
+|   |-- reference/
+|   |-- styles/
+|   `-- tokens/
 |-- Vita/
-|   `-- DESIGN.md
+|   |-- DESIGN.md
+|   |-- catalog/
+|   |-- design-system.manifest.json
+|   |-- examples/
+|   |-- patterns/
+|   |-- reference/
+|   |-- styles/
+|   `-- tokens/
 |-- Vita-Dark/
-|   `-- DESIGN.md
+|   |-- DESIGN.md
+|   |-- catalog/
+|   |-- design-system.manifest.json
+|   |-- examples/
+|   |-- patterns/
+|   |-- reference/
+|   |-- styles/
+|   `-- tokens/
 |-- Vita-Red/
-|   `-- DESIGN.md
+|   |-- DESIGN.md
+|   |-- catalog/
+|   |-- design-system.manifest.json
+|   |-- examples/
+|   |-- patterns/
+|   |-- reference/
+|   |-- styles/
+|   `-- tokens/
 |-- Vita-Slate/
-|   `-- DESIGN.md
+|   |-- DESIGN.md
+|   |-- catalog/
+|   |-- design-system.manifest.json
+|   |-- examples/
+|   |-- patterns/
+|   |-- reference/
+|   |-- styles/
+|   `-- tokens/
 |-- docs/
 |   |-- assets/
 |   |-- maintenance.md
@@ -71,15 +113,15 @@ git clone https://github.com/wfg2513148/apex-design.git
 cd apex-design
 ```
 
-选择一个主题目录，将该目录下的 `DESIGN.md` 作为设计体系来源。例如：
+选择一个主题目录并导入完整主题目录，让 Open Design 同时读取 manifest、token JSON、CSS、Reference 层、企业模式层、结构化目录和示例页面。例如：
 
 ```text
-Iris/DESIGN.md
-Redwood-Light/DESIGN.md
-Vita/DESIGN.md
-Vita-Dark/DESIGN.md
-Vita-Red/DESIGN.md
-Vita-Slate/DESIGN.md
+Iris/
+Redwood-Light/
+Vita/
+Vita-Dark/
+Vita-Red/
+Vita-Slate/
 ```
 
 每次生成原型时建议只使用一个主题样式，避免不同主题样式的视觉语言混在一起。
@@ -90,7 +132,7 @@ Vita-Slate/DESIGN.md
 
 点击流程图可打开 Open Design 导入步骤说明。
 
-在 Open Design 中应逐个导入主题目录，而不是导入仓库根目录。
+在 Open Design 中应逐个导入完整主题目录，而不是导入仓库根目录，也不要只复制 `DESIGN.md` 单文件。
 
 如果仓库克隆在 `<repo>`，则本地导入路径应是：
 
@@ -105,7 +147,7 @@ Vita-Slate/DESIGN.md
 
 推荐导入模式：
 
-- `hybrid`：适合日常原型生成，保留 `DESIGN.md` 的同时让 Open Design 生成辅助结构。
+- `hybrid`：适合日常原型生成，保留 `DESIGN.md` 的同时让 Open Design 使用主题 token JSON、CSS 适配层、patterns 和 catalogs。
 - `verbatim`：适合强调原文证据保留的场景。
 - `normalized`：适合明确希望 Open Design 派生更多标准结构的场景。
 
@@ -163,6 +205,7 @@ https://oracleapex.cn/ords/r/test/ut/...
 - 每个主题 73 个必需菜单条目，包含别名条目
 - 每个主题都有机器可读 YAML front matter
 - 每个主题都有面向 Open Design 的生成规则
+- 6 个主题都提供 manifest、token JSON、CSS 适配层、Reference 实现层、企业模式层、结构化目录和企业 HR 示例页面，用于更高保真的企业级 Web 应用原型
 
 维护流程见 [docs/maintenance.md](docs/maintenance.md)。
 

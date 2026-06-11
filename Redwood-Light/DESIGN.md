@@ -222,6 +222,22 @@ coverage:
   liveComponentEvidenceAt: "2026-06-10T18:26:57Z"
   httpVerification: "71/71 oracleapex.cn paths returned HTTP 200 with apex-theme-redwood-light body class"
   capturedAt: "2026-06-10T15:35:56+08:00"
+resources:
+  readme: "README.md"
+  manifest: "design-system.manifest.json"
+  tokens: "tokens/redwood-light.tokens.json"
+  css: "styles/redwood-light-open-design.css"
+  reference: "reference/apex-reference.json"
+  referenceGuide: "reference/implementation-guidelines.md"
+  pageTemplates: "patterns/page-templates.json"
+  enterprisePatterns: "patterns/enterprise-patterns.json"
+  componentStates: "patterns/component-state-matrix.json"
+  patternsGuide: "patterns/README.md"
+  componentCatalog: "catalog/component-catalog.json"
+  navigationIconCatalog: "catalog/navigation-icon-catalog.json"
+  openDesignReadiness: "catalog/open-design-readiness.json"
+  catalogGuide: "catalog/README.md"
+  example: "examples/enterprise-hr-dashboard.html"
 componentPatterns:
   shell:
     bodyBackground: "#F7F6F4"
@@ -323,6 +339,39 @@ Redwood Light is visually distinct from Vita. Do not model it as a Vita layout w
 - Unique Design, Components, and Icons pages covered: 71 / 71
 - Required menu entries covered: 73 / 73, including repeated aliases such as Navigation / Navigation Bar and Modal Dialogs / Page Dialog
 - Capture timestamp: 2026-06-10T15:35:56+08:00
+
+
+## Companion Resources
+
+Use these files with this `DESIGN.md` when Open Design or another prototyping tool needs more than prose guidance:
+
+- `design-system.manifest.json`: machine-readable package manifest, canonical/fallback source URLs, official runtime asset references, and Open Design import hints.
+- `README.md`: local package guide for using the Redwood Light directory as a complete Open Design design-system package.
+- `tokens/redwood-light.tokens.json`: machine-readable tokens for colors, typography, spacing, radius, shadows, sizes, and APEX class mappings.
+- `styles/redwood-light-open-design.css`: compact prototype CSS that maps Redwood Light tokens to common APEX classes such as `t-Header`, `t-Body-nav`, `t-Region`, `t-Button`, `a-IRR-table`, `a-GV-table`, `t-Card`, and `t-Icon`.
+- `reference/apex-reference.json`: machine-readable Reference layer covering APEX tools, utility classes, CSS variables, JavaScript events/APIs, and change-log boundaries.
+- `reference/implementation-guidelines.md`: implementation guidance for using Reference pages in enterprise prototypes without inventing non-APEX CSS or runtime contracts.
+- `patterns/page-templates.json`: page shell, 12-column grid, page-template, Dialog, Drawer, and inline overlay guidance.
+- `patterns/enterprise-patterns.json`: enterprise page blueprints for dashboards, report workspaces, editable grids, master-detail pages, transaction forms, approvals, and wizards.
+- `patterns/component-state-matrix.json`: component variants and interaction states for buttons, forms, regions, reports, grids, filters, badges, overlays, timelines, and wizards.
+- `catalog/component-catalog.json`: machine-readable standard component catalog derived from the 46-component extraction table.
+- `catalog/navigation-icon-catalog.json`: navigation entries, navigation classes, Font APEX families, observed icon categories, and representative `fa-*` classes.
+- `catalog/open-design-readiness.json`: readiness audit for the artifacts needed to generate enterprise Open Design prototypes.
+- `examples/enterprise-hr-dashboard.html`: an enterprise HR dashboard example showing shell, title region, cards, report, form, and timeline patterns using the local CSS.
+
+The manifest records the official Oracle APEX runtime CSS, JavaScript, and Font APEX resources. Do not vendor Oracle runtime assets into this repository; load them from an APEX runtime when exact fidelity is required.
+
+## Reference Implementation Layer
+
+The package includes a Reference layer verified from the Universal Theme Reference navigation. Use this layer when a generated prototype needs APEX-compatible classes, template logic, or runtime behavior notes. Target Universal Theme 26.1 behavior unless a prompt explicitly asks for migration from an older theme.
+
+## Enterprise Application Pattern Layer
+
+The `patterns/` files translate observed Universal Theme pages into generation blueprints for enterprise screens: page templates, report workspaces, editable grids, master-detail management, transaction forms, approval workflows, guided wizards, and component state matrices. Keep the output scoped to **Redwood Light** and `.apex-theme-redwood-light`.
+
+## Machine-Readable Catalog Layer
+
+The `catalog/` files mirror the standard component table, navigation evidence, icon system, and readiness audit in a format that Open Design can consume without parsing Markdown. Use them for component selection, navigation/icon fidelity, and import completeness checks.
 
 ## Redwood Light Coverage Model
 

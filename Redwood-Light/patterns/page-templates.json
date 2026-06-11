@@ -1,0 +1,154 @@
+{
+  "name": "Oracle APEX Universal Theme Redwood Light Page Templates",
+  "themeStyle": "Redwood Light",
+  "source": {
+    "canonicalBase": "https://oracleapex.com/ords/r/apex_pm/ut",
+    "fallbackEvidenceBase": "https://oracleapex.cn/ords/r/test/ut",
+    "verifiedBodyClass": "apex-theme-redwood-light",
+    "verifiedPrimaryToken": "#5f7d4f",
+    "capturedAt": "2026-06-11T02:31:00Z",
+    "evidencePages": [
+      "pages",
+      "grid-layout",
+      "page-dialog",
+      "page-drawer",
+      "inline-dialog",
+      "inline-drawer"
+    ]
+  },
+  "shell": {
+    "bodyClasses": [
+      "t-PageBody",
+      "t-PageTemplate--standard",
+      "apex-side-nav",
+      "apex-icons-fontapex",
+      "apex-theme-redwood-light",
+      "t-PageBody--leftNav"
+    ],
+    "requiredRegions": [
+      "t-Header",
+      "t-Body-nav",
+      "t-Body-title",
+      "t-Body-content"
+    ],
+    "navigation": {
+      "containerClass": "a-TreeView t-TreeNav js-defaultCollapsed t-TreeNav--styleA",
+      "currentStateClasses": [
+        "is-current--top",
+        "is-selected"
+      ]
+    }
+  },
+  "grid": {
+    "model": "12-column responsive grid",
+    "classes": [
+      "row",
+      "col",
+      "col-start",
+      "col-end",
+      "col-12",
+      "col-8",
+      "col-6",
+      "col-4",
+      "col-3",
+      "col-xxs-12",
+      "col-xs-6",
+      "col-sm-4",
+      "col-md-3",
+      "col-lg-2",
+      "col-xl-2",
+      "col-xxl-1",
+      "apex-col-auto"
+    ],
+    "generationRules": [
+      "Use row and col classes before adding custom layout CSS.",
+      "Use 12-column desktop composition for dashboards and dense report pages.",
+      "Collapse multi-column KPI and form regions to single-column flow on narrow screens."
+    ]
+  },
+  "templates": [
+    {
+      "name": "Standard",
+      "bodyClass": "t-PageTemplate--standard",
+      "useFor": [
+        "dashboard",
+        "report workspace",
+        "form detail page",
+        "administration page"
+      ]
+    },
+    {
+      "name": "Left Side Column",
+      "useFor": [
+        "filter sidebar with report results",
+        "master navigation with detail content"
+      ]
+    },
+    {
+      "name": "Right Side Column",
+      "useFor": [
+        "detail inspector",
+        "activity feed",
+        "contextual actions"
+      ]
+    },
+    {
+      "name": "Both Side Column",
+      "useFor": [
+        "complex administration workspace",
+        "filter plus inspector workflow"
+      ]
+    },
+    {
+      "name": "Marquee Detail",
+      "useFor": [
+        "employee profile",
+        "case detail",
+        "asset detail",
+        "account detail"
+      ]
+    },
+    {
+      "name": "Page Dialog",
+      "evidencePath": "page-dialog",
+      "triggerClass": "t-Button",
+      "useFor": [
+        "short create/edit task",
+        "confirmation workflow",
+        "focused lookup"
+      ]
+    },
+    {
+      "name": "Page Drawer",
+      "evidencePath": "page-drawer",
+      "triggerClass": "t-Button",
+      "useFor": [
+        "side edit panel",
+        "record preview",
+        "approval detail"
+      ]
+    },
+    {
+      "name": "Inline Dialog",
+      "evidencePath": "inline-dialog",
+      "componentClasses": [
+        "ui-dialog",
+        "t-Region",
+        "t-Region--hideShow",
+        "a-Collapsible"
+      ]
+    },
+    {
+      "name": "Inline Drawer",
+      "evidencePath": "inline-drawer"
+    }
+  ],
+  "canonicalUrls": {
+    "pages": "https://oracleapex.com/ords/r/apex_pm/ut/pages",
+    "grid-layout": "https://oracleapex.com/ords/r/apex_pm/ut/grid-layout",
+    "page-dialog": "https://oracleapex.com/ords/r/apex_pm/ut/page-dialog",
+    "page-drawer": "https://oracleapex.com/ords/r/apex_pm/ut/page-drawer",
+    "inline-dialog": "https://oracleapex.com/ords/r/apex_pm/ut/inline-dialog",
+    "inline-drawer": "https://oracleapex.com/ords/r/apex_pm/ut/inline-drawer"
+  }
+}

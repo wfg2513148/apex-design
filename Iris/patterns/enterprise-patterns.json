@@ -1,0 +1,173 @@
+{
+  "name": "Oracle APEX Universal Theme Iris Enterprise Patterns",
+  "themeStyle": "Iris",
+  "source": {
+    "canonicalBase": "https://oracleapex.com/ords/r/apex_pm/ut",
+    "fallbackEvidenceBase": "https://oracleapex.cn/ords/r/test/ut",
+    "verifiedBodyClass": "apex-theme-iris",
+    "verifiedPrimaryToken": "#00688c",
+    "capturedAt": "2026-06-11T02:31:00Z",
+    "evidencePages": [
+      "forms",
+      "form-item-types",
+      "interactive-report",
+      "interactive-grid",
+      "standard-reports",
+      "reports-faceted-search",
+      "reports-smart-filters",
+      "reports-search-region",
+      "card-regions",
+      "metric-card",
+      "badge-component",
+      "timeline-component",
+      "wizard-region",
+      "alert-region",
+      "buttons"
+    ]
+  },
+  "compositionRules": [
+    "Use the theme shell and title region for every full-page enterprise prototype.",
+    "Keep operational actions in the title region, report toolbar, or region header actions.",
+    "Use Cards or Metric Cards for summarized KPIs, not marketing heroes.",
+    "Use Interactive Report for read-heavy exploration and Interactive Grid for editable tabular work.",
+    "Use Faceted Search or Smart Filters when a report requires persistent business filters.",
+    "Use Page Drawer or Inline Drawer for contextual edit and approval tasks.",
+    "Use Badge, Alert, and color/status modifiers for semantic state."
+  ],
+  "patterns": [
+    {
+      "id": "enterprise-dashboard",
+      "name": "Enterprise Operations Dashboard",
+      "evidencePaths": [
+        "card-regions",
+        "metric-card",
+        "standard-reports",
+        "timeline-component"
+      ],
+      "preferredClasses": [
+        "t-Region",
+        "t-Cards",
+        "t-Card",
+        "t-Badge",
+        "t-Report-report",
+        "t-Button"
+      ]
+    },
+    {
+      "id": "interactive-report-workspace",
+      "name": "Interactive Report Workspace",
+      "evidencePaths": [
+        "interactive-report",
+        "reports-faceted-search",
+        "reports-smart-filters",
+        "reports-search-region"
+      ],
+      "preferredClasses": [
+        "t-IRR-region",
+        "a-IRR",
+        "a-IRR-button",
+        "a-Button",
+        "t-Badge",
+        "t-Report-cell"
+      ]
+    },
+    {
+      "id": "interactive-grid-editing",
+      "name": "Interactive Grid Editing",
+      "evidencePaths": [
+        "interactive-grid"
+      ],
+      "preferredClasses": [
+        "a-IG-gridView",
+        "a-GV",
+        "a-GV-table",
+        "a-GV-header",
+        "a-GV-cell",
+        "a-Toolbar"
+      ]
+    },
+    {
+      "id": "master-detail-management",
+      "name": "Master Detail Management",
+      "evidencePaths": [
+        "pages",
+        "forms",
+        "interactive-report",
+        "page-drawer"
+      ],
+      "preferredClasses": [
+        "t-Region",
+        "t-Form-fieldContainer",
+        "t-Tabs",
+        "t-IRR-region",
+        "t-Badge"
+      ]
+    },
+    {
+      "id": "transaction-form",
+      "name": "Transaction Form",
+      "evidencePaths": [
+        "forms",
+        "form-item-types",
+        "buttons",
+        "alert-region"
+      ],
+      "preferredClasses": [
+        "t-Form-fieldContainer",
+        "apex-item-wrapper",
+        "apex-item-text",
+        "apex-item-select",
+        "t-Button--hot"
+      ]
+    },
+    {
+      "id": "approval-workflow",
+      "name": "Approval Workflow",
+      "evidencePaths": [
+        "page-drawer",
+        "inline-drawer",
+        "timeline-component",
+        "badge-component",
+        "alert-region"
+      ],
+      "preferredClasses": [
+        "t-Badge",
+        "t-Button",
+        "t-Button--hot",
+        "t-Alert"
+      ]
+    },
+    {
+      "id": "guided-wizard",
+      "name": "Guided Wizard",
+      "evidencePaths": [
+        "wizard-region",
+        "forms",
+        "buttons"
+      ],
+      "preferredClasses": [
+        "t-Wizard",
+        "t-Button",
+        "t-Icon",
+        "t-Form-fieldContainer"
+      ]
+    }
+  ],
+  "canonicalUrls": {
+    "forms": "https://oracleapex.com/ords/r/apex_pm/ut/forms",
+    "form-item-types": "https://oracleapex.com/ords/r/apex_pm/ut/form-item-types",
+    "interactive-report": "https://oracleapex.com/ords/r/apex_pm/ut/interactive-report",
+    "interactive-grid": "https://oracleapex.com/ords/r/apex_pm/ut/interactive-grid",
+    "standard-reports": "https://oracleapex.com/ords/r/apex_pm/ut/standard-reports",
+    "reports-faceted-search": "https://oracleapex.com/ords/r/apex_pm/ut/reports-faceted-search",
+    "reports-smart-filters": "https://oracleapex.com/ords/r/apex_pm/ut/reports-smart-filters",
+    "reports-search-region": "https://oracleapex.com/ords/r/apex_pm/ut/reports-search-region",
+    "card-regions": "https://oracleapex.com/ords/r/apex_pm/ut/card-regions",
+    "metric-card": "https://oracleapex.com/ords/r/apex_pm/ut/metric-card",
+    "badge-component": "https://oracleapex.com/ords/r/apex_pm/ut/badge-component",
+    "timeline-component": "https://oracleapex.com/ords/r/apex_pm/ut/timeline-component",
+    "wizard-region": "https://oracleapex.com/ords/r/apex_pm/ut/wizard-region",
+    "alert-region": "https://oracleapex.com/ords/r/apex_pm/ut/alert-region",
+    "buttons": "https://oracleapex.com/ords/r/apex_pm/ut/buttons"
+  }
+}

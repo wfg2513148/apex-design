@@ -1,0 +1,528 @@
+/*
+ * Oracle APEX Universal Theme Vita approximation for Open Design prototypes.
+ * This file is a compact, source-backed adapter. It does not copy Oracle APEX
+ * runtime CSS; load official APEX runtime assets when exact fidelity is needed.
+ */
+
+:root,
+.apex-theme-vita {
+  --ut-palette-primary: #056ac8;
+  --ut-palette-primary-shade: #e6f0fa;
+  --ut-palette-primary-text: #056ac8;
+  --ut-palette-success: #278701;
+  --ut-palette-warning: #ffc628;
+  --ut-palette-danger: #cb1100;
+  --ut-palette-info: #056ac8;
+  --ut-body-background-color: #fdfdfd;
+  --ut-header-background-color: #056ac8;
+  --ut-region-background-color: #fff;
+  --ut-component-border-radius: .125rem;
+
+  --apex-vita-font-family-base: system-ui, -apple-system, "system-ui", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  --apex-vita-font-family-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  --apex-vita-font-family-icon: "Font APEX Small", "Font APEX Large", "apex-core-font";
+
+  --apex-vita-body: #fdfdfd;
+  --apex-vita-surface: #fff;
+  --apex-vita-surface-alt: #f8f8f8;
+  --apex-vita-input: #f9f9f9;
+  --apex-vita-text: #000;
+  --apex-vita-component-text: #262626;
+  --apex-vita-muted-text: #666;
+  --apex-vita-border: rgba(0, 0, 0, .1);
+  --apex-vita-report-border: #e6e6e6;
+  --apex-vita-side-nav: #2e3439;
+  --apex-vita-side-nav-text: #fff;
+
+  --apex-vita-header-height: 48px;
+  --apex-vita-title-height: 96px;
+  --apex-vita-nav-row-height: 44px;
+  --apex-vita-button-height: 32px;
+  --apex-vita-report-row-height: 32px;
+  --apex-vita-radius: 2px;
+  --apex-vita-card-radius: 3px;
+  --apex-vita-region-shadow: 0 2px 4px -2px rgba(0, 0, 0, .1);
+  --apex-vita-button-shadow: 0 2px 4px -3px rgba(0, 0, 0, .1);
+}
+
+.apex-theme-vita,
+.apex-theme-vita body,
+body.apex-theme-vita,
+.t-PageBody.apex-theme-vita {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--apex-vita-text);
+  background: var(--ut-body-background-color);
+  font-family: var(--apex-vita-font-family-base);
+  font-size: 16px;
+}
+
+.apex-theme-vita *,
+.apex-theme-vita *::before,
+.apex-theme-vita *::after {
+  box-sizing: border-box;
+}
+
+.t-Header,
+.apex-theme-vita .app-header {
+  min-height: var(--apex-vita-header-height);
+  background: var(--ut-header-background-color);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 8px;
+}
+
+.t-Header-logo,
+.apex-theme-vita .app-logo {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 48px;
+}
+
+.t-Body,
+.apex-theme-vita .app-shell {
+  display: grid;
+  grid-template-columns: 256px minmax(0, 1fr);
+  min-height: calc(100vh - var(--apex-vita-header-height));
+}
+
+.t-Body-nav,
+.apex-theme-vita .app-nav {
+  background: var(--apex-vita-side-nav);
+  color: var(--apex-vita-side-nav-text);
+  box-shadow: -1px 0 0 rgba(0, 0, 0, .1) inset;
+}
+
+.a-TreeView-content,
+.apex-theme-vita .app-nav-link {
+  min-height: var(--apex-vita-nav-row-height);
+  padding: 10px 8px;
+  color: var(--apex-vita-side-nav-text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 16px;
+  text-decoration: none;
+}
+
+.a-TreeView-content.is-selected,
+.a-TreeView-content.is-current--top,
+.apex-theme-vita .app-nav-link[aria-current="page"] {
+  background: color-mix(in srgb, var(--ut-palette-primary) 72%, #000);
+  color: #fff;
+}
+
+.t-Body-title,
+.apex-theme-vita .page-title-region {
+  min-height: var(--apex-vita-title-height);
+  background: var(--apex-vita-surface);
+  color: var(--apex-vita-text);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 24px;
+}
+
+.t-Breadcrumb,
+.apex-theme-vita .breadcrumb {
+  color: var(--apex-vita-muted-text);
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.t-Body-content,
+.apex-theme-vita .page-content {
+  padding: 16px 24px 32px;
+  background: var(--apex-vita-body);
+}
+
+.row,
+.apex-theme-vita .apex-row {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.col-12 { grid-column: span 12; }
+.col-8 { grid-column: span 8; }
+.col-6 { grid-column: span 6; }
+.col-4 { grid-column: span 4; }
+.col-3 { grid-column: span 3; }
+
+.t-Region,
+.t-ContentBlock,
+.apex-theme-vita .region {
+  background: var(--ut-region-background-color);
+  color: var(--apex-vita-component-text);
+  border: 1px solid var(--apex-vita-border);
+  border-radius: var(--apex-vita-radius);
+  box-shadow: var(--apex-vita-region-shadow);
+  margin-block-end: 16px;
+}
+
+.t-Region-header,
+.apex-theme-vita .region-header {
+  min-height: 48px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--apex-vita-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.t-Region-title,
+.apex-theme-vita .region-title {
+  margin: 0;
+  color: var(--apex-vita-component-text);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.t-Region-body,
+.apex-theme-vita .region-body {
+  padding: 16px;
+}
+
+.t-Button,
+.a-Button,
+.apex-theme-vita button,
+.apex-theme-vita .button {
+  min-height: var(--apex-vita-button-height);
+  border: 1px solid rgba(0, 0, 0, .075);
+  border-radius: var(--apex-vita-radius);
+  background: var(--apex-vita-surface-alt);
+  color: #393939;
+  box-shadow: var(--apex-vita-button-shadow);
+  padding: 7px 11px;
+  font: 400 12px/16px var(--apex-vita-font-family-base);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-decoration: none;
+}
+
+.t-Button:hover,
+.a-Button:hover,
+.apex-theme-vita .button:hover {
+  background: #fff;
+}
+
+.t-Button:focus-visible,
+.a-Button:focus-visible,
+.apex-theme-vita .button:focus-visible {
+  outline: 2px solid var(--ut-palette-primary);
+  outline-offset: 2px;
+}
+
+.t-Button:disabled,
+.a-Button:disabled,
+.apex-theme-vita .button:disabled,
+.t-Button.is-disabled,
+.a-Button.is-disabled {
+  opacity: .45;
+  cursor: not-allowed;
+}
+
+.t-Button--hot,
+.t-Button--primary,
+.a-Button--hot,
+.apex-theme-vita .button-primary {
+  background: var(--ut-palette-primary);
+  border-color: var(--ut-palette-primary);
+  color: #fff;
+}
+
+.t-Button--danger,
+.apex-theme-vita .button-danger {
+  background: var(--ut-palette-danger);
+  border-color: var(--ut-palette-danger);
+  color: #fff;
+}
+
+.t-Form-label,
+.apex-theme-vita label {
+  color: var(--apex-vita-component-text);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+.apex-item-text,
+.apex-item-select,
+.apex-theme-vita input,
+.apex-theme-vita select,
+.apex-theme-vita textarea {
+  min-height: 32px;
+  border: 1px solid #dfdfdf;
+  border-radius: var(--apex-vita-radius);
+  background: var(--apex-vita-input);
+  color: #202020;
+  padding: 4px 7px;
+  font: 400 12px/16px var(--apex-vita-font-family-base);
+}
+
+.apex-item-text:focus,
+.apex-item-select:focus,
+.apex-theme-vita input:focus,
+.apex-theme-vita select:focus,
+.apex-theme-vita textarea:focus {
+  outline: none;
+  background: #fff;
+  border-color: var(--ut-palette-primary);
+  box-shadow: 0 0 0 1px var(--ut-palette-primary);
+}
+
+.apex-theme-vita input:disabled,
+.apex-theme-vita select:disabled,
+.apex-theme-vita textarea:disabled,
+.apex-theme-vita .is-disabled input,
+.apex-theme-vita .is-readonly input {
+  opacity: .65;
+  cursor: not-allowed;
+}
+
+.apex-theme-vita .is-invalid input,
+.apex-theme-vita .is-invalid select,
+.apex-theme-vita .is-invalid textarea,
+.apex-theme-vita input[aria-invalid="true"],
+.apex-theme-vita select[aria-invalid="true"],
+.apex-theme-vita textarea[aria-invalid="true"] {
+  border-color: var(--ut-palette-danger);
+  box-shadow: 0 0 0 1px var(--ut-palette-danger);
+}
+
+.t-Cards,
+.apex-theme-vita .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.t-Card,
+.apex-theme-vita .card {
+  background: #fff;
+  border: 1px solid var(--apex-vita-border);
+  border-radius: var(--apex-vita-card-radius);
+  box-shadow: 0 2px 4px -2px rgba(0, 0, 0, .075);
+  padding: 16px;
+}
+
+.t-Card:hover,
+.apex-theme-vita .card:hover {
+  box-shadow: 0 4px .5rem 0 rgba(0, 0, 0, .1);
+}
+
+.t-Badge,
+.apex-theme-vita .badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 20px;
+  padding: 2px 8px;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, .1);
+  color: var(--apex-vita-component-text);
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.t-Badge--success,
+.apex-theme-vita .badge-success {
+  background: color-mix(in srgb, var(--ut-palette-success) 16%, #fff);
+  color: #1f5f00;
+}
+
+.t-Badge--warning,
+.apex-theme-vita .badge-warning {
+  background: color-mix(in srgb, var(--ut-palette-warning) 28%, #fff);
+  color: #5f4300;
+}
+
+.t-Badge--danger,
+.apex-theme-vita .badge-danger {
+  background: color-mix(in srgb, var(--ut-palette-danger) 14%, #fff);
+  color: #8f0c00;
+}
+
+.t-Badge--info,
+.apex-theme-vita .badge-info {
+  background: var(--ut-palette-primary-shade);
+  color: var(--ut-palette-primary);
+}
+
+.t-Alert,
+.apex-theme-vita .alert {
+  border: 1px solid var(--apex-vita-border);
+  border-radius: var(--apex-vita-radius);
+  background: #fff;
+  padding: 12px 16px;
+  color: var(--apex-vita-component-text);
+}
+
+.apex-theme-vita .alert-success { border-color: var(--ut-palette-success); }
+.apex-theme-vita .alert-warning { border-color: var(--ut-palette-warning); }
+.apex-theme-vita .alert-danger { border-color: var(--ut-palette-danger); }
+.apex-theme-vita .alert-info { border-color: var(--ut-palette-info); }
+
+.a-IRR-table,
+.a-GV-table,
+.t-Report-report,
+.apex-theme-vita table.report {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  color: var(--apex-vita-component-text);
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.a-IRR-table th,
+.a-GV-header,
+.t-Report-colHead,
+.apex-theme-vita table.report th {
+  min-height: var(--apex-vita-report-row-height);
+  background: #fff;
+  border: 1px solid var(--apex-vita-report-border);
+  color: var(--apex-vita-component-text);
+  font-weight: 600;
+  padding: 8px;
+  text-align: left;
+}
+
+.a-IRR-table td,
+.a-GV-cell,
+.t-Report-cell,
+.apex-theme-vita table.report td {
+  height: var(--apex-vita-report-row-height);
+  border: 1px solid var(--apex-vita-report-border);
+  padding: 8px;
+  vertical-align: middle;
+}
+
+.a-GV-cell.is-active,
+.a-GV-cell.is-selected,
+.a-IRR-table tr.is-selected td,
+.apex-theme-vita table.report tr.is-selected td {
+  background: var(--ut-palette-primary-shade);
+}
+
+.a-GV-cell.is-readonly {
+  background: #f8f8f8;
+  color: var(--apex-vita-muted-text);
+}
+
+.apex-theme-vita .toolbar,
+.a-Toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-block-end: 8px;
+}
+
+.apex-theme-vita .tabs,
+.t-Tabs {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  border-bottom: 1px solid var(--apex-vita-border);
+}
+
+.apex-theme-vita .tab,
+.t-Tabs-link {
+  padding: 8px 12px;
+  color: var(--apex-vita-component-text);
+  font-size: 12px;
+  line-height: 16px;
+  text-decoration: none;
+}
+
+.apex-theme-vita .tab[aria-selected="true"],
+.t-Tabs-link.is-active {
+  color: var(--ut-palette-primary);
+  box-shadow: inset 0 -2px 0 var(--ut-palette-primary);
+}
+
+.apex-theme-vita .modal,
+.apex-theme-vita .drawer,
+.ui-dialog,
+.t-Dialog,
+.t-Drawer {
+  background: #fff;
+  border: 1px solid var(--apex-vita-border);
+  border-radius: var(--apex-vita-radius);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, .24);
+}
+
+.t-Drawer,
+.apex-theme-vita .drawer {
+  max-width: min(520px, 100vw);
+}
+
+.ui-dialog-titlebar,
+.t-Dialog-header,
+.t-Drawer-header {
+  min-height: 48px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--apex-vita-border);
+  font-weight: 600;
+}
+
+.apex-theme-vita .timeline {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.apex-theme-vita .timeline-item {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 8px;
+  padding: 8px 0;
+}
+
+.a-Icon,
+.t-Icon,
+.fa {
+  font-family: var(--apex-vita-font-family-icon), var(--apex-vita-font-family-base);
+  font-style: normal;
+  line-height: 1;
+}
+
+@media (max-width: 800px) {
+  .t-Body,
+  .apex-theme-vita .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .t-Body-nav,
+  .apex-theme-vita .app-nav {
+    display: none;
+  }
+
+  .row,
+  .apex-theme-vita .apex-row {
+    grid-template-columns: 1fr;
+  }
+
+  .col-12,
+  .col-8,
+  .col-6,
+  .col-4,
+  .col-3 {
+    grid-column: span 1;
+  }
+}
