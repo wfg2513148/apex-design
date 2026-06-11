@@ -165,6 +165,29 @@ node scripts/import-open-design.mjs --dry-run --no-verify
 
 The script overwrites the matching `user:oracle-apex-*-theme-design-system` directories, preserves Open Design metadata such as `projectId` and `createdAt`, and verifies the imported ids through the local Open Design API when it is running.
 
+### AI Install Prompt
+
+Give this prompt to Codex, Open Design, or another local AI coding agent when you want it to install or refresh these design systems in your local Open Design workspace:
+
+```text
+Install the Oracle APEX Universal Theme design systems from https://github.com/wfg2513148/apex-design into the local Open Design instance on this machine.
+
+Steps:
+1. If the repository is not already available locally, clone it from https://github.com/wfg2513148/apex-design.
+2. From the repository root, run `node scripts/import-open-design.mjs`.
+3. Let the script auto-detect the local Open Design user design-system directory and API URL. If auto-detection fails, use `--open-design-root <path-to-open-design>` or `OPEN_DESIGN_ROOT=<path-to-open-design>`.
+4. Confirm that all six user design systems are visible in the Open Design catalog:
+   - `user:oracle-apex-iris-theme-design-system`
+   - `user:oracle-apex-redwood-light-theme-design-system`
+   - `user:oracle-apex-vita-theme-design-system`
+   - `user:oracle-apex-vita-dark-theme-design-system`
+   - `user:oracle-apex-vita-red-theme-design-system`
+   - `user:oracle-apex-vita-slate-theme-design-system`
+5. Report the command output, the detected target directory, and whether Open Design catalog verification passed.
+
+Do not manually create duplicate design systems. The script is intended to overwrite and refresh the existing `user:oracle-apex-*-theme-design-system` entries while preserving Open Design metadata such as `projectId` and `createdAt`.
+```
+
 ## Use With AI Prototyping Tools
 
 Give the relevant theme file to the prototyping tool as the design-system source:
