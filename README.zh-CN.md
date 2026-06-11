@@ -164,6 +164,29 @@ Vita-Slate/
 
 更多步骤见 [docs/open-design-import.md](docs/open-design-import.md)。
 
+### 一键同步到本机 Open Design
+
+后续主题资源更新后，可以直接覆盖同步到本机 Open Design 已有的 6 套 APEX 设计体系：
+
+```sh
+node scripts/import-open-design.mjs
+```
+
+常用选项：
+
+```sh
+# 只同步 Vita
+node scripts/import-open-design.mjs --theme Vita
+
+# 指定 Open Design checkout
+node scripts/import-open-design.mjs --open-design-root /Users/kwang/open-design
+
+# 只预览将要同步的内容
+node scripts/import-open-design.mjs --dry-run --no-verify
+```
+
+脚本会覆盖 `user:oracle-apex-*-theme-design-system` 对应目录，保留 Open Design 的 `projectId/createdAt` 等元数据，并通过本机 Open Design API 验证导入结果。
+
 ## 用于 AI 原型生成
 
 示例提示词：

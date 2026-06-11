@@ -142,6 +142,29 @@ Recommended Open Design import mode:
 
 See [docs/open-design-import.md](docs/open-design-import.md) for step-by-step import guidance.
 
+### One-Command Local Open Design Sync
+
+After updating a theme package, sync all six APEX design systems into the local Open Design user design-system directory:
+
+```sh
+node scripts/import-open-design.mjs
+```
+
+Common options:
+
+```sh
+# Sync only Vita
+node scripts/import-open-design.mjs --theme Vita
+
+# Point at a specific Open Design checkout
+node scripts/import-open-design.mjs --open-design-root /Users/kwang/open-design
+
+# Preview the sync without writing
+node scripts/import-open-design.mjs --dry-run --no-verify
+```
+
+The script overwrites the matching `user:oracle-apex-*-theme-design-system` directories, preserves Open Design metadata such as `projectId` and `createdAt`, and verifies the imported ids through the local Open Design API when it is running.
+
 ## Use With AI Prototyping Tools
 
 Give the relevant theme file to the prototyping tool as the design-system source:

@@ -98,6 +98,14 @@ for theme in ["Iris", "Redwood-Light", "Vita", "Vita-Dark", "Vita-Red", "Vita-Sl
 PY
 ```
 
+Check the Open Design sync script:
+
+```sh
+node --test tests/import-open-design.test.mjs
+node --check scripts/import-open-design.mjs
+node scripts/import-open-design.mjs --dry-run --no-verify
+```
+
 ## Release Policy
 
 Use semantic versioning tags:
@@ -110,6 +118,7 @@ Use semantic versioning tags:
 - `v0.2.4`: added live component extraction matrices for Iris, Redwood Light, and Vita.
 - `v0.3.0`: added Vita - Dark, Vita - Red, and Vita - Slate design systems with live component extraction matrices.
 - `v0.4.0`: added companion manifest, token JSON, CSS adapter, Reference layer, enterprise pattern layer, machine-readable catalogs, and enterprise HR example for higher-fidelity Open Design prototypes across all six theme styles.
+- `v0.4.1`: added a one-command local Open Design sync script with tests, overwrite-safe metadata preservation, local API verification, and bilingual usage documentation.
 
 Future release guidance:
 

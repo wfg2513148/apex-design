@@ -55,6 +55,51 @@ Use absolute paths on your machine. For example, if the repository is cloned at 
 <repo>/Vita-Slate
 ```
 
+## One-Command Local Sync
+
+After a theme file changes in this repository, use the sync script to update the local Open Design user design-system directory in place:
+
+```sh
+node scripts/import-open-design.mjs
+```
+
+By default the script:
+
+- syncs all six APEX theme directories;
+- detects `<home>/open-design/.od/design-systems` or a sibling `open-design/.od/design-systems` directory;
+- overwrites the existing `user:oracle-apex-*-theme-design-system` folders;
+- preserves existing Open Design metadata such as `projectId` and `createdAt`;
+- writes an Open Design-compatible `manifest.json`, `tokens.css`, and `components.html` next to the source package files;
+- verifies the synced ids through `http://127.0.0.1:5174/api/design-systems` when Open Design is running.
+
+To point at a specific Open Design checkout:
+
+```sh
+node scripts/import-open-design.mjs --open-design-root /Users/kwang/open-design
+```
+
+To sync one theme:
+
+```sh
+node scripts/import-open-design.mjs --theme Vita
+node scripts/import-open-design.mjs --theme Iris
+node scripts/import-open-design.mjs --theme Redwood-Light
+```
+
+To preview without writing:
+
+```sh
+node scripts/import-open-design.mjs --dry-run --no-verify
+```
+
+Environment overrides:
+
+```sh
+OPEN_DESIGN_ROOT=/Users/kwang/open-design node scripts/import-open-design.mjs
+OPEN_DESIGN_USER_DESIGN_SYSTEMS_DIR=/path/to/.od/design-systems node scripts/import-open-design.mjs
+OPEN_DESIGN_URL=http://127.0.0.1:5174 node scripts/import-open-design.mjs
+```
+
 ## Import Modes
 
 Use `hybrid` for most prototype work. It preserves the design-system document while allowing Open Design to use normalized helper files such as the theme token JSON, CSS adapter, patterns, and catalogs.
