@@ -244,9 +244,9 @@ componentPatterns:
     contentBackground: "#FFFFFF"
     headerBackground: "#FFFFFF"
     headerText: "#161513"
-    sideNavigationBackground: "#F7F6F4"
-    sideNavigationText: "#312D2A"
-    sideNavigationSelectedBackground: "#E7E5E2"
+    sideNavigationBackground: "#FFFFFF"
+    sideNavigationText: "#161513"
+    sideNavigationSelectedBackground: "rgba(22,21,19,.08)"
     sideNavigationSelectedText: "#161513"
     sideNavigationSelectedAccent: "#5f7d4f"
     titleIconBackground: "#6F7D7B"
@@ -418,12 +418,12 @@ Use these as the executable Redwood Light defaults in Open Design prototypes.
 - Live root primary / focus / selected accent: `#5f7d4f`
 - Secondary attention: `#D63B25`
 - Canvas or broad surface: `#F7F6F4` to `#EAEAEA`, depending on page template density
-- Header surface: `#FFFFFF`
-- Side navigation surface: `#F7F6F4`
-- Selected navigation row: `#E7E5E2`
+- Header surface: transparent over the Redwood warm shell, visually `#F7F6F4` / `#F5F4F2`
+- Side navigation surface: `#FFFFFF`
+- Selected navigation row: `rgba(22,21,19,.08)`
 - Component surface: `#FFFFFF`
 - Text / on-surface: `#161513`
-- Navigation text: `#312D2A`
+- Navigation text: `#161513`, with inactive item content rendered as `rgba(22,21,19,.7)`
 - Component index link text: blue-teal `#00688C`
 - Muted icon tile: `#6F7D7B`
 - Small category badge: dark warm gray `#7B7671`
@@ -452,7 +452,19 @@ Redwood Light uses Oracle Sans in the captured pages. Use `Oracle Sans` and the 
 
 ### Application Shell And Navigation
 
-Redwood Light screens should look like Oracle APEX workspaces using Redwood visual language: compact navigation, title/breadcrumb region, data-first content, Oracle Sans typography, warm light-gray app canvas, and rounded controls. The app header stays white with dark text and utility actions. The left navigation uses warm off-white / light-gray surfaces with dark text; selected rows are muted gray with a narrow accent or icon emphasis. Do not fill the header or side navigation with solid primary green, because that makes Redwood Light collapse into a Vita-like high-chroma shell. Use the live Redwood Light root primary `#5f7d4f` for selected accents, focus rings, primary actions, and small icon surfaces while retaining the extracted palette token `#4F7D7B` for brand accent work. Use white for regions, cards, inputs, and reports. Keep `#161513` as the core text color.
+Redwood Light screens should look like Oracle APEX workspaces using Redwood visual language: compact navigation, title/breadcrumb region, data-first content, Oracle Sans typography, warm light-gray app canvas, and rounded controls. The app header is transparent over the warm shell with dark text and utility actions. The left navigation uses a white surface with dark text; selected rows are translucent warm gray without a solid primary fill. Do not fill the header or side navigation with solid primary green, because that makes Redwood Light collapse into a Vita-like high-chroma shell. Use the live Redwood Light root primary `#5f7d4f` for selected accents, focus rings, primary actions, and small icon surfaces while retaining the extracted palette token `#4F7D7B` for brand accent work. Use white for regions, cards, inputs, and reports. Keep `#161513` as the core text color. The title region keeps the native 8px neutral Redwood texture strip at its lower edge using `https://oracleapex.com/i/themes/theme_42/26.1/images/rw/texture-strip/neutral.png`.
+
+#### Redwood Light Navigation Menu Modes
+
+Use one primary Navigation Menu template per application shell. Do not turn APEX navigation into a marketing navbar, oversized pill menu, or unrelated SaaS sidebar. Preserve Universal Theme classes and the warm gray Redwood shell so generators can reproduce the observed runtime structure:
+
+- **Menu Bar / Top Navigation Menu**: Use `apex-top-nav t-PageBody--topNav` with `t-Header`, `t-Header-nav`, and `t-Header-nav-list js-tabLike a-MenuBar a-MenuBar--overflow a-MenuBar--tabs`. Top-level entries are horizontal, 14px text, `a-Menu--split` for entries with submenus, and `a-Menu--current` for the current route. Split entries keep label padding tight and add a separate 32px `a-Menu-subMenuCol` disclosure cell.
+- **Tabs / Top Navigation Tabs**: Use `apex-top-nav t-PageBody--topNav` with `t-NavTabs t-NavTabs--inlineLabels-lg t-NavTabs--displayLabels-sm` inside `t-Header-nav`. Keep this mode for simple applications with about six or fewer primary destinations; the tab row remains compact at about 40px.
+- **Mega Menu / Top Navigation Mega Menu**: Use `apex-top-nav` with no persistent top nav list and expose the header menu button as `t-Button--headerTree t-Button--megaMenuToggle`. The open menu is `t-MegaMenu a-Menu` with an `a-Menu-content t-MegaMenu-container` panel, subtle border, and `0 12px 24px -12px rgba(0,0,0,.3)` shadow.
+- **Side Tree Navigation**: Use `apex-side-nav t-PageBody--leftNav` with `t-Body-nav` and `a-TreeView t-TreeNav js-defaultCollapsed t-TreeNav--styleA`. The standard APEX side navigation is collapsible: expose `t_Button_navControl t-Button--headerTree`, toggle `js-navExpanded` / `js-navCollapsed` on the page body, keep the expanded body grid at `280px minmax(0,1fr)`, and collapse the nav grid column to `0px` while TreeView content compresses to a 22px icon strip with transparent labels. Top-level rows use 48px with a `24px` icon column, `8px 8px 8px 22px` content padding, and inactive content color `rgba(22,21,19,.7)`. Child rows also use 48px, a `20px` icon column, `8px 8px 8px 52px` padding, 16px labels, and 8px label offset. Mark the current page on `a-TreeView-row` with `is-selected is-current--top` so the `rgba(22,21,19,.08)` selected background spans the full white side panel.
+- **Navigation Bar**: Keep `t-NavigationBar` in the header end area for utilities such as authentication, help, feedback, version, or theme style. It is not a replacement for the main Navigation Menu and should remain compact.
+
+The canonical evidence page is `https://oracleapex.com/ords/r/apex_pm/ut/navigation`; fallback evidence may come from `https://oracleapex.cn/ords/r/test/ut/navigation` when the primary host times out.
 
 ### Buttons
 

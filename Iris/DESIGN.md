@@ -430,6 +430,18 @@ Iris uses Apple/system UI typography in the captured pages. Use `-apple-system` 
 
 Iris screens should look like Oracle APEX workspaces with a deep neutral shell: compact dark top header, dark left navigation, pale title/breadcrumb band, warm off-white body canvas, and dense white content regions. Use the live Iris root primary `#00688c` for focus rings, primary actions, badges, and link emphasis while retaining the extracted Iris palette token `#5FB9B5` as the softer brand accent. Do not fill the shell with solid teal/blue; that collapses Iris into a Vita-like high-chroma navigation treatment. Do not use Redwood Light's white header and warm-gray side navigation. Keep regions, cards, inputs, and reports white with tight borders and small shadows.
 
+#### Iris Navigation Menu Modes
+
+Use one primary Navigation Menu template per application shell. Do not turn APEX navigation into a marketing navbar, oversized pill menu, or unrelated SaaS sidebar. Preserve Universal Theme classes and the deep neutral shell so generators can reproduce the observed runtime structure:
+
+- **Menu Bar / Top Navigation Menu**: Use `apex-top-nav t-PageBody--topNav` with `t-Header`, `t-Header-nav`, and `t-Header-nav-list js-tabLike a-MenuBar a-MenuBar--overflow a-MenuBar--tabs`. Top-level entries are horizontal, 14px text, `a-Menu--split` for entries with submenus, and `a-Menu--current` for the current route. Split entries keep label padding tight and add a separate 32px `a-Menu-subMenuCol` disclosure cell.
+- **Tabs / Top Navigation Tabs**: Use `apex-top-nav t-PageBody--topNav` with `t-NavTabs t-NavTabs--inlineLabels-lg t-NavTabs--displayLabels-sm` inside `t-Header-nav`. Keep this mode for simple applications with about six or fewer primary destinations; the tab row remains compact at about 40px.
+- **Mega Menu / Top Navigation Mega Menu**: Use `apex-top-nav` with no persistent top nav list and expose the header menu button as `t-Button--headerTree t-Button--megaMenuToggle`. The open menu is `t-MegaMenu a-Menu` with an `a-Menu-content t-MegaMenu-container` panel, subtle border, and `0 12px 24px -12px rgba(0,0,0,.3)` shadow.
+- **Side Tree Navigation**: Use `apex-side-nav t-PageBody--leftNav` with `t-Body-nav` and `a-TreeView t-TreeNav js-defaultCollapsed t-TreeNav--styleA`. The standard APEX side navigation is collapsible: expose `t_Button_navControl t-Button--headerTree`, toggle `js-navExpanded` / `js-navCollapsed` on the page body, keep the expanded body grid at `240px minmax(0,1fr)`, and collapse the nav grid column to `0px` while TreeView content compresses to a 16px icon strip with transparent labels. Top-level rows use 44px; child rows use 40px with 12px labels. Mark the current page on `a-TreeView-row` with `is-selected is-current--top` so the selected background spans the full panel.
+- **Navigation Bar**: Keep `t-NavigationBar` in the header end area for utilities such as authentication, help, feedback, version, or theme style. It is not a replacement for the main Navigation Menu and should remain compact.
+
+The canonical evidence page is `https://oracleapex.com/ords/r/apex_pm/ut/navigation`; fallback evidence may come from `https://oracleapex.cn/ords/r/test/ut/navigation` when the primary host times out.
+
 ### Buttons
 
 Observed neutral buttons use `#FFFFFF` background, `#161513` text, `rgba(0,0,0,.075)` border, 4px radius, 12px font, 16px line height, and roughly 7px 11px padding. Primary buttons use `#00688c` with white text. Preserve the APEX button vocabulary: Normal, Primary, Warning, Danger, Success, Simple, Remove UI Decoration, Display as Link, Tiny, Small, Large, Stretch.
@@ -456,7 +468,7 @@ The Components landing page should read as a dense catalog on a white component 
 
 ### Lists, Menus, Tabs, Wizards
 
-List and navigation components should remain utilitarian. In side navigation, use the dark neutral shell with white text and a subtle translucent selected row; use teal for badges, focus, and link/action emphasis rather than as a full selected-row fill. Links List supports badges, right arrows, icon display, and action styling. Tabs Container supports remembered active tab, icon placement, fill labels, simple/pill style, and small/large sizes. Wizard supports vertical orientation, clickable steps, and label display modes.
+List and navigation components should remain utilitarian. Menu Bar uses APEX `a-MenuBar` and `a-Menu` behavior, Top Navigation Tabs use `t-NavTabs`, and Side Tree Navigation remains a collapsible TreeView, not a generic sidebar. In side navigation, use the dark neutral shell with white text and a subtle translucent selected row; use teal for badges, focus, and link/action emphasis rather than as a full selected-row fill. Links List supports badges, right arrows, icon display, and action styling. Tabs Container supports remembered active tab, icon placement, fill labels, simple/pill style, and small/large sizes. Wizard supports vertical orientation, clickable steps, and label display modes.
 
 ### Feedback And Status
 

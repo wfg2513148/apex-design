@@ -32,10 +32,15 @@
   --apex-vita-border: rgba(0, 0, 0, .1);
   --apex-vita-report-border: #e6e6e6;
   --apex-vita-side-nav: #2e3439;
+  --apex-vita-side-nav-active: #171a1d;
   --apex-vita-side-nav-text: #fff;
+  --apex-vita-mega-menu-shadow: 0 12px 24px -12px rgba(0, 0, 0, .3);
 
   --apex-vita-header-height: 48px;
+  --apex-vita-top-menu-height: 48px;
+  --apex-vita-top-tabs-height: 40px;
   --apex-vita-title-height: 96px;
+  --apex-vita-side-nav-width: 240px;
   --apex-vita-nav-row-height: 44px;
   --apex-vita-button-height: 32px;
   --apex-vita-report-row-height: 32px;
@@ -57,6 +62,10 @@ body.apex-theme-vita,
   font-size: 16px;
 }
 
+.t-PageBody {
+  min-height: 100vh;
+}
+
 .apex-theme-vita *,
 .apex-theme-vita *::before,
 .apex-theme-vita *::after {
@@ -74,6 +83,26 @@ body.apex-theme-vita,
   padding: 0 8px;
 }
 
+.t-Header-branding {
+  min-height: var(--apex-vita-header-height);
+  background: var(--ut-header-background-color);
+  color: #fff;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 8px 7px;
+  box-shadow: 0 2px 4px -2px rgba(0, 0, 0, .1);
+}
+
+.t-Header-controls,
+.t-Header-logo,
+.t-Header-navBar {
+  display: flex;
+  align-items: center;
+  min-height: 32px;
+}
+
 .t-Header-logo,
 .apex-theme-vita .app-logo {
   color: #fff;
@@ -82,18 +111,121 @@ body.apex-theme-vita,
   line-height: 48px;
 }
 
+.fa,
+.t-Icon,
+.a-Icon,
+.t-Header-controlsIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 16px;
+  min-width: 16px;
+  height: 16px;
+  font-style: normal;
+  line-height: 16px;
+}
+
+.fa::before,
+.t-Icon::before,
+.a-Icon::before,
+.t-Header-controlsIcon::before {
+  content: "";
+}
+
+.t-Header-controlsIcon::before,
+.fa-bars::before { content: "\2630"; }
+.fa-home::before { content: "\2302"; }
+.fa-dashboard::before { content: "\25a3"; }
+.fa-users::before { content: "\25c9"; }
+.fa-user::before { content: "\25cf"; }
+.fa-id-badge::before { content: "\25a3"; }
+.fa-list::before { content: "\2637"; }
+.fa-calendar::before { content: "\25a6"; }
+.fa-line-chart::before { content: "\2571"; }
+.fa-clock-o::before { content: "\25f7"; }
+.fa-info-circle::before { content: "\0069"; }
+.fa-cog::before,
+.fa-gear::before { content: "\2699"; }
+.fa-bell::before { content: "\25e6"; }
+.fa-check::before { content: "\2713"; }
+.fa-alert::before { content: "\0021"; }
+.fa-play-circle-o::before { content: "\25b7"; }
+.fa-angle-down::before,
+.icon-menu-split-drop-down::before { content: "\25be"; }
+.fa-angle-right::before { content: "\25b8"; }
+
 .t-Body,
 .apex-theme-vita .app-shell {
   display: grid;
-  grid-template-columns: 256px minmax(0, 1fr);
+  grid-template-columns: var(--apex-vita-side-nav-width) minmax(0, 1fr);
   min-height: calc(100vh - var(--apex-vita-header-height));
+}
+
+.apex-side-nav.js-navExpanded .t-Body,
+.apex-side-nav.js-navExpanded .app-shell {
+  grid-template-columns: var(--apex-vita-side-nav-width) minmax(0, 1fr);
+}
+
+.apex-side-nav.js-navCollapsed .t-Body,
+.apex-side-nav.js-navCollapsed .app-shell {
+  grid-template-columns: 0 minmax(0, 1fr);
 }
 
 .t-Body-nav,
 .apex-theme-vita .app-nav {
   background: var(--apex-vita-side-nav);
   color: var(--apex-vita-side-nav-text);
+  overflow: hidden auto;
   box-shadow: -1px 0 0 rgba(0, 0, 0, .1) inset;
+}
+
+.apex-side-nav.js-navCollapsed .t-Body-nav,
+.apex-side-nav.js-navCollapsed .app-nav {
+  width: 0;
+}
+
+.a-TreeView,
+.t-TreeNav {
+  display: flex;
+  min-height: 100%;
+  width: 100%;
+  color: var(--apex-vita-side-nav-text);
+}
+
+.a-TreeView ul,
+.t-TreeNav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.a-TreeView > ul,
+.t-TreeNav > ul {
+  width: 100%;
+}
+
+.a-TreeView-node,
+.a-TreeView-row {
+  min-height: var(--apex-vita-nav-row-height);
+}
+
+.a-TreeView-node {
+  position: relative;
+}
+
+.a-TreeView-row {
+  height: var(--apex-vita-nav-row-height);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+.a-TreeView-row.is-selected,
+.a-TreeView-row.is-current--top {
+  background: rgb(30, 34, 37);
 }
 
 .a-TreeView-content,
@@ -101,19 +233,328 @@ body.apex-theme-vita,
   min-height: var(--apex-vita-nav-row-height);
   padding: 10px 8px;
   color: var(--apex-vita-side-nav-text);
-  display: flex;
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
   align-items: center;
-  gap: 8px;
+  gap: 0;
   font-size: 14px;
   line-height: 16px;
   text-decoration: none;
 }
 
+.a-TreeView-node:not(.a-TreeView-node--topLevel),
+.a-TreeView-node:not(.a-TreeView-node--topLevel) .a-TreeView-row,
+.a-TreeView-node:not(.a-TreeView-node--topLevel) .a-TreeView-content {
+  min-height: 40px;
+}
+
+.a-TreeView-node:not(.a-TreeView-node--topLevel) .a-TreeView-row {
+  height: 40px;
+}
+
+.a-TreeView-node:not(.a-TreeView-node--topLevel) .a-TreeView-content {
+  grid-template-columns: 28px minmax(0, 1fr);
+  padding: 12px 8px;
+}
+
+.a-TreeView-node:not(.a-TreeView-node--topLevel) .a-TreeView-content > .fa,
+.a-TreeView-node:not(.a-TreeView-node--topLevel) .a-TreeView-content > .t-Icon,
+.a-TreeView-node:not(.a-TreeView-node--topLevel) .a-TreeView-content > .a-Icon {
+  height: 16px;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.a-TreeView-node:not(.a-TreeView-node--topLevel) .a-TreeView-label {
+  height: 16px;
+  margin-left: 0;
+  padding: 0;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.apex-side-nav.js-navCollapsed .a-TreeView,
+.apex-side-nav.js-navCollapsed .t-TreeNav {
+  width: 0;
+}
+
+.apex-side-nav.js-navCollapsed .a-TreeView-row {
+  width: 16px;
+}
+
+.apex-side-nav.js-navCollapsed .a-TreeView-content {
+  grid-template-columns: 28px 0;
+  width: 16px;
+}
+
+.apex-side-nav.js-navCollapsed .a-TreeView-label {
+  color: transparent;
+  margin-left: 0;
+  width: 0;
+}
+
+.apex-side-nav.js-navCollapsed .a-TreeView-toggle {
+  display: none;
+}
+
+.a-TreeView-node.is-collapsible > .a-TreeView-content,
+.a-TreeView-node.is-expandable > .a-TreeView-content {
+  width: calc(100% - 32px);
+}
+
+.a-TreeView-content > .fa,
+.a-TreeView-content > .t-Icon,
+.a-TreeView-content > .a-Icon {
+  grid-column: 1;
+  width: 28px;
+  height: 24px;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.a-TreeView-label {
+  color: inherit;
+  grid-column: 2;
+  margin-left: 8px;
+  min-width: 0;
+  overflow: hidden;
+  padding: 4px 0;
+  text-overflow: ellipsis;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.a-TreeView-toggle {
+  align-items: center;
+  color: inherit;
+  display: flex;
+  justify-content: center;
+  min-height: var(--apex-vita-nav-row-height);
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 32px;
+}
+
+.a-TreeView-content:hover,
+.a-TreeView-node.is-focused > .a-TreeView-content {
+  background: rgba(0, 0, 0, .18);
+}
+
 .a-TreeView-content.is-selected,
 .a-TreeView-content.is-current--top,
 .apex-theme-vita .app-nav-link[aria-current="page"] {
-  background: color-mix(in srgb, var(--ut-palette-primary) 72%, #000);
+  background: transparent;
   color: #fff;
+}
+
+.t-Button--headerTree,
+.t-Button--megaMenuToggle {
+  align-items: center;
+  background: transparent;
+  border: 1px solid transparent;
+  color: #fff;
+  display: inline-flex;
+  height: 32px;
+  justify-content: center;
+  padding: 7px;
+  width: 32px;
+}
+
+.t-Button--headerTree.is-active,
+.t-Button--megaMenuToggle.is-active {
+  background: rgba(0, 0, 0, .15);
+}
+
+.apex-top-nav .t-Body,
+.apex-top-nav .app-shell {
+  display: block;
+}
+
+.t-Header-nav {
+  background: transparent;
+  min-height: 0;
+}
+
+.t-Header-nav-list,
+.a-MenuBar,
+.t-NavTabs {
+  background: var(--apex-vita-side-nav);
+  color: #fff;
+  margin: 0;
+}
+
+.t-Header-nav-list,
+.a-MenuBar {
+  min-height: var(--apex-vita-top-menu-height);
+}
+
+.a-MenuBar > ul,
+.t-Header-nav-list > ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.a-MenuBar-item {
+  align-items: stretch;
+  border-right: 1px solid rgba(255, 255, 255, .1);
+  display: flex;
+  min-height: var(--apex-vita-top-menu-height);
+}
+
+.a-MenuBar-label {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  font-size: 14px;
+  line-height: 20px;
+  min-height: var(--apex-vita-top-menu-height);
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.a-MenuBar-item.a-Menu--split .a-MenuBar-label {
+  padding-right: 0;
+}
+
+.a-Menu-subMenuCol {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  height: var(--apex-vita-top-menu-height);
+  justify-content: center;
+  padding: 8px;
+  width: 32px;
+}
+
+.a-Menu-subMenuCol .a-Icon {
+  width: 16px;
+  height: 16px;
+  font-size: 16px;
+}
+
+.a-MenuBar-item.is-focused,
+.a-MenuBar-item:hover,
+.a-MenuBar-item.a-Menu--current {
+  background: var(--apex-vita-side-nav-active);
+}
+
+.a-Menu {
+  background: #fff;
+  border: 1px solid var(--apex-vita-border);
+  box-shadow: var(--apex-vita-mega-menu-shadow);
+  color: var(--apex-vita-component-text);
+  font-size: 14px;
+}
+
+.a-Menu-content,
+.a-Menu-item,
+.a-Menu-label {
+  color: inherit;
+}
+
+.t-NavTabs {
+  display: flex;
+  list-style: none;
+  min-height: var(--apex-vita-top-tabs-height);
+  padding: 0;
+}
+
+.t-NavTabs-item {
+  border-right: 1px solid rgba(255, 255, 255, .1);
+  flex: 1 1 0;
+  min-height: var(--apex-vita-top-tabs-height);
+}
+
+.t-NavTabs-link {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  font-size: 14px;
+  justify-content: center;
+  line-height: 24px;
+  min-height: var(--apex-vita-top-tabs-height);
+  padding: 8px 12px;
+  position: relative;
+  text-decoration: none;
+}
+
+.t-NavTabs-link .fa,
+.t-NavTabs-link .t-Icon,
+.t-NavTabs-link .a-Icon {
+  width: 22px;
+  height: 22px;
+  margin-right: 4px;
+  padding: 4px;
+}
+
+.t-NavTabs-item.is-active .t-NavTabs-link,
+.t-NavTabs-link:hover {
+  background: var(--apex-vita-side-nav-active);
+}
+
+.t-MegaMenu {
+  background: transparent;
+  color: var(--apex-vita-component-text);
+  font-size: 14px;
+}
+
+.t-MegaMenu-container {
+  background: #fff;
+  border: 1px solid var(--apex-vita-border);
+  box-shadow: var(--apex-vita-mega-menu-shadow);
+  color: var(--apex-vita-component-text);
+  display: inline-block;
+  font-size: 12px;
+  line-height: 16px;
+  max-width: 100%;
+  width: fit-content;
+}
+
+.t-MegaMenu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.t-MegaMenu-list--top {
+  display: grid;
+  grid-auto-columns: minmax(156px, max-content);
+  grid-auto-flow: column;
+}
+
+.t-MegaMenu-item--top {
+  font-size: 14px;
+  line-height: 20px;
+  padding: 16px;
+}
+
+.t-MegaMenu-label {
+  color: var(--ut-palette-primary);
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.t-MegaMenu-list--sub {
+  margin-top: 8px;
+}
+
+.t-MegaMenu-list--sub .t-MegaMenu-item {
+  font-size: 14px;
+  line-height: 20px;
+  min-height: 32px;
+}
+
+.t-MegaMenu-labelWrap,
+.t-MegaMenu-list--sub .a-Menu-label {
+  color: var(--apex-vita-component-text);
+  display: block;
+  line-height: 20px;
+  text-decoration: none;
 }
 
 .t-Body-title,
@@ -221,6 +662,33 @@ body.apex-theme-vita,
 .apex-theme-vita .button:focus-visible {
   outline: 2px solid var(--ut-palette-primary);
   outline-offset: 2px;
+}
+
+.t-Header .t-Button--headerTree,
+.t-Header .t-Button--megaMenuToggle {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  color: #fff;
+  height: 32px;
+  min-height: 32px;
+  padding: 7px;
+  width: 32px;
+}
+
+.t-Header .t-Button--headerTree:hover,
+.t-Header .t-Button--megaMenuToggle:hover {
+  background: rgba(0, 0, 0, .15);
+}
+
+.t-Header .t-Button--headerTree.is-active,
+.t-Header .t-Button--megaMenuToggle.is-active {
+  background: rgba(0, 0, 0, .25);
+}
+
+.t-Header .t-Button--headerTree .t-Header-controlsIcon,
+.t-Header .t-Button--megaMenuToggle .t-Header-controlsIcon {
+  color: inherit;
 }
 
 .t-Button:disabled,

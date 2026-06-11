@@ -13,7 +13,8 @@
       "page-dialog",
       "page-drawer",
       "inline-dialog",
-      "inline-drawer"
+      "inline-drawer",
+      "navigation"
     ]
   },
   "shell": {
@@ -36,8 +37,132 @@
       "currentStateClasses": [
         "is-current--top",
         "is-selected"
-      ]
-    }
+      ],
+      "expandedWidth": "240px",
+      "collapsedGridColumn": "0px",
+      "collapsedContentWidth": "16px",
+      "rowHeight": "44px",
+      "childRowHeight": "40px",
+      "currentStateTarget": "a-TreeView-row"
+    },
+    "navigationModes": [
+      {
+        "name": "Menu Bar",
+        "previewPage": "1120",
+        "bodyClasses": [
+          "apex-top-nav",
+          "t-PageBody--topNav",
+          "apex-theme-vita-slate"
+        ],
+        "primaryClasses": [
+          "t-Header-nav",
+          "t-Header-nav-list",
+          "a-MenuBar",
+          "a-MenuBar--overflow",
+          "a-MenuBar--tabs",
+          "a-MenuBar-item",
+          "a-MenuBar-label",
+          "a-Menu-subMenuCol",
+          "icon-menu-split-drop-down",
+          "a-Menu--split",
+          "a-Menu--current"
+        ],
+        "observedDimensions": {
+          "brandingRowHeight": "48px",
+          "menuRowHeight": "48px"
+        },
+        "useFor": "complex desktop-style navigation with hierarchical submenus"
+      },
+      {
+        "name": "Tabs",
+        "previewPage": "1121",
+        "bodyClasses": [
+          "apex-top-nav",
+          "t-PageBody--topNav",
+          "apex-theme-vita-slate"
+        ],
+        "primaryClasses": [
+          "t-Header-nav",
+          "t-NavTabs",
+          "t-NavTabs--inlineLabels-lg",
+          "t-NavTabs--displayLabels-sm",
+          "t-NavTabs-item",
+          "t-NavTabs-link",
+          "t-NavTabs-label",
+          "t-Icon",
+          "fa-home",
+          "is-active"
+        ],
+        "observedDimensions": {
+          "brandingRowHeight": "48px",
+          "tabsRowHeight": "40px"
+        },
+        "useFor": "simple applications with about six or fewer primary destinations"
+      },
+      {
+        "name": "Mega Menu",
+        "previewPage": "1122",
+        "bodyClasses": [
+          "apex-top-nav",
+          "t-PageBody--topNav",
+          "apex-theme-vita-slate"
+        ],
+        "primaryClasses": [
+          "t-Button--headerTree",
+          "t-Button--megaMenuToggle",
+          "t-MegaMenu",
+          "t-MegaMenu-container",
+          "t-MegaMenu-list--top",
+          "t-MegaMenu-item--top",
+          "t-MegaMenu-item--hasSub",
+          "t-MegaMenu-label",
+          "t-MegaMenu-list--sub"
+        ],
+        "observedDimensions": {
+          "toggleSize": "32px",
+          "panelWidth": "745px",
+          "panelShadow": "0 12px 24px -12px rgba(0,0,0,.3)",
+          "topItemPadding": "16px",
+          "subItemHeight": "32px"
+        },
+        "useFor": "broad applications where many navigation destinations should be visible together"
+      },
+      {
+        "name": "Side Tree Navigation",
+        "previewPage": "1123",
+        "bodyClasses": [
+          "apex-side-nav",
+          "t-PageBody--leftNav",
+          "apex-theme-vita-slate",
+          "js-navExpanded",
+          "js-navCollapsed"
+        ],
+        "primaryClasses": [
+          "t_Button_navControl",
+          "t-Button--headerTree",
+          "t-Body-nav",
+          "a-TreeView",
+          "t-TreeNav",
+          "js-defaultCollapsed",
+          "t-TreeNav--styleA",
+          "a-TreeView-node",
+          "a-TreeView-row",
+          "a-TreeView-toggle",
+          "a-TreeView-content",
+          "a-TreeView-label",
+          "fa fa-home"
+        ],
+        "observedDimensions": {
+          "expandedWidth": "240px",
+          "collapsedGridColumn": "0px",
+          "collapsedContentWidth": "16px",
+          "rowHeight": "44px",
+          "childRowHeight": "40px",
+          "toggleWidth": "32px"
+        },
+        "useFor": "workspace-style hierarchical navigation with collapsible side panel and tree nodes"
+      }
+    ]
   },
   "grid": {
     "model": "12-column responsive grid",

@@ -217,6 +217,453 @@ body.apex-theme-vita-dark,
 .apex-theme-vita-dark .timeline-item { display: grid; grid-template-columns: 32px 1fr; gap: 8px; padding: 8px 0; }
 .apex-theme-vita-dark .a-Icon, .apex-theme-vita-dark .t-Icon, .apex-theme-vita-dark .fa { font-family: var(--apex-vita-dark-font-family-icon), var(--apex-vita-dark-font-family-base); font-style: normal; line-height: 1; }
 
+/* Navigation mode fidelity for Open Design prototypes. */
+.apex-theme-vita-dark {
+  --apex-vita-dark-side-nav-active: #171a1d;
+  --apex-vita-dark-side-nav-active-text: #FFFFFF;
+  --apex-vita-dark-side-nav-width: 240px;
+  --apex-vita-dark-top-menu-height: 48px;
+  --apex-vita-dark-top-tabs-height: 40px;
+  --apex-vita-dark-mega-menu-shadow: 0 12px 24px -12px rgba(0, 0, 0, .3);
+}
+
+.apex-theme-vita-dark .t-Header,
+.apex-theme-vita-dark.t-PageBody > .t-Header,
+.apex-theme-vita-dark .app-header {
+  color: #fff;
+}
+
+.apex-theme-vita-dark .t-Header .toolbar,
+.apex-theme-vita-dark .app-header .toolbar {
+  justify-content: flex-end;
+  margin-block-end: 0;
+  margin-left: auto;
+}
+
+.apex-theme-vita-dark .fa,
+.apex-theme-vita-dark .t-Icon,
+.apex-theme-vita-dark .a-Icon,
+.apex-theme-vita-dark .t-Header-controlsIcon {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  font-style: normal;
+  height: 16px;
+  justify-content: center;
+  line-height: 16px;
+  min-width: 16px;
+  width: 16px;
+}
+
+.apex-theme-vita-dark .fa::before,
+.apex-theme-vita-dark .t-Icon::before,
+.apex-theme-vita-dark .a-Icon::before,
+.apex-theme-vita-dark .t-Header-controlsIcon::before { content: ""; }
+.apex-theme-vita-dark .t-Header-controlsIcon::before,
+.apex-theme-vita-dark .fa-bars::before { content: "\2630"; }
+.apex-theme-vita-dark .fa-home::before { content: "\2302"; }
+.apex-theme-vita-dark .fa-dashboard::before { content: "\25a3"; }
+.apex-theme-vita-dark .fa-users::before { content: "\25c9"; }
+.apex-theme-vita-dark .fa-user::before { content: "\25cf"; }
+.apex-theme-vita-dark .fa-id-badge::before { content: "\25a3"; }
+.apex-theme-vita-dark .fa-list::before { content: "\2637"; }
+.apex-theme-vita-dark .fa-calendar::before { content: "\25a6"; }
+.apex-theme-vita-dark .fa-table::before { content: "\25a6"; }
+.apex-theme-vita-dark .fa-line-chart::before { content: "\2571"; }
+.apex-theme-vita-dark .fa-clock-o::before { content: "\25f7"; }
+.apex-theme-vita-dark .fa-info-circle::before { content: "\0069"; }
+.apex-theme-vita-dark .fa-cog::before,
+.apex-theme-vita-dark .fa-gear::before { content: "\2699"; }
+.apex-theme-vita-dark .fa-bell::before { content: "\25e6"; }
+.apex-theme-vita-dark .fa-check::before { content: "\2713"; }
+.apex-theme-vita-dark .fa-alert::before { content: "\0021"; }
+.apex-theme-vita-dark .fa-play-circle-o::before { content: "\25b7"; }
+.apex-theme-vita-dark .fa-angle-down::before,
+.apex-theme-vita-dark .icon-menu-split-drop-down::before { content: "\25be"; }
+.apex-theme-vita-dark .fa-angle-right::before { content: "\25b8"; }
+
+.apex-theme-vita-dark .t-Body,
+.apex-theme-vita-dark .app-shell,
+.apex-theme-vita-dark.apex-side-nav.js-navExpanded .t-Body,
+.apex-theme-vita-dark.apex-side-nav.js-navExpanded .app-shell {
+  grid-template-columns: var(--apex-vita-dark-side-nav-width) minmax(0, 1fr);
+}
+
+.apex-theme-vita-dark.apex-side-nav.js-navCollapsed .t-Body,
+.apex-theme-vita-dark.apex-side-nav.js-navCollapsed .app-shell {
+  grid-template-columns: 0 minmax(0, 1fr);
+}
+
+.apex-theme-vita-dark .t-Body-nav,
+.apex-theme-vita-dark .app-nav {
+  overflow: hidden auto;
+}
+
+.apex-theme-vita-dark.apex-side-nav.js-navCollapsed .t-Body-nav,
+.apex-theme-vita-dark.apex-side-nav.js-navCollapsed .app-nav {
+  width: 0;
+}
+
+.apex-theme-vita-dark .a-TreeView,
+.apex-theme-vita-dark .t-TreeNav {
+  color: var(--apex-vita-dark-side-nav-text);
+  display: flex;
+  min-height: 100%;
+  width: 100%;
+}
+
+.apex-theme-vita-dark .a-TreeView ul,
+.apex-theme-vita-dark .t-TreeNav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.apex-theme-vita-dark .a-TreeView > ul,
+.apex-theme-vita-dark .t-TreeNav > ul {
+  width: 100%;
+}
+
+.apex-theme-vita-dark .a-TreeView-node,
+.apex-theme-vita-dark .a-TreeView-row {
+  min-height: var(--apex-vita-dark-nav-row-height);
+}
+
+.apex-theme-vita-dark .a-TreeView-node {
+  position: relative;
+}
+
+.apex-theme-vita-dark .a-TreeView-row {
+  height: var(--apex-vita-dark-nav-row-height);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+.apex-theme-vita-dark .a-TreeView-row.is-selected,
+.apex-theme-vita-dark .a-TreeView-row.is-current--top {
+  background: var(--apex-vita-dark-side-nav-active);
+}
+
+.apex-theme-vita-dark .a-TreeView-content,
+.apex-theme-vita-dark .app-nav-link {
+  align-items: center;
+  display: grid;
+  gap: 0;
+  grid-template-columns: 28px minmax(0, 1fr);
+  line-height: 16px;
+  padding: 10px 8px;
+}
+
+.apex-theme-vita-dark .a-TreeView-node:not(.a-TreeView-node--topLevel),
+.apex-theme-vita-dark .a-TreeView-node:not(.a-TreeView-node--topLevel) .a-TreeView-row,
+.apex-theme-vita-dark .a-TreeView-node:not(.a-TreeView-node--topLevel) .a-TreeView-content {
+  min-height: 40px;
+}
+
+.apex-theme-vita-dark .a-TreeView-node:not(.a-TreeView-node--topLevel) .a-TreeView-row {
+  height: 40px;
+}
+
+.apex-theme-vita-dark .a-TreeView-node:not(.a-TreeView-node--topLevel) .a-TreeView-content {
+  grid-template-columns: 28px minmax(0, 1fr);
+  padding: 12px 8px;
+}
+
+.apex-theme-vita-dark .a-TreeView-node:not(.a-TreeView-node--topLevel) .a-TreeView-content > .fa,
+.apex-theme-vita-dark .a-TreeView-node:not(.a-TreeView-node--topLevel) .a-TreeView-content > .t-Icon,
+.apex-theme-vita-dark .a-TreeView-node:not(.a-TreeView-node--topLevel) .a-TreeView-content > .a-Icon {
+  font-size: 16px;
+  height: 16px;
+  line-height: 16px;
+}
+
+.apex-theme-vita-dark .a-TreeView-node:not(.a-TreeView-node--topLevel) .a-TreeView-label {
+  font-size: 12px;
+  height: 16px;
+  line-height: 16px;
+  margin-left: 0;
+  padding: 0;
+}
+
+.apex-theme-vita-dark.apex-side-nav.js-navCollapsed .a-TreeView,
+.apex-theme-vita-dark.apex-side-nav.js-navCollapsed .t-TreeNav {
+  width: 0;
+}
+
+.apex-theme-vita-dark.apex-side-nav.js-navCollapsed .a-TreeView-row {
+  width: 16px;
+}
+
+.apex-theme-vita-dark.apex-side-nav.js-navCollapsed .a-TreeView-content {
+  grid-template-columns: 28px 0;
+  width: 16px;
+}
+
+.apex-theme-vita-dark.apex-side-nav.js-navCollapsed .a-TreeView-label {
+  color: transparent;
+  margin-left: 0;
+  width: 0;
+}
+
+.apex-theme-vita-dark.apex-side-nav.js-navCollapsed .a-TreeView-toggle {
+  display: none;
+}
+
+.apex-theme-vita-dark .a-TreeView-node.is-collapsible > .a-TreeView-content,
+.apex-theme-vita-dark .a-TreeView-node.is-expandable > .a-TreeView-content {
+  width: calc(100% - 32px);
+}
+
+.apex-theme-vita-dark .a-TreeView-content > .fa,
+.apex-theme-vita-dark .a-TreeView-content > .t-Icon,
+.apex-theme-vita-dark .a-TreeView-content > .a-Icon {
+  grid-column: 1;
+  font-size: 20px;
+  height: 24px;
+  line-height: 24px;
+  width: 28px;
+}
+
+.apex-theme-vita-dark .a-TreeView-label {
+  color: inherit;
+  grid-column: 2;
+  margin-left: 8px;
+  min-width: 0;
+  overflow: hidden;
+  padding: 4px 0;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.apex-theme-vita-dark .a-TreeView-toggle {
+  align-items: center;
+  color: inherit;
+  display: flex;
+  justify-content: center;
+  min-height: var(--apex-vita-dark-nav-row-height);
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 32px;
+}
+
+.apex-theme-vita-dark .a-TreeView-content:hover,
+.apex-theme-vita-dark .a-TreeView-node.is-focused > .a-TreeView-content {
+  background: rgba(0, 0, 0, .12);
+}
+
+.apex-theme-vita-dark .a-TreeView-content.is-selected,
+.apex-theme-vita-dark .a-TreeView-content.is-current--top,
+.apex-theme-vita-dark .app-nav-link[aria-current="page"] {
+  background: transparent;
+  color: var(--apex-vita-dark-side-nav-active-text);
+}
+
+.apex-theme-vita-dark .t-Button--headerTree,
+.apex-theme-vita-dark .t-Button--megaMenuToggle {
+  align-items: center;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  color: currentColor;
+  display: inline-flex;
+  height: 32px;
+  justify-content: center;
+  min-height: 32px;
+  padding: 7px;
+  width: 32px;
+}
+
+.apex-theme-vita-dark .t-Button--headerTree:hover,
+.apex-theme-vita-dark .t-Button--megaMenuToggle:hover {
+  background: rgba(0, 0, 0, .12);
+}
+
+.apex-theme-vita-dark .t-Button--headerTree.is-active,
+.apex-theme-vita-dark .t-Button--megaMenuToggle.is-active {
+  background: rgba(0, 0, 0, .18);
+}
+
+.apex-theme-vita-dark.apex-top-nav .t-Body,
+.apex-theme-vita-dark.apex-top-nav .app-shell {
+  display: block;
+}
+
+.apex-theme-vita-dark .t-Header-nav {
+  background: transparent;
+  min-height: 0;
+}
+
+.apex-theme-vita-dark .t-Header-nav-list,
+.apex-theme-vita-dark .a-MenuBar,
+.apex-theme-vita-dark .t-NavTabs {
+  background: var(--apex-vita-dark-side-nav);
+  color: var(--apex-vita-dark-side-nav-text);
+  margin: 0;
+}
+
+.apex-theme-vita-dark .t-Header-nav-list,
+.apex-theme-vita-dark .a-MenuBar {
+  min-height: var(--apex-vita-dark-top-menu-height);
+}
+
+.apex-theme-vita-dark .a-MenuBar > ul,
+.apex-theme-vita-dark .t-Header-nav-list > ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.apex-theme-vita-dark .a-MenuBar-item {
+  align-items: stretch;
+  border-right: 1px solid rgba(0, 0, 0, .1);
+  display: flex;
+  min-height: var(--apex-vita-dark-top-menu-height);
+}
+
+.apex-theme-vita-dark .a-MenuBar-label {
+  align-items: center;
+  color: inherit;
+  display: flex;
+  font-size: 14px;
+  line-height: 20px;
+  min-height: var(--apex-vita-dark-top-menu-height);
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.apex-theme-vita-dark .a-MenuBar-item.a-Menu--split .a-MenuBar-label { padding-right: 0; }
+
+.apex-theme-vita-dark .a-Menu-subMenuCol {
+  align-items: center;
+  color: inherit;
+  display: flex;
+  height: var(--apex-vita-dark-top-menu-height);
+  justify-content: center;
+  padding: 8px;
+  width: 32px;
+}
+
+.apex-theme-vita-dark .a-MenuBar-item.is-focused,
+.apex-theme-vita-dark .a-MenuBar-item:hover,
+.apex-theme-vita-dark .a-MenuBar-item.a-Menu--current {
+  background: var(--apex-vita-dark-side-nav-active);
+  color: var(--apex-vita-dark-side-nav-active-text);
+}
+
+.apex-theme-vita-dark .a-Menu,
+.apex-theme-vita-dark .t-MegaMenu-container {
+  background: var(--apex-vita-dark-surface);
+  border: 1px solid var(--apex-vita-dark-border);
+  box-shadow: var(--apex-vita-dark-mega-menu-shadow);
+  color: var(--apex-vita-dark-component-text);
+}
+
+.apex-theme-vita-dark .a-Menu-content,
+.apex-theme-vita-dark .a-Menu-item,
+.apex-theme-vita-dark .a-Menu-label { color: inherit; }
+
+.apex-theme-vita-dark .t-NavTabs {
+  display: flex;
+  list-style: none;
+  min-height: var(--apex-vita-dark-top-tabs-height);
+  padding: 0;
+}
+
+.apex-theme-vita-dark .t-NavTabs-item {
+  border-right: 1px solid rgba(0, 0, 0, .1);
+  flex: 1 1 0;
+  min-height: var(--apex-vita-dark-top-tabs-height);
+}
+
+.apex-theme-vita-dark .t-NavTabs-link {
+  align-items: center;
+  color: inherit;
+  display: flex;
+  font-size: 14px;
+  justify-content: center;
+  line-height: 24px;
+  min-height: var(--apex-vita-dark-top-tabs-height);
+  padding: 8px 12px;
+  text-decoration: none;
+}
+
+.apex-theme-vita-dark .t-NavTabs-link .fa,
+.apex-theme-vita-dark .t-NavTabs-link .t-Icon,
+.apex-theme-vita-dark .t-NavTabs-link .a-Icon {
+  height: 22px;
+  margin-right: 4px;
+  padding: 4px;
+  width: 22px;
+}
+
+.apex-theme-vita-dark .t-NavTabs-item.is-active .t-NavTabs-link,
+.apex-theme-vita-dark .t-NavTabs-link:hover {
+  background: var(--apex-vita-dark-side-nav-active);
+  color: var(--apex-vita-dark-side-nav-active-text);
+}
+
+.apex-theme-vita-dark .t-MegaMenu {
+  background: transparent;
+  color: var(--apex-vita-dark-component-text);
+  font-size: 14px;
+}
+
+.apex-theme-vita-dark .t-MegaMenu-container {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 16px;
+  max-width: 100%;
+  width: fit-content;
+}
+
+.apex-theme-vita-dark .t-MegaMenu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.apex-theme-vita-dark .t-MegaMenu-list--top {
+  display: grid;
+  grid-auto-columns: minmax(156px, max-content);
+  grid-auto-flow: column;
+}
+
+.apex-theme-vita-dark .t-MegaMenu-item--top {
+  font-size: 14px;
+  line-height: 20px;
+  padding: 16px;
+}
+
+.apex-theme-vita-dark .t-MegaMenu-label {
+  color: var(--ut-palette-primary);
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.apex-theme-vita-dark .t-MegaMenu-list--sub { margin-top: 8px; }
+
+.apex-theme-vita-dark .t-MegaMenu-list--sub .t-MegaMenu-item {
+  font-size: 14px;
+  line-height: 20px;
+  min-height: 32px;
+}
+
+.apex-theme-vita-dark .t-MegaMenu-labelWrap,
+.apex-theme-vita-dark .t-MegaMenu-list--sub .a-Menu-label {
+  color: var(--apex-vita-dark-component-text);
+  display: block;
+  line-height: 20px;
+  text-decoration: none;
+}
+
 @media (max-width: 800px) {
   .apex-theme-vita-dark .t-Body, .apex-theme-vita-dark .app-shell { grid-template-columns: 1fr; }
   .apex-theme-vita-dark .t-Body-nav, .apex-theme-vita-dark .app-nav { display: none; }

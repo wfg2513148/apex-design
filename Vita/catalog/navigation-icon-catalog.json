@@ -124,16 +124,26 @@
   "navigationClasses": {
     "applicationShell": [
       "t-Header",
+      "t-Header-branding",
+      "t-Header-nav",
       "t-Body-nav",
       "t-Body-title",
       "t-Body-content",
+      "apex-top-nav",
       "apex-side-nav"
     ],
     "treeNavigation": [
+      "a-TreeView",
+      "t-TreeNav",
       "a-TreeView-node",
+      "a-TreeView-node--topLevel",
+      "a-TreeView-node--leaf",
       "a-TreeView-row",
       "a-TreeView-content",
       "a-TreeView-label",
+      "a-TreeView-toggle",
+      "is-expandable",
+      "is-collapsible",
       "is-current--top",
       "is-selected"
     ],
@@ -145,12 +155,36 @@
     "tabs": [
       "t-Tabs",
       "t-Tabs-link",
+      "t-NavTabs",
+      "t-NavTabs-item",
+      "t-NavTabs-link",
+      "t-NavTabs-label",
       "is-active"
     ],
     "menu": [
       "a-MenuBar",
+      "a-MenuBar--overflow",
+      "a-MenuBar--tabs",
+      "a-MenuBar-item",
+      "a-MenuBar-label",
+      "a-Menu-subMenuCol",
+      "icon-menu-split-drop-down",
       "a-Menu",
-      "a-Menu-item"
+      "a-Menu-item",
+      "a-Menu--split",
+      "a-Menu--current"
+    ],
+    "megaMenu": [
+      "t-Button--megaMenuToggle",
+      "t-MegaMenu",
+      "t-MegaMenu-container",
+      "t-MegaMenu-body",
+      "t-MegaMenu-list--top",
+      "t-MegaMenu-list--sub",
+      "t-MegaMenu-item--top",
+      "t-MegaMenu-item--hasSub",
+      "t-MegaMenu-label",
+      "t-MegaMenu-labelWrap"
     ],
     "wizard": [
       "t-WizardSteps",
@@ -159,6 +193,125 @@
       "t-WizardSteps-label"
     ]
   },
+  "vitaNavigationModes": [
+    {
+      "name": "Menu Bar",
+      "canonicalPath": "navigation",
+      "previewPage": "1120",
+      "bodyClass": "apex-top-nav t-PageBody--topNav apex-theme-vita",
+      "runtimeClasses": [
+        "t-Header-nav",
+        "t-Header-nav-list js-tabLike a-MenuBar a-MenuBar--overflow a-MenuBar--tabs",
+        "a-MenuBar-item",
+        "a-MenuBar-label",
+        "a-Menu-subMenuCol",
+        "icon-menu-split-drop-down",
+        "a-Menu--split",
+        "a-Menu--current"
+      ],
+      "dimensions": {
+        "brandingRowHeight": "48px",
+        "menuRowHeight": "48px",
+        "itemFontSize": "14px"
+      },
+      "rules": [
+        "Use for complex applications with several hierarchy levels.",
+        "Render submenus as APEX a-Menu surfaces; do not use custom card dropdowns.",
+        "For split menu entries, keep the label padding tight and render the 32px a-Menu-subMenuCol disclosure cell.",
+        "Mark current entries with a-Menu--current and focus/hover with the dark active background."
+      ]
+    },
+    {
+      "name": "Tabs",
+      "canonicalPath": "navigation",
+      "previewPage": "1121",
+      "bodyClass": "apex-top-nav t-PageBody--topNav apex-theme-vita",
+      "runtimeClasses": [
+        "t-Header-nav",
+        "t-NavTabs t-NavTabs--inlineLabels-lg t-NavTabs--displayLabels-sm",
+        "t-NavTabs-item",
+        "t-NavTabs-link",
+        "t-NavTabs-label",
+        "t-Icon fa fa-home",
+        "is-active"
+      ],
+      "dimensions": {
+        "brandingRowHeight": "48px",
+        "tabsRowHeight": "40px",
+        "itemFontSize": "14px"
+      },
+      "rules": [
+        "Use for roughly six or fewer primary destinations.",
+        "Keep labels short and evenly distributed across the dark nav row.",
+        "Render optional t-Icon fa-* icons before tab labels with the native 22px icon box.",
+        "Do not substitute region t-Tabs for top navigation tabs."
+      ]
+    },
+    {
+      "name": "Mega Menu",
+      "canonicalPath": "navigation",
+      "previewPage": "1122",
+      "bodyClass": "apex-top-nav t-PageBody--topNav apex-theme-vita",
+      "runtimeClasses": [
+        "t-Button--headerTree t-Button--megaMenuToggle",
+        "t-MegaMenu a-Menu",
+        "a-Menu-content t-MegaMenu-container",
+        "t-MegaMenu-list--top",
+        "t-MegaMenu-item--top t-MegaMenu-item--hasSub",
+        "t-MegaMenu-label",
+        "t-MegaMenu-list--sub"
+      ],
+      "dimensions": {
+        "toggleSize": "32px",
+        "panelWidth": "745px",
+        "topItemPadding": "16px",
+        "subItemHeight": "32px"
+      },
+      "rules": [
+        "Open from the header menu button rather than a persistent nav row.",
+        "Use a white panel with subtle border and shadow.",
+        "Group top-level destinations into columns with blue bold headings and compact sublinks."
+      ]
+    },
+    {
+      "name": "Side Tree Navigation",
+      "canonicalPath": "navigation",
+      "previewPage": "1123",
+      "bodyClass": "apex-side-nav t-PageBody--leftNav apex-theme-vita js-navExpanded",
+      "runtimeClasses": [
+        "js-navExpanded",
+        "js-navCollapsed",
+        "t_Button_navControl",
+        "t-Button--headerTree",
+        "t-Body-nav",
+        "a-TreeView t-TreeNav js-defaultCollapsed t-TreeNav--styleA",
+        "a-TreeView-node",
+        "a-TreeView-row",
+        "a-TreeView-toggle",
+        "a-TreeView-content",
+        "a-TreeView-label",
+        "fa fa-home",
+        "is-selected is-current--top"
+      ],
+      "dimensions": {
+        "expandedWidth": "240px",
+        "collapsedGridColumn": "0px",
+        "collapsedContentWidth": "16px",
+        "rowHeight": "44px",
+        "childRowHeight": "40px",
+        "toggleWidth": "32px",
+        "itemFontSize": "14px",
+        "childItemFontSize": "12px"
+      },
+      "rules": [
+        "Use for workspace-style applications with hierarchical navigation.",
+        "Expose the native header tree control as t_Button_navControl and toggle js-navExpanded/js-navCollapsed on the page body.",
+        "Represent hierarchy with TreeView nodes; place a-TreeView-toggle as a sibling of a-TreeView-content for expandable nodes.",
+        "Use the native two-column tree content layout: 28px icon column plus label column, with a separate 32px toggle area.",
+        "Apply current state to a-TreeView-row with is-selected and is-current--top so the dark selected background spans the full side panel."
+      ]
+    }
+  ],
   "iconSystem": {
     "families": [
       "Font APEX Small",

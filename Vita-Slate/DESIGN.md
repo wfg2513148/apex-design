@@ -348,6 +348,18 @@ Open Design should treat this file as the Vita - Slate-only extraction for the U
 
 Vita - Slate screens should still look like Oracle APEX workspaces: compact header, left navigation, title/breadcrumb region, and dense content regions. Do not drift into Redwood Light; Slate keeps Vita component density with slate navigation and title chrome.
 
+#### Vita - Slate Navigation Menu Modes
+
+Use one primary Navigation Menu template per application shell. Do not turn APEX navigation into a marketing navbar, oversized pill menu, or unrelated SaaS sidebar. Preserve Universal Theme classes and the slate Vita shell so generators can reproduce the observed runtime structure:
+
+- **Menu Bar / Top Navigation Menu**: Use `apex-top-nav t-PageBody--topNav` with `t-Header`, `t-Header-nav`, and `t-Header-nav-list js-tabLike a-MenuBar a-MenuBar--overflow a-MenuBar--tabs`. Top-level entries are horizontal, 14px text, `a-Menu--split` for entries with submenus, and `a-Menu--current` for the current route. Split entries keep label padding tight and add a separate 32px `a-Menu-subMenuCol` disclosure cell.
+- **Tabs / Top Navigation Tabs**: Use `apex-top-nav t-PageBody--topNav` with `t-NavTabs t-NavTabs--inlineLabels-lg t-NavTabs--displayLabels-sm` inside `t-Header-nav`. Keep this mode for simple applications with about six or fewer primary destinations; the tab row remains compact at about 40px.
+- **Mega Menu / Top Navigation Mega Menu**: Use `apex-top-nav` with no persistent top nav list and expose the header menu button as `t-Button--headerTree t-Button--megaMenuToggle`. The open menu is `t-MegaMenu a-Menu` with an `a-Menu-content t-MegaMenu-container` panel, subtle border, and `0 12px 24px -12px rgba(0,0,0,.3)` shadow.
+- **Side Tree Navigation**: Use `apex-side-nav t-PageBody--leftNav` with `t-Body-nav` and `a-TreeView t-TreeNav js-defaultCollapsed t-TreeNav--styleA`. The standard APEX side navigation is collapsible: expose `t_Button_navControl t-Button--headerTree`, toggle `js-navExpanded` / `js-navCollapsed` on the page body, keep the expanded body grid at `240px minmax(0,1fr)`, and collapse the nav grid column to `0px` while TreeView content compresses to a 16px icon strip with transparent labels. Top-level rows use 44px; child rows use 40px with 12px labels. Mark the current page on `a-TreeView-row` with `is-selected is-current--top` so the selected background spans the full panel.
+- **Navigation Bar**: Keep `t-NavigationBar` in the header end area for utilities such as authentication, help, feedback, version, or theme style. It is not a replacement for the main Navigation Menu and should remain compact.
+
+The canonical evidence page is `https://oracleapex.com/ords/r/apex_pm/ut/navigation`; fallback evidence may come from `https://oracleapex.cn/ords/r/test/ut/navigation` when the primary host times out.
+
 ### Buttons
 
 Neutral buttons use `#F8F8F8` background, `#393939` text, `rgba(0,0,0,0.075)` border, `2px` radius, `12px` font size, and `7px 11px` padding. Hot buttons use `#505F6D` with `#FFFFFF` text.

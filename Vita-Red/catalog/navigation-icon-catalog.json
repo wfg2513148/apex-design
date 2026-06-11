@@ -124,16 +124,25 @@
   "navigationClasses": {
     "applicationShell": [
       "t-Header",
+      "t-Header-nav",
       "t-Body-nav",
       "t-Body-title",
       "t-Body-content",
+      "apex-top-nav",
       "apex-side-nav"
     ],
     "treeNavigation": [
+      "a-TreeView",
+      "t-TreeNav",
       "a-TreeView-node",
+      "a-TreeView-node--topLevel",
+      "a-TreeView-node--leaf",
       "a-TreeView-row",
+      "a-TreeView-toggle",
       "a-TreeView-content",
       "a-TreeView-label",
+      "is-expandable",
+      "is-collapsible",
       "is-current--top",
       "is-selected"
     ],
@@ -145,18 +154,42 @@
     "tabs": [
       "t-Tabs",
       "t-Tabs-link",
+      "t-NavTabs",
+      "t-NavTabs-item",
+      "t-NavTabs-link",
+      "t-NavTabs-label",
       "is-active"
     ],
     "menu": [
       "a-MenuBar",
+      "a-MenuBar--overflow",
+      "a-MenuBar--tabs",
+      "a-MenuBar-item",
+      "a-MenuBar-label",
+      "a-Menu-subMenuCol",
+      "icon-menu-split-drop-down",
       "a-Menu",
-      "a-Menu-item"
+      "a-Menu-item",
+      "a-Menu--split",
+      "a-Menu--current"
     ],
     "wizard": [
       "t-WizardSteps",
       "t-WizardSteps-step",
       "t-WizardSteps-marker",
       "t-WizardSteps-label"
+    ],
+    "megaMenu": [
+      "t-Button--megaMenuToggle",
+      "t-MegaMenu",
+      "t-MegaMenu-container",
+      "t-MegaMenu-body",
+      "t-MegaMenu-list--top",
+      "t-MegaMenu-list--sub",
+      "t-MegaMenu-item--top",
+      "t-MegaMenu-item--hasSub",
+      "t-MegaMenu-label",
+      "t-MegaMenu-labelWrap"
     ]
   },
   "iconSystem": {
@@ -235,5 +268,127 @@
     "tree": "https://oracleapex.com/ords/r/apex_pm/ut/tree",
     "wizard-region": "https://oracleapex.com/ords/r/apex_pm/ut/wizard-region",
     "icons": "https://oracleapex.com/ords/r/apex_pm/ut/icons"
-  }
+  },
+  "navigationModes": [
+    {
+      "name": "Menu Bar",
+      "canonicalPath": "navigation",
+      "previewPage": "1120",
+      "bodyClass": "apex-top-nav t-PageBody--topNav apex-theme-vita-red",
+      "runtimeClasses": [
+        "t-Header-nav",
+        "t-Header-nav-list",
+        "a-MenuBar",
+        "a-MenuBar--overflow",
+        "a-MenuBar--tabs",
+        "a-MenuBar-item",
+        "a-MenuBar-label",
+        "a-Menu-subMenuCol",
+        "icon-menu-split-drop-down",
+        "a-Menu--split",
+        "a-Menu--current"
+      ],
+      "dimensions": {
+        "brandingRowHeight": "48px",
+        "menuRowHeight": "48px"
+      },
+      "rules": [
+        "Use for complex applications with several hierarchy levels.",
+        "Render submenus as APEX a-Menu surfaces; do not use custom card dropdowns.",
+        "Mark current entries with a-Menu--current and focus/hover with the active background."
+      ]
+    },
+    {
+      "name": "Tabs",
+      "canonicalPath": "navigation",
+      "previewPage": "1121",
+      "bodyClass": "apex-top-nav t-PageBody--topNav apex-theme-vita-red",
+      "runtimeClasses": [
+        "t-Header-nav",
+        "t-NavTabs",
+        "t-NavTabs--inlineLabels-lg",
+        "t-NavTabs--displayLabels-sm",
+        "t-NavTabs-item",
+        "t-NavTabs-link",
+        "t-NavTabs-label",
+        "t-Icon",
+        "fa-home",
+        "is-active"
+      ],
+      "dimensions": {
+        "brandingRowHeight": "48px",
+        "tabsRowHeight": "40px"
+      },
+      "rules": [
+        "Use for roughly six or fewer primary destinations.",
+        "Keep labels short and evenly distributed across the nav row.",
+        "Render optional t-Icon fa-* icons before tab labels with the native icon box."
+      ]
+    },
+    {
+      "name": "Mega Menu",
+      "canonicalPath": "navigation",
+      "previewPage": "1122",
+      "bodyClass": "apex-top-nav t-PageBody--topNav apex-theme-vita-red",
+      "runtimeClasses": [
+        "t-Button--headerTree",
+        "t-Button--megaMenuToggle",
+        "t-MegaMenu",
+        "t-MegaMenu-container",
+        "t-MegaMenu-list--top",
+        "t-MegaMenu-item--top",
+        "t-MegaMenu-item--hasSub",
+        "t-MegaMenu-label",
+        "t-MegaMenu-list--sub"
+      ],
+      "dimensions": {
+        "toggleSize": "32px",
+        "panelWidth": "745px",
+        "panelShadow": "0 12px 24px -12px rgba(0,0,0,.3)",
+        "topItemPadding": "16px",
+        "subItemHeight": "32px"
+      },
+      "rules": [
+        "Open from the header menu button rather than a persistent nav row.",
+        "Use a white or theme surface panel with subtle border and shadow.",
+        "Group top-level destinations into columns with bold primary-color headings and compact sublinks."
+      ]
+    },
+    {
+      "name": "Side Tree Navigation",
+      "canonicalPath": "navigation",
+      "previewPage": "1123",
+      "bodyClass": "apex-side-nav t-PageBody--leftNav apex-theme-vita-red js-navExpanded",
+      "runtimeClasses": [
+        "t_Button_navControl",
+        "t-Button--headerTree",
+        "t-Body-nav",
+        "a-TreeView",
+        "t-TreeNav",
+        "js-defaultCollapsed",
+        "t-TreeNav--styleA",
+        "a-TreeView-node",
+        "a-TreeView-row",
+        "a-TreeView-toggle",
+        "a-TreeView-content",
+        "a-TreeView-label",
+        "fa fa-home"
+      ],
+      "dimensions": {
+        "expandedWidth": "240px",
+        "collapsedGridColumn": "0px",
+        "collapsedContentWidth": "16px",
+        "rowHeight": "44px",
+        "childRowHeight": "40px",
+        "toggleWidth": "32px"
+      },
+      "rules": [
+        "Use for workspace-style applications with hierarchical navigation.",
+        "Expose the native header tree control as t_Button_navControl and toggle js-navExpanded/js-navCollapsed on the page body.",
+        "Represent hierarchy with TreeView nodes; place a-TreeView-toggle as a sibling of a-TreeView-content for expandable nodes.",
+        "Use the native two-column tree content layout: 28px icon column plus label column, with a separate 32px toggle area.",
+        "Apply current state to a-TreeView-row with is-selected and is-current--top so the selected background spans the full side panel."
+      ]
+    }
+  ]
 }

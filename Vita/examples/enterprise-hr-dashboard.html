@@ -7,9 +7,9 @@
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="../styles/vita-open-design.css">
 </head>
-<body class="t-PageBody apex-side-nav apex-icons-fontapex apex-theme-vita">
+<body class="t-PageBody t-PageBody--leftNav apex-side-nav apex-icons-fontapex apex-theme-vita js-ready js-navExpanded">
   <header class="t-Header">
-    <button class="t-Button t-Button--icon t-Button--header" aria-label="Main Navigation"><span class="t-Icon fa fa-bars"></span></button>
+    <button class="t-Button t-Button--icon t-Button--header t-Button--headerTree is-active" aria-label="Main Navigation" aria-controls="t_TreeNav" aria-expanded="true" id="t_Button_navControl" type="button"><span class="t-Header-controlsIcon" aria-hidden="true"></span></button>
     <div class="t-Header-logo">Universal Theme HR</div>
     <div style="margin-left:auto;display:flex;gap:8px;align-items:center;">
       <button class="t-Button t-Button--header"><span class="t-Icon fa fa-bell"></span> Alerts</button>
@@ -19,11 +19,42 @@
 
   <div class="t-Body app-shell">
     <nav class="t-Body-nav app-nav" aria-label="Application">
-      <a class="a-TreeView-content app-nav-link is-selected is-current--top" href="#"><span class="t-Icon fa fa-dashboard"></span>Dashboard</a>
-      <a class="a-TreeView-content app-nav-link" href="#"><span class="t-Icon fa fa-users"></span>Employees</a>
-      <a class="a-TreeView-content app-nav-link" href="#"><span class="t-Icon fa fa-calendar"></span>Leave Requests</a>
-      <a class="a-TreeView-content app-nav-link" href="#"><span class="t-Icon fa fa-line-chart"></span>Workforce Analytics</a>
-      <a class="a-TreeView-content app-nav-link" href="#"><span class="t-Icon fa fa-cog"></span>Administration</a>
+      <div class="a-TreeView t-TreeNav js-defaultCollapsed t-TreeNav--styleA" id="t_TreeNav">
+        <ul>
+          <li class="a-TreeView-node a-TreeView-node--leaf a-TreeView-node--topLevel">
+            <div class="a-TreeView-row is-selected is-current--top"></div>
+            <div class="a-TreeView-content is-selected is-current--top"><span class="t-Icon fa fa-dashboard"></span><a class="a-TreeView-label" href="#">Dashboard</a></div>
+          </li>
+          <li class="a-TreeView-node a-TreeView-node--topLevel is-collapsible">
+            <div class="a-TreeView-row"></div>
+            <span class="a-TreeView-toggle fa fa-angle-down" aria-hidden="true"></span>
+            <div class="a-TreeView-content"><span class="t-Icon fa fa-users"></span><a class="a-TreeView-label" href="#">Employees</a></div>
+            <ul>
+              <li class="a-TreeView-node a-TreeView-node--leaf">
+                <div class="a-TreeView-row"></div>
+                <div class="a-TreeView-content"><span class="t-Icon fa fa-list"></span><a class="a-TreeView-label" href="#">Directory</a></div>
+              </li>
+              <li class="a-TreeView-node a-TreeView-node--leaf">
+                <div class="a-TreeView-row"></div>
+                <div class="a-TreeView-content"><span class="t-Icon fa fa-id-badge"></span><a class="a-TreeView-label" href="#">Assignments</a></div>
+              </li>
+            </ul>
+          </li>
+          <li class="a-TreeView-node a-TreeView-node--leaf a-TreeView-node--topLevel">
+            <div class="a-TreeView-row"></div>
+            <div class="a-TreeView-content"><span class="t-Icon fa fa-calendar"></span><a class="a-TreeView-label" href="#">Leave Requests</a></div>
+          </li>
+          <li class="a-TreeView-node a-TreeView-node--leaf a-TreeView-node--topLevel">
+            <div class="a-TreeView-row"></div>
+            <div class="a-TreeView-content"><span class="t-Icon fa fa-line-chart"></span><a class="a-TreeView-label" href="#">Workforce Analytics</a></div>
+          </li>
+          <li class="a-TreeView-node a-TreeView-node--topLevel is-expandable">
+            <div class="a-TreeView-row"></div>
+            <span class="a-TreeView-toggle fa fa-angle-right" aria-hidden="true"></span>
+            <div class="a-TreeView-content"><span class="t-Icon fa fa-cog"></span><a class="a-TreeView-label" href="#">Administration</a></div>
+          </li>
+        </ul>
+      </div>
     </nav>
 
     <div>
@@ -56,6 +87,35 @@
             <div style="font-size:12px;color:var(--apex-vita-muted-text);">Recruiting requests</div>
           </li>
         </ul>
+
+        <section class="t-Region region">
+          <header class="t-Region-header region-header">
+            <h2 class="t-Region-title region-title">Navigation Mode Samples</h2>
+          </header>
+          <div class="t-Region-body region-body" style="display:grid;gap:16px;">
+            <div class="t-Header-nav-list js-tabLike a-MenuBar a-MenuBar--overflow a-MenuBar--tabs" aria-label="Menu Bar sample">
+              <ul>
+                <li class="a-MenuBar-item"><a class="a-MenuBar-label" href="#">Workforce</a></li>
+                <li class="a-MenuBar-item a-Menu--split a-Menu--current"><a class="a-MenuBar-label" href="#">Employees</a><span class="a-Menu-subMenuCol"><span class="a-Icon icon-menu-split-drop-down"></span></span></li>
+                <li class="a-MenuBar-item a-Menu--split"><a class="a-MenuBar-label" href="#">Reports</a><span class="a-Menu-subMenuCol"><span class="a-Icon icon-menu-split-drop-down"></span></span></li>
+              </ul>
+            </div>
+            <ul class="t-NavTabs t-NavTabs--inlineLabels-lg t-NavTabs--displayLabels-sm" aria-label="Top Tabs sample">
+              <li class="t-NavTabs-item"><a class="t-NavTabs-link" href="#"><span class="t-Icon fa fa-home"></span><span class="t-NavTabs-label">Overview</span></a></li>
+              <li class="t-NavTabs-item is-active"><a class="t-NavTabs-link" href="#"><span class="t-Icon fa fa-users"></span><span class="t-NavTabs-label">Employees</span></a></li>
+              <li class="t-NavTabs-item"><a class="t-NavTabs-link" href="#"><span class="t-Icon fa fa-check"></span><span class="t-NavTabs-label">Approvals</span></a></li>
+            </ul>
+            <div class="t-MegaMenu-container" aria-label="Mega Menu sample">
+              <div class="t-MegaMenu-body">
+                <ul class="t-MegaMenu-list t-MegaMenu-list--top">
+                  <li class="t-MegaMenu-item t-MegaMenu-item--top t-MegaMenu-item--hasSub"><span class="t-MegaMenu-label">People</span><ul class="t-MegaMenu-list t-MegaMenu-list--sub"><li class="t-MegaMenu-item"><a class="a-Menu-label t-MegaMenu-labelWrap" href="#">Directory</a></li><li class="t-MegaMenu-item"><a class="a-Menu-label t-MegaMenu-labelWrap" href="#">Assignments</a></li></ul></li>
+                  <li class="t-MegaMenu-item t-MegaMenu-item--top t-MegaMenu-item--hasSub is-active"><span class="t-MegaMenu-label">Requests</span><ul class="t-MegaMenu-list t-MegaMenu-list--sub"><li class="t-MegaMenu-item"><a class="a-Menu-label t-MegaMenu-labelWrap" href="#">Leave</a></li><li class="t-MegaMenu-item"><a class="a-Menu-label t-MegaMenu-labelWrap" href="#">Hiring</a></li></ul></li>
+                  <li class="t-MegaMenu-item t-MegaMenu-item--top t-MegaMenu-item--hasSub"><span class="t-MegaMenu-label">Analytics</span><ul class="t-MegaMenu-list t-MegaMenu-list--sub"><li class="t-MegaMenu-item"><a class="a-Menu-label t-MegaMenu-labelWrap" href="#">Headcount</a></li><li class="t-MegaMenu-item"><a class="a-Menu-label t-MegaMenu-labelWrap" href="#">Turnover</a></li></ul></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <section class="t-Region region">
           <header class="t-Region-header region-header">
@@ -135,5 +195,13 @@
       </main>
     </div>
   </div>
+  <script>
+    document.getElementById('t_Button_navControl').addEventListener('click', function () {
+      const expanded = document.body.classList.toggle('js-navExpanded');
+      document.body.classList.toggle('js-navCollapsed', !expanded);
+      this.classList.toggle('is-active', expanded);
+      this.setAttribute('aria-expanded', String(expanded));
+    });
+  </script>
 </body>
 </html>

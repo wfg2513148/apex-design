@@ -21,7 +21,8 @@
       "timeline-component",
       "wizard-region",
       "alert-region",
-      "buttons"
+      "buttons",
+      "navigation"
     ],
     "capturedAt": "2026-06-11T01:46:02Z"
   },
@@ -32,10 +33,48 @@
     "Use Interactive Report for read-heavy exploration and Interactive Grid for editable tabular work.",
     "Use Faceted Search or Smart Filters when a report requires persistent business filters.",
     "Use Page Drawer or Inline Drawer for contextual edit and approval tasks.",
+    "Choose one APEX Navigation Menu mode per application shell: Menu Bar, Tabs, Mega Menu, or Side Tree Navigation.",
     "Use Badge, Alert, and color/status modifiers for semantic state; do not invent unrelated status colors.",
     "Use Wizard only for genuinely sequential workflows with a known step order."
   ],
   "patterns": [
+    {
+      "id": "application-navigation-modes",
+      "name": "Application Navigation Modes",
+      "useFor": [
+        "HR system shell",
+        "finance workspace shell",
+        "service console shell",
+        "administration shell"
+      ],
+      "evidencePaths": [
+        "navigation"
+      ],
+      "layout": [
+        "t-Header with 48px Vita branding row",
+        "one Navigation Menu template only",
+        "t-Body-title breadcrumb/title region",
+        "dense t-Body-content regions"
+      ],
+      "preferredClasses": [
+        "apex-theme-vita",
+        "apex-top-nav",
+        "apex-side-nav",
+        "t-Header-nav",
+        "a-MenuBar",
+        "t-NavTabs",
+        "t-MegaMenu",
+        "t-Body-nav",
+        "a-TreeView"
+      ],
+      "generationRules": [
+        "Use Menu Bar for complex desktop-style hierarchy with a 48px dark menu row.",
+        "Use Tabs for simple top navigation with about six or fewer destinations and a 40px dark tab row.",
+        "Use Mega Menu when many destinations must be visible in a white grouped popup from the header menu button.",
+        "Use Side Tree Navigation for workspace applications that need a 240px collapsible hierarchy with 44px rows.",
+        "Keep t-NavigationBar reserved for header utilities such as auth, help, feedback, version, and theme style."
+      ]
+    },
     {
       "id": "enterprise-dashboard",
       "name": "Enterprise Operations Dashboard",
@@ -293,6 +332,7 @@
     "timeline-component": "https://oracleapex.com/ords/r/apex_pm/ut/timeline-component",
     "wizard-region": "https://oracleapex.com/ords/r/apex_pm/ut/wizard-region",
     "alert-region": "https://oracleapex.com/ords/r/apex_pm/ut/alert-region",
-    "buttons": "https://oracleapex.com/ords/r/apex_pm/ut/buttons"
+    "buttons": "https://oracleapex.com/ords/r/apex_pm/ut/buttons",
+    "navigation": "https://oracleapex.com/ords/r/apex_pm/ut/navigation"
   }
 }

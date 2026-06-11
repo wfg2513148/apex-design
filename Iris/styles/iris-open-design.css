@@ -217,6 +217,453 @@ body.apex-theme-iris,
 .apex-theme-iris .timeline-item { display: grid; grid-template-columns: 32px 1fr; gap: 8px; padding: 8px 0; }
 .apex-theme-iris .a-Icon, .apex-theme-iris .t-Icon, .apex-theme-iris .fa { font-family: var(--apex-iris-font-family-icon), var(--apex-iris-font-family-base); font-style: normal; line-height: 1; }
 
+/* Navigation mode fidelity for Open Design prototypes. */
+.apex-theme-iris {
+  --apex-iris-side-nav-active: rgba(255, 255, 255, .08);
+  --apex-iris-side-nav-active-text: #FFFFFF;
+  --apex-iris-side-nav-width: 240px;
+  --apex-iris-top-menu-height: 48px;
+  --apex-iris-top-tabs-height: 40px;
+  --apex-iris-mega-menu-shadow: 0 12px 24px -12px rgba(0, 0, 0, .3);
+}
+
+.apex-theme-iris .t-Header,
+.apex-theme-iris.t-PageBody > .t-Header,
+.apex-theme-iris .app-header {
+  color: #fff;
+}
+
+.apex-theme-iris .t-Header .toolbar,
+.apex-theme-iris .app-header .toolbar {
+  justify-content: flex-end;
+  margin-block-end: 0;
+  margin-left: auto;
+}
+
+.apex-theme-iris .fa,
+.apex-theme-iris .t-Icon,
+.apex-theme-iris .a-Icon,
+.apex-theme-iris .t-Header-controlsIcon {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  font-style: normal;
+  height: 16px;
+  justify-content: center;
+  line-height: 16px;
+  min-width: 16px;
+  width: 16px;
+}
+
+.apex-theme-iris .fa::before,
+.apex-theme-iris .t-Icon::before,
+.apex-theme-iris .a-Icon::before,
+.apex-theme-iris .t-Header-controlsIcon::before { content: ""; }
+.apex-theme-iris .t-Header-controlsIcon::before,
+.apex-theme-iris .fa-bars::before { content: "\2630"; }
+.apex-theme-iris .fa-home::before { content: "\2302"; }
+.apex-theme-iris .fa-dashboard::before { content: "\25a3"; }
+.apex-theme-iris .fa-users::before { content: "\25c9"; }
+.apex-theme-iris .fa-user::before { content: "\25cf"; }
+.apex-theme-iris .fa-id-badge::before { content: "\25a3"; }
+.apex-theme-iris .fa-list::before { content: "\2637"; }
+.apex-theme-iris .fa-calendar::before { content: "\25a6"; }
+.apex-theme-iris .fa-table::before { content: "\25a6"; }
+.apex-theme-iris .fa-line-chart::before { content: "\2571"; }
+.apex-theme-iris .fa-clock-o::before { content: "\25f7"; }
+.apex-theme-iris .fa-info-circle::before { content: "\0069"; }
+.apex-theme-iris .fa-cog::before,
+.apex-theme-iris .fa-gear::before { content: "\2699"; }
+.apex-theme-iris .fa-bell::before { content: "\25e6"; }
+.apex-theme-iris .fa-check::before { content: "\2713"; }
+.apex-theme-iris .fa-alert::before { content: "\0021"; }
+.apex-theme-iris .fa-play-circle-o::before { content: "\25b7"; }
+.apex-theme-iris .fa-angle-down::before,
+.apex-theme-iris .icon-menu-split-drop-down::before { content: "\25be"; }
+.apex-theme-iris .fa-angle-right::before { content: "\25b8"; }
+
+.apex-theme-iris .t-Body,
+.apex-theme-iris .app-shell,
+.apex-theme-iris.apex-side-nav.js-navExpanded .t-Body,
+.apex-theme-iris.apex-side-nav.js-navExpanded .app-shell {
+  grid-template-columns: var(--apex-iris-side-nav-width) minmax(0, 1fr);
+}
+
+.apex-theme-iris.apex-side-nav.js-navCollapsed .t-Body,
+.apex-theme-iris.apex-side-nav.js-navCollapsed .app-shell {
+  grid-template-columns: 0 minmax(0, 1fr);
+}
+
+.apex-theme-iris .t-Body-nav,
+.apex-theme-iris .app-nav {
+  overflow: hidden auto;
+}
+
+.apex-theme-iris.apex-side-nav.js-navCollapsed .t-Body-nav,
+.apex-theme-iris.apex-side-nav.js-navCollapsed .app-nav {
+  width: 0;
+}
+
+.apex-theme-iris .a-TreeView,
+.apex-theme-iris .t-TreeNav {
+  color: var(--apex-iris-side-nav-text);
+  display: flex;
+  min-height: 100%;
+  width: 100%;
+}
+
+.apex-theme-iris .a-TreeView ul,
+.apex-theme-iris .t-TreeNav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.apex-theme-iris .a-TreeView > ul,
+.apex-theme-iris .t-TreeNav > ul {
+  width: 100%;
+}
+
+.apex-theme-iris .a-TreeView-node,
+.apex-theme-iris .a-TreeView-row {
+  min-height: var(--apex-iris-nav-row-height);
+}
+
+.apex-theme-iris .a-TreeView-node {
+  position: relative;
+}
+
+.apex-theme-iris .a-TreeView-row {
+  height: var(--apex-iris-nav-row-height);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+.apex-theme-iris .a-TreeView-row.is-selected,
+.apex-theme-iris .a-TreeView-row.is-current--top {
+  background: var(--apex-iris-side-nav-active);
+}
+
+.apex-theme-iris .a-TreeView-content,
+.apex-theme-iris .app-nav-link {
+  align-items: center;
+  display: grid;
+  gap: 0;
+  grid-template-columns: 28px minmax(0, 1fr);
+  line-height: 16px;
+  padding: 10px 8px;
+}
+
+.apex-theme-iris .a-TreeView-node:not(.a-TreeView-node--topLevel),
+.apex-theme-iris .a-TreeView-node:not(.a-TreeView-node--topLevel) .a-TreeView-row,
+.apex-theme-iris .a-TreeView-node:not(.a-TreeView-node--topLevel) .a-TreeView-content {
+  min-height: 40px;
+}
+
+.apex-theme-iris .a-TreeView-node:not(.a-TreeView-node--topLevel) .a-TreeView-row {
+  height: 40px;
+}
+
+.apex-theme-iris .a-TreeView-node:not(.a-TreeView-node--topLevel) .a-TreeView-content {
+  grid-template-columns: 28px minmax(0, 1fr);
+  padding: 12px 8px;
+}
+
+.apex-theme-iris .a-TreeView-node:not(.a-TreeView-node--topLevel) .a-TreeView-content > .fa,
+.apex-theme-iris .a-TreeView-node:not(.a-TreeView-node--topLevel) .a-TreeView-content > .t-Icon,
+.apex-theme-iris .a-TreeView-node:not(.a-TreeView-node--topLevel) .a-TreeView-content > .a-Icon {
+  font-size: 16px;
+  height: 16px;
+  line-height: 16px;
+}
+
+.apex-theme-iris .a-TreeView-node:not(.a-TreeView-node--topLevel) .a-TreeView-label {
+  font-size: 12px;
+  height: 16px;
+  line-height: 16px;
+  margin-left: 0;
+  padding: 0;
+}
+
+.apex-theme-iris.apex-side-nav.js-navCollapsed .a-TreeView,
+.apex-theme-iris.apex-side-nav.js-navCollapsed .t-TreeNav {
+  width: 0;
+}
+
+.apex-theme-iris.apex-side-nav.js-navCollapsed .a-TreeView-row {
+  width: 16px;
+}
+
+.apex-theme-iris.apex-side-nav.js-navCollapsed .a-TreeView-content {
+  grid-template-columns: 28px 0;
+  width: 16px;
+}
+
+.apex-theme-iris.apex-side-nav.js-navCollapsed .a-TreeView-label {
+  color: transparent;
+  margin-left: 0;
+  width: 0;
+}
+
+.apex-theme-iris.apex-side-nav.js-navCollapsed .a-TreeView-toggle {
+  display: none;
+}
+
+.apex-theme-iris .a-TreeView-node.is-collapsible > .a-TreeView-content,
+.apex-theme-iris .a-TreeView-node.is-expandable > .a-TreeView-content {
+  width: calc(100% - 32px);
+}
+
+.apex-theme-iris .a-TreeView-content > .fa,
+.apex-theme-iris .a-TreeView-content > .t-Icon,
+.apex-theme-iris .a-TreeView-content > .a-Icon {
+  grid-column: 1;
+  font-size: 20px;
+  height: 24px;
+  line-height: 24px;
+  width: 28px;
+}
+
+.apex-theme-iris .a-TreeView-label {
+  color: inherit;
+  grid-column: 2;
+  margin-left: 8px;
+  min-width: 0;
+  overflow: hidden;
+  padding: 4px 0;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.apex-theme-iris .a-TreeView-toggle {
+  align-items: center;
+  color: inherit;
+  display: flex;
+  justify-content: center;
+  min-height: var(--apex-iris-nav-row-height);
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 32px;
+}
+
+.apex-theme-iris .a-TreeView-content:hover,
+.apex-theme-iris .a-TreeView-node.is-focused > .a-TreeView-content {
+  background: rgba(0, 0, 0, .12);
+}
+
+.apex-theme-iris .a-TreeView-content.is-selected,
+.apex-theme-iris .a-TreeView-content.is-current--top,
+.apex-theme-iris .app-nav-link[aria-current="page"] {
+  background: transparent;
+  color: var(--apex-iris-side-nav-active-text);
+}
+
+.apex-theme-iris .t-Button--headerTree,
+.apex-theme-iris .t-Button--megaMenuToggle {
+  align-items: center;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  color: currentColor;
+  display: inline-flex;
+  height: 32px;
+  justify-content: center;
+  min-height: 32px;
+  padding: 7px;
+  width: 32px;
+}
+
+.apex-theme-iris .t-Button--headerTree:hover,
+.apex-theme-iris .t-Button--megaMenuToggle:hover {
+  background: rgba(0, 0, 0, .12);
+}
+
+.apex-theme-iris .t-Button--headerTree.is-active,
+.apex-theme-iris .t-Button--megaMenuToggle.is-active {
+  background: rgba(0, 0, 0, .18);
+}
+
+.apex-theme-iris.apex-top-nav .t-Body,
+.apex-theme-iris.apex-top-nav .app-shell {
+  display: block;
+}
+
+.apex-theme-iris .t-Header-nav {
+  background: transparent;
+  min-height: 0;
+}
+
+.apex-theme-iris .t-Header-nav-list,
+.apex-theme-iris .a-MenuBar,
+.apex-theme-iris .t-NavTabs {
+  background: var(--apex-iris-side-nav);
+  color: var(--apex-iris-side-nav-text);
+  margin: 0;
+}
+
+.apex-theme-iris .t-Header-nav-list,
+.apex-theme-iris .a-MenuBar {
+  min-height: var(--apex-iris-top-menu-height);
+}
+
+.apex-theme-iris .a-MenuBar > ul,
+.apex-theme-iris .t-Header-nav-list > ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.apex-theme-iris .a-MenuBar-item {
+  align-items: stretch;
+  border-right: 1px solid rgba(0, 0, 0, .1);
+  display: flex;
+  min-height: var(--apex-iris-top-menu-height);
+}
+
+.apex-theme-iris .a-MenuBar-label {
+  align-items: center;
+  color: inherit;
+  display: flex;
+  font-size: 14px;
+  line-height: 20px;
+  min-height: var(--apex-iris-top-menu-height);
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.apex-theme-iris .a-MenuBar-item.a-Menu--split .a-MenuBar-label { padding-right: 0; }
+
+.apex-theme-iris .a-Menu-subMenuCol {
+  align-items: center;
+  color: inherit;
+  display: flex;
+  height: var(--apex-iris-top-menu-height);
+  justify-content: center;
+  padding: 8px;
+  width: 32px;
+}
+
+.apex-theme-iris .a-MenuBar-item.is-focused,
+.apex-theme-iris .a-MenuBar-item:hover,
+.apex-theme-iris .a-MenuBar-item.a-Menu--current {
+  background: var(--apex-iris-side-nav-active);
+  color: var(--apex-iris-side-nav-active-text);
+}
+
+.apex-theme-iris .a-Menu,
+.apex-theme-iris .t-MegaMenu-container {
+  background: var(--apex-iris-surface);
+  border: 1px solid var(--apex-iris-border);
+  box-shadow: var(--apex-iris-mega-menu-shadow);
+  color: var(--apex-iris-component-text);
+}
+
+.apex-theme-iris .a-Menu-content,
+.apex-theme-iris .a-Menu-item,
+.apex-theme-iris .a-Menu-label { color: inherit; }
+
+.apex-theme-iris .t-NavTabs {
+  display: flex;
+  list-style: none;
+  min-height: var(--apex-iris-top-tabs-height);
+  padding: 0;
+}
+
+.apex-theme-iris .t-NavTabs-item {
+  border-right: 1px solid rgba(0, 0, 0, .1);
+  flex: 1 1 0;
+  min-height: var(--apex-iris-top-tabs-height);
+}
+
+.apex-theme-iris .t-NavTabs-link {
+  align-items: center;
+  color: inherit;
+  display: flex;
+  font-size: 14px;
+  justify-content: center;
+  line-height: 24px;
+  min-height: var(--apex-iris-top-tabs-height);
+  padding: 8px 12px;
+  text-decoration: none;
+}
+
+.apex-theme-iris .t-NavTabs-link .fa,
+.apex-theme-iris .t-NavTabs-link .t-Icon,
+.apex-theme-iris .t-NavTabs-link .a-Icon {
+  height: 22px;
+  margin-right: 4px;
+  padding: 4px;
+  width: 22px;
+}
+
+.apex-theme-iris .t-NavTabs-item.is-active .t-NavTabs-link,
+.apex-theme-iris .t-NavTabs-link:hover {
+  background: var(--apex-iris-side-nav-active);
+  color: var(--apex-iris-side-nav-active-text);
+}
+
+.apex-theme-iris .t-MegaMenu {
+  background: transparent;
+  color: var(--apex-iris-component-text);
+  font-size: 14px;
+}
+
+.apex-theme-iris .t-MegaMenu-container {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 16px;
+  max-width: 100%;
+  width: fit-content;
+}
+
+.apex-theme-iris .t-MegaMenu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.apex-theme-iris .t-MegaMenu-list--top {
+  display: grid;
+  grid-auto-columns: minmax(156px, max-content);
+  grid-auto-flow: column;
+}
+
+.apex-theme-iris .t-MegaMenu-item--top {
+  font-size: 14px;
+  line-height: 20px;
+  padding: 16px;
+}
+
+.apex-theme-iris .t-MegaMenu-label {
+  color: var(--ut-palette-primary);
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.apex-theme-iris .t-MegaMenu-list--sub { margin-top: 8px; }
+
+.apex-theme-iris .t-MegaMenu-list--sub .t-MegaMenu-item {
+  font-size: 14px;
+  line-height: 20px;
+  min-height: 32px;
+}
+
+.apex-theme-iris .t-MegaMenu-labelWrap,
+.apex-theme-iris .t-MegaMenu-list--sub .a-Menu-label {
+  color: var(--apex-iris-component-text);
+  display: block;
+  line-height: 20px;
+  text-decoration: none;
+}
+
 @media (max-width: 800px) {
   .apex-theme-iris .t-Body, .apex-theme-iris .app-shell { grid-template-columns: 1fr; }
   .apex-theme-iris .t-Body-nav, .apex-theme-iris .app-nav { display: none; }

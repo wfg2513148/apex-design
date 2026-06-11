@@ -22,7 +22,8 @@
       "timeline-component",
       "wizard-region",
       "alert-region",
-      "buttons"
+      "buttons",
+      "navigation"
     ]
   },
   "compositionRules": [
@@ -32,9 +33,47 @@
     "Use Interactive Report for read-heavy exploration and Interactive Grid for editable tabular work.",
     "Use Faceted Search or Smart Filters when a report requires persistent business filters.",
     "Use Page Drawer or Inline Drawer for contextual edit and approval tasks.",
+    "Choose one APEX Navigation Menu mode per application shell: Menu Bar, Tabs, Mega Menu, or Side Tree Navigation.",
     "Use Badge, Alert, and color/status modifiers for semantic state."
   ],
   "patterns": [
+    {
+      "id": "application-navigation-modes",
+      "name": "Application Navigation Modes",
+      "useFor": [
+        "HR system shell",
+        "finance workspace shell",
+        "service console shell",
+        "administration shell"
+      ],
+      "evidencePaths": [
+        "navigation"
+      ],
+      "layout": [
+        "t-Header with compact theme branding row",
+        "one Navigation Menu template only",
+        "t-Body-title breadcrumb/title region",
+        "dense t-Body-content regions"
+      ],
+      "preferredClasses": [
+        "apex-theme-vita-slate",
+        "apex-top-nav",
+        "apex-side-nav",
+        "t-Header-nav",
+        "a-MenuBar",
+        "t-NavTabs",
+        "t-MegaMenu",
+        "t-Body-nav",
+        "a-TreeView"
+      ],
+      "generationRules": [
+        "Use Menu Bar for complex desktop-style hierarchy with a compact menu row.",
+        "Use Tabs for simple top navigation with about six or fewer destinations and a 40px tab row.",
+        "Use Mega Menu when many destinations must be visible in a grouped popup from the header menu button.",
+        "Use Side Tree Navigation for workspace applications that need a 240px collapsible hierarchy.",
+        "Keep t-NavigationBar reserved for header utilities such as auth, help, feedback, version, and theme style."
+      ]
+    },
     {
       "id": "enterprise-dashboard",
       "name": "Enterprise Operations Dashboard",
